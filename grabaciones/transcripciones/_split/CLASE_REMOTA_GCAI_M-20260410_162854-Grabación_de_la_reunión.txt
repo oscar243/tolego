@@ -1,0 +1,681 @@
+Pero ahí váyanme siguiendo, porfa.
+Entonces chicos, de nuevo, gracias por conectarse.
+Vamos hoy a hablar de un poco de los modelos de guía generativa que tenemos para comenzar a generar nuestros modelos y de dónde parten los principios de Vertex AI para poder ejecutar.
+Y uno de los modelos de difusión más prometedores y famosos, que es por donde vamos a comenzar a explicar qué son los modelos de difusión, son estos primeros que vemos, que son los que se llaman VICE o Birational Out Encoders, lo que traduce las siglas, y básicamente lo que hace es que codifica imágenes hasta un tamaño comprimido y luego lo decodifica de vuelta al tamaño original, mientras al tiempo, en paralelo, va aprendiendo de la distribución de los datos.
+Este es el más famoso que tenemos en lo que son los modelos de difusión en IA generativa para procesamiento de imágenes.
+Otro que tenemos son los GAN, que ya de hecho habíamos hablado en una de las clases pasadas un poco, los Generative Adversarial Models, los cuales lo que hacen es enfrentar dos redes neuronales.
+Una red neuronal, la cual va a ser la función de generador, crea la imagen, crea el contenido, en este caso, como lo estamos hablando para imagen, bueno, crea una imagen.
+Y la otra lo que va a hacer es comparar, y es la que llamamos la red neuronal discriminante, y es la que va a predecir si la imagen es real o es falsa.
+Cuando decimos es real, es que cumple los parámetros del prompt que estamos ingresando.
+Si es falsa, no los está cumpliendo, no llega al nivel de certeza que requerimos.
+Y lo que esperamos es entrenar este discriminador para que cada vez distinga mejor las imágenes correctas y las comience a clasificar para dar la salida y el resultado en el modelo.
+Tercero tenemos los modelos autoregresivos, de esto hay mucha, mucha teoría, pero específicamente cuando hablamos de imágenes, lo que hace es tomar toda la secuencia de píxeles, es el modelo como más clásico y que siempre hemos tenido, y replica el LLM en texto a manera de vector, lo representa a manera de vector y a partir de ahí comienza a hacer los pronósticos y las predicciones de los pixeles a manera de vector.
+Los podemos clasificar en dos grupos grandes.
+Acá tenemos los que son los modelos de difusión no condicionales.
+Los modelos de difusión no condicionales se le llaman así porque no cuentan con entradas o instrucciones adicionales y se entrenan a partir de imágenes del elemento en específico.
+Se le ingresa por ejemplo, esta imagen que se ve acá, que es borrosa y se le pide la necesito en mejor result, en alta definición o algún cierto criterio y él trabaja sobre esta misma imagen para darnos la salida.
+No necesita data base para poder generar esta salida, él trabaja sobre la misma imagen, pero pues lo contrario.
+Tenemos los modelos de difusión condicionales que sirven para generar imágenes a partir de instrucción, a partir de instrucciones como texto u otras imágenes, que es lo que nos va a servir firmemente como el prompt en esto sí ya estamos hablando de que necesitamos una entrada para que el modelo comience a producir y darle estas condiciones y parámetros y una data base para que comience a funcionar.
+¿Pero bueno, expliquémoslo a fondo cómo funciona un modelo no condicional?
+Que es donde quiero que nos centremos.
+Entonces, como les decía, básicamente lo que hacemos es ingresar una imagen que puede ser ruido y le pedimos que lo convierta en una imagen que deja ese ruido para nosotros y se vuelve información importante.
+Estoy dando el ejemplo con imagen, pero es exactamente el mismo funcionamiento con texto, con audios, con videos, con lo que sea, pero imagen me parece que es lo más claro.
+Entonces lo que va a hacer el modelo no condicional es comenzar a iterar esta imagen n número de veces, n número de veceS e iterarlo de tal manera que va a casi que destruir la imagen muchas veces, destruirla, destruirla, destruirla, destruirla, destruirla.
+Va a deconstruir la imagen y va a comenzar a analizar el detalle de los datos de esa imagen.
+El objetivo principal es entrenar el modelo para quitar el ruido, reconociendo el ruido y de ahí sintetizar la imagen según el ruido que ya estamos reconociendo en el proceso de iteración.
+El paso a paso fácil, tenemos una imagen inicial x y creamos una muestra.
+Necesitamos una muestra que vamos a comenzar a iterar en t veces y en esas iteraciones t veces vamos a comenzar a generar ruido, ruido, ruido, para que él entienda cuál es el ruido y finalmente quitar, retirar ese ruido.
+En la salida del modelo.
+Estamos partiendo de que queremos identificar el ruido para comenzar a iterar y eliminarlo y crear nuestra variable de salida de manera correcta según lo que esperamos.
+¿Qué es lo que estamos haciendo?
+Básicamente estamos aprendiendo sobre la distribución de los datos, sobre la distribución del error de la imagen, de la imagen que se está viendo, pero a nivel de píxeles y datos y vectores, dependiendo el modelo que se seleccione.
+Y bueno, esto era el concepto básico y lo que usualmente se usaba.
+Ahorita hay muchas nuevas cosas en lo que es la generación de imágenes.
+Tal vez ustedes conocen algunas nuevas que yo desconozco, tal vez yo conozco algunas nuevas.
+Lo más importante, más allá del método de generación y de eliminación de ruido, y pues en este caso el modelo de difusión no condicional, es que podamos generar esos resultados de manera más rápida y con mayor control sobre lo que queremos.
+Que si le estamos dando un nivel de detalle muy específico, lo pueda hacer con el nivel de detalle que nosotros requerimos.
+Y bueno, esto básicamente es lo que sería el LLM para generación de imágenes y que puede ser extrapolado para cualquier otro tipo de entrada.
+Ahora bien, veamos algo muy importante que son los mecanismos de atención.
+Porque los mecanismos de atención son la base para los LLM y para algo que vamos a ver más adelante que ayuda a potenciar.
+Y de hecho creo que Juan Sebastián me escribía al interno y me decía, para mí esto es aplica en los transformers.
+Bueno, ya lo vamos a ver en los transformers, porque cuando hablamos de transformers, hablamos de mecanismos de atención.
+Y supongamos la frase cliché, queremos, o el ejercicio cliché, queremos traducir una frase del inglés al español.
+Y tenemos la frase de Black cat mouse.
+La traducción el gato negro se come el ratón.
+Si lo pensáramos desde la IA generativa, lo más probable es que se usara una arquitectura, y creo que lo veíamos la clase pasada, si no, igual ahora lo vamos a volver a revisar, a refrescar.
+Lo normal sería tener una arquitectura encoder y decoder, donde vamos paso a paso a ir desglosando los tokens, a ir desglosando las palabras, las letras y los acomodo en vectores, darles la ponderación, irlo acomodando, ya lo vamos a ver más adelante más detallado.
+Pero a veces en este caso, si se desglosa la frase original, no se alinea paso a paso con la frase traducida, porque acá estamos hablando de black cat y en español estamos hablando de el gato negro.
+Si hacemos la validación uno a uno de y él cuadra black gato ya no cuadra, es porque hay una pequeña diferencia entre los dos idiomas.
+Y esto es justamente lo que necesitamos solucionar.
+En la primera palabra de la frase original estamos comenzando por black negro y en la frase traducida estamos comenzando por gato.
+Ahí es donde debemos hacer pensar a nuestro modelo de manera lógica.
+Y bueno, para hacerlo se trabaja con esto que llamamos el mecanismo de atención aplicado al encoder y al decoder.
+Lo que queremos es que este mecanismo le permita a la red neuronal enfocarse en una parte específica de la secuencia de entrada.
+Para hacerlo, se asignan pesos a la entrada, de modo que las partes importantes tengan mayor peso, las que no son tan importantes tienen menor PES y ya el modelo sabe por dónde debería enfocarse.
+Ese es el mecanismo de atención.
+¿Cuando se aplica el modelo de atención?
+Cuando el codificador está pasando por muchos datos al decodificador y el decodificador realiza un paso extra antes de entregar el resultado.
+Lo que hace el decodificador es comparar los diferentes resultados del codificador, de tal manera que toma los scores de cada partecita del codificador y lo multiplica por el softmax para obtener de ahí unos pesos ponderados y organizar de mayor a menor la mejor respuesta posible.
+Entonces, ¿Dónde debemos poner el mecanismo de atención acá?
+Pues probablemente lo más importante es black cat gato negro y que ahí él comience a hacer el análisis y priorice.
+Eso es básicamente el mecanismo de atención.
+Ahora, ¿Qué es la arquitectura encoder decoder?
+Como vimos anteriormente, yo les decía que si no implementamos el mecanismo de atención en una arquitectura de encoder decoder, probablemente el modelo va a presentar alucinaciones, porque la palabra en inglés se escribe diferente en en español tiene un diferente orden que no es tan lógico y que no va a ser tan intuitivo para una guía generativa identificar.
+Es por eso que se le llama esta arquitectura una arquitectura de secuencia, porque él va analizando paso a paso lo que va pasando en la secuencia.
+En términos simples, sencillos, lo que estoy refiriéndome es que él consume una secuencia de paso a paso 1234 y genera otra secuencia de paso a Paso 1234.
+Ahora, antes de centrarnos como en el problema del encoder decoder y cómo lo solucionamos y cómo funciona el modelo de atención.
+¿Cómo se hace el encoder y decoder?
+Tiene dos etapas clave el modelo encoder decoder.
+Se llama encoder decoder porque tiene dos etapas donde la primera es la encoder y la segunda es la decoder.
+La encoder es cuando se codifica la data, el decoder cuando se decodifica la data.
+Hasta ahí fácil.
+El encoder lo que hace es tomar cada token de la secuencia de entrada.
+¿Se acuerdan hace muchas, muchas clases que yo les decía?
+Tenemos a nivel de párrafo, a nivel de frase, de palabra, de letra y ya si vamos un poco más allá, tenemos el pixel pero tal vez no podemos procesarlo y tenemos el token.
+Bueno, el encoder toma esos tokens que sí podemos analizar, esas agrupaciones de datos que sí podemos analizar de la secuencia de entrada y procesan la información paso a paso va generando un estado interno y en cada estado interno él va guardando la información del token actual y del token anterior, es decir, hay caché, hay memoria.
+Al final del proceso se va a obtener un vector en el encoding, un vector final y ese vector lo que debería representar es toda la oración.
+Entonces si estamos diciendo el gato negro, pues va a representar toda la oración.
+El gato negro, o bueno, la primera oración es de Black Cat porque estamos en inglés todavía.
+¿Qué es lo que finalmente está haciendo el encoder?
+Convertir lenguaje humano en una representación numérica con significado.
+¿Listo?
+El encoder, para que lo anoten y se lo lleven, lo que está haciendo es convertir lenguaje humano en una representación numérica con un significado con un peso.
+¿Listo?
+Eso es mi definición de lo que es encoder.
+Ahora ya tienen vector armado con la información, la información vectorizada de las frases que le están entrando.
+Ahora viene una parte muy importante y es el decoder.
+El decoder o decodificador lo que va a hacer es tomar ese vector que generamos en el encoding y comienza a generar una secuencia de salida.
+¿Cómo lo hace?
+Token por token.
+Si tenemos un vector de n igual 6, pues vamos a tener una salida n-6.
+Y esos vectores van a tener una probabilidad asociada, donde esa probabilidad asociada lo que nos está indicando es qué palabra es más probable que venga a continuación, cuál es la palabra más probable que estemos buscando, cuál es la palabra que se ajusta más al contexto de la situación.
+Entonces, por ejemplo, en el ejemplo de blackout e the mouse, la salida sería el siguiente posición gato, siguiente posición, negro, siguiente posición, C, siguiente posición, comió, siguiente posición, bla, bla, bla, bla, bla.
+Así funciona.
+¿Y cómo se entrena ese modelo?
+Aquí es donde ya debemos conectar lo que hemos venido aprendiendo en los cursos anteriores, las clases también anteriores y es el Machine Learning.
+Como todo Machine Learning, como todo modelo de ciencia de datos, se necesita un dataset de pares de entrada y salida que permitan entrenamiento, un dataset base, modelo base que permita el entrenamiento del modelo para poder hacer estos cálculos y estas conclusiones.
+¿Qué deberíamos hacer?
+Ingresar la secuencia de la que estoy hablando a la entrada del encoder, el decoder genera una salida, se compara con la salida real, se calcula el error y a partir del error se ajusta el modelo y esto pues ya se itera miles y miles y miles y de miles, miles y miles de veces qué les estoy hablando.
+Machine Learning puro, el concepto básico de Machine Learning.
+Entonces el encoding, decoding intenta tomar, representar datos del mundo real, información del mundo real de manera numérica, de tal manera que la podamos procesar y pasar por algunos modelos de Machine Learning para generar predicciones y pronósticos de qué es lo que probablemente va a venir.
+¿Listo?
+Ese es el concepto básico.
+Ahora, yo les decía, tenemos lo que son, lo que son los mecanismos de atención y tenemos los encoder y los decoder, pues ahora vienen los transformers.
+Voy a hacer acá una pausa y es ¿Quién me puede contar que es un transformer?
+¿Alguien sabe?
+De manera rápida, breve, igual lo voy a explicar ahora.
+Pues profe, o sea, tengo entendido que es como una arquitectura que utiliza pues lo que mencionabas de los MBI, que es para, como ellos no entienden palabras, sino números, entonces al transformarlo ya pues en token hay como un espacio matemático donde las palabras se convierten en vectores y están muy cerca dependiendo de su significado.
+Entonces por ejemplo, gato estaría cerca de, no sé si perro, porque tal vez son mascotas, si me hago entender, o sea, las palabras que son como parecidas terminan estando en un mismo espacio matemático y ya, entonces pues utilizan obviamente una función de atención que es para recoger las palabras más importantes que haya.
+Perfecto, sigue, sigue.
+¿Tienes algo más?
+Sé que puede haber como varias cabezas, por decirlo así, cabezas de atención, entonces es como multicapa, entonces todo el proceso que sucede, recuperar la atención, traer las palabras, pasa en diferentes como espacios, por decirlo así.
+Muy bien, y voy a intentar reunir lo que me fuiste diciendo para dar el concepto de lo que es un transformer.
+Y es un modelo que se usa en los modelos de idea generativa, y es la evolución del modelo tradicional del encoder y el decoder.
+Es una evolución, pero no es algo totalmente diferente.
+La principal diferencia es que ya estamos utilizando los mecanismos de atención para, primero, entender contexto, segundo, procesar en paralelo y tercero, mejorar la precisión del modelo de la respuesta en lenguaje natural, eliminando alucinaciones.
+Entonces, sí, una arquitectura del transformer es igual a lo que hablábamos ahora del encoder y el decoder, con la diferencia de que vamos a añadir algo más y es el mecanismo de atención.
+¿Listo?
+Entonces, desglosemos.
+Y bueno, yo esperaba que alguno me dijera que era esto, pero no, no es esto, es esto.
+Este modelo que se ve acá, donde vamos a añadir un paso y es este paso de acá.
+Esa es la única diferencia que hay entre el modelo tradicional de encoder y decoder que tenemos en los modelos de IA generativa.
+Entonces, ¿Qué es lo que va a suceder Cuando la data entra, ingresa al encoder, El encoder lo que va a hacer es, a través de dos componentes clave, que esto lo tiene siempre?
+Primero, una capa de autoatención, self attention, analiza todas las palabras de la oración e identifica cuáles son más relevantes entre sí.
+Entonces, por ejemplo, en el ejemplo de black cat de mouse, la palabra ate presta atención a cat, pero también presta atención a mouse.
+Entonces, probablemente at es una palabra de mucho más valor, en la que hay que prestar más atención en el modelo.
+Primero pasa por la capa de autoatención, donde se va a analizar las palabras de la oración que van a cobrar más relevancia dentro de la oración.
+Después pasa por la capa de fit forward.
+¿Qué es lo que va a ser la capa de fit forward?
+Lo que dice la palabra, dar un resultado, dar una sugerencia.
+Toma el resultado de la atención y lo procesa con una red neuronal.
+Ahí vienen varias capas de la red neuronal.
+Se aplica independientemente a cada uno de los tokens, y ese resultado es lo que se va a pasar por el decoding cuando entra ya a la capa del decoder.
+En el decoder ya vamos a tener tres capas de nuevo.
+La de autoatención, donde ya vamos a comenzar a revertir el proceso.
+Después vamos a tener la encoder decoder attention, que es la clave, y es donde nos vamos a centrar, dónde se va a centrar el modelo.
+Y tercero la de fit forward, y la diferencia es que al pasar por el encoder, decoder, attention, el decoder se va a enfocar mucho más, o ni siquiera mucho más, se va a enfocar en la parte más relevante que le está entregando el encoder.
+Entonces veámoslo con un ejemplo por si no les quedó del todo claro.
+Vamos a aterrizarlo como para ponerlo en notas.
+Tenemos una entrada que es de Black Cat, Eiden Mouse, esa es la primera entrada, es una frase y la creemos en español.
+Paso 2, vienen los embeddings, cada palabra se convierte en un vector, creo que no había utilizado el término embedding antes, para los que no sepan es básicamente vectorizar una frase o una palabra.
+Tercero, tenemos ya lo que es la tensión, y aquí es donde pasa lo más importante en el modelo de transformer, y es que se generan diferentes vectores con diferentes valores, diferentes llaves, se calculan los pesos de atención, se multiplica por las probabilidades y el resultado es que se identifican finalmente las palabras más relevantes para el modelo.
+Siguiente paso, ya viene lo que son las sumas de las matrices, cómo se generan múltiples matrices, todas las matrices se suman, se concatenan todas esas matrices y se obtiene finalmente una representación, presentación final enriquecida con una matriz que va a tener contexto, relaciones y significado profundo, ya que está combinando todo.
+Pero eso era el modelo tradicional, el transformer.
+He dicho que todos son modelos tradicionales, es porque cada año va saliendo cosas nuevas, y es que este era el modelo por excelencia a la hora de hacer IA generativa, pero llegó Google y sacó algo bueno, yo les dije que los transformers eran los transformers, pues sacó algo que es como el Decepticon de los modelos de vida generativa, y es algo que iba en contravía a esto, pero algo mucho más potente, pues con el presupuesto que obviamente tiene Google para poder realizar este tipo de cosas.
+Y es que hace unos años crearon una arquitectura llamada BERT, esta de acá, a la que le pongo la carita del Decepticon.
+BERT lo que es, es una arquitectura que únicamente plantea que es sólo necesario utilizar un encoder, no es necesario utilizar el decoder qué es lo que lo hace especial.
+Desglosemos las siglas, yo creo que así se puede entender mucho mejor.
+VER traduce Bidirectional Encoder Representation Bidirectional, es decir bidireccional encoder el que codifica representation, representación, de ahí sale la palabra bird, quiere decir que hay una codificación en dos vías.
+¿Listo?
+Eso es lo que lo hace lo más especial que es bidireccional y es que cada vez que nosotros le pasamos data, texto en este caso, él lo puede leer de izquierda a derecha o derecha a izquierda, entiende el contexto completo y no parcial.
+Él analiza todo, todo, toda la data, no solo como una lectura como normalmente nosotros lo haríamos.
+Bird no recibe texto simple, es la principal diferencia.
+Él recibe un token de clasificación y un token de separación.
+Con el encoder él hace lo que es el embedding, ya hablamos que es el embedding, tomar las palabras, las frases y convertirlas a nivel vectorial.
+Calcula una posición para cada uno de esos embeddings y luego hace algo que se llama segment embeddings y es comenzar a clasificar, a decir qué frase pertenece a esos vectores que está generando.
+A la final lo que hace es sumar todos sus vectores, todos sus vectores que él genera y ese es el vector de salida.
+Porque digo, ¿Como es algo, sí es algo que se está usando, que se usa, que lo usa Google, que lo usa Google con vertex?
+Pero ¿Por qué también es especial?
+Porque pues es Google y tiene el potencial y la billetera para poder financiar este tipo de modelos que son muchísimo más potentes.
+¿Qué es lo que lo hace tan potente?
+Es que él tiene unos entrenamientos como de los base muy, muy, muy grandes, mucho más grandes de lo que estamos normalmente acostumbrados, lo cual pues potencia muchísimo más este tipo de modelo.
+Cuando se ejecuta un modelo con Bert, él tiene dos tareas clave.
+El primero es el modelado del lenguaje enmascarado, que lo que está haciendo es ocultar algunas palabras, ocultar algunas palabras de la frase.
+Esto lo hace para entender aún mejor la frase.
+Entonces the black cat at the mouse.
+Bueno, tal vez black no tiene mucha incidencia en la frase, entonces oculto a black y queda the cat eat mouse.
+Y es una frase mucho más fácil de analizar y también le funciona para él comenzar a predecir qué podría ir ahí, en ese espacio, en esa máscara que está colocando dentro de la frase.
+Y por otro lado, él tiene algo que es el NSP, que son las Next Sentence Prediction.
+Y lo que permite el Next Sentence Prediction es que él tiene la capacidad de lo que ya hablamos, una conversación del lenguaje natural y es predecir cuál puede ser la siguiente frase, respuesta, pregunta, lo siguiente que puede venir después de nuestro, nuestra variable de ingreso, que es de Black, kt y de Mouse, y es preguntar algo en relación a, o dar más contexto en relación a lo que está sucediendo.
+Hay diferentes tamaños de BERT, no los tengo ahorita presentes, no recuerdo bien, creo que en la literatura de Google, en el curso de Generative AI Líder está él tiene diferentes tamaños, tamaños gigantescos, que permite, pues primero clasificar texto de manera muy efectiva, mucho más rápida, porque está pasando solo por un proceso que Google la está usando.
+Entonces, pues tiene los beneficios de Google, se actualizan, lo actualizan, lo mejoran, tiene todas las bases y fuentes de conocimiento de Google y que trabaja con similaridad semántica.
+Similaridad semántica es un concepto que vamos a ver ahora más adelante, que ya de pronto algunos de ustedes lo conocen, ahorita les voy a preguntar quiénes lo conocen y si me pueden decir qué es, pero trabaja con similaridad semántica, lo cual lo hace mucho, mucho, mucho más potente para las necesidades que tenemos hoy en día con los modelos de idea generativa.
+Entonces, ¿Cuál es la clave?
+Conecten todo.
+Tenemos el encoder y decoder, que es la base conceptual de los modelos de idea generativa.
+¿Listo?
+Codificar y decodificar.
+Ahora tenemos una mejora de lo que es el codificar y el decodificar con los transformers.
+¿Cómo lo hacemos?
+¿De qué parte?
+¿Cuál es el principio de los transformers?
+La mejora con la tensión.
+Y ahora tenemos una comprensión que ya está utilizando similaridad semántica, que tiene una velocidad de procesamiento más rápida y que tiene un respaldo grande de Google, que es BERT, y que va a ayudarnos a generar una comprensión mucho más profunda del lenguaje, diferente a como está haciendo el encoder de coder tradicional, que es secuencial.
+¿Listo?
+Eso es Bert y por eso lo llamo un poco como el Decepticon de lo que venimos hablando, porque es totalmente diferente.
+Y bueno, ya de último están los modelos de GPT, pero ya luego hablamos de los modelos de GPT, así que bien, hablemos de los vectores y los embeddings.
+Listo, Vamos a profundizar mucho más en vectores y embeddings, pero para esto quiero devolverme un poco, y es que cuando nosotros hablábamos de los modelos de idea generativa, pues hablábamos de diferentes pasos en el encoder, y en el decoder.
+Vamos a resumirlo en estos tres pasos, ¿Bien?
+Para que todos lo tengamos.
+Primero, un modelo de idea generativa normal lo que hace es codificar la data.
+Codifica la data.
+¿Qué quiere decir codifica la data?
+Ya lo dijimos, generar esos embeddings, generar esos vectores de data con texto.
+Crea esos vectores.
+Una vez los crea, crea el index.
+El index es la agrupación de esos vectores.
+Y después del index viene el search, y es comenzar a buscar en esos index esa información justa que necesitamos en nuestro modelo.
+¿Listo?
+Esos son los tres pasos fundamentales.
+Pero vamos a partir por el primero, que es el encode, que es uno de los conceptos más importantes detrás de la vía generativa actual.
+Y es lo que realmente hace que herramientas como los chatbots, buscadores inteligentes, sistemas de recomendación, realmente sean inteligentes.
+Partamos de un problema real.
+Imaginemos, no sé, una empresa.
+Imaginemos una empresa y esa empresa tiene millones y millones de documentos, correos, reportes, dashboards, datos y un montón de cosas.
+Y el reto no es tener la información, porque ya tenemos una arquitectura que nos almacena esa información.
+Ya nuestra compañía invirtió en la nube, lo que hemos venido viendo, dio sus primeros pasos en lo que es el camino de la transformación digital, invirtió, invirtió en data centers, invirtió en la arquitectura de la nube que necesita.
+Pero ahora él quiere encontrar esa información útil que él justamente necesita.
+Esas personas de negocio, esas personas de datos, esas personas de marketing, esas personas, personas de lo que sea, puedan encontrar dentro de toda esa cantidad de data, la data precisa y útil que necesita.
+En la búsqueda tradicional, cuando hablábamos del encoder y el decoder, lo que se haría es, bueno, y los que trabajan mucho con Excel o con Smartsheet o con Google Sheet, hay una función muy buena, famosa, conocida y que la gente normalmente usa, que es el xlookup o vlookup, que tenemos una variable y buscamos esa variable dentro de una matriz, la buscamos, la cruzamos y nos permite hacer cruces entre la data y buscar algunas llaves y bueno, cosas interesantes.
+Ese es el funcionamiento normal de una IA generativa.
+Y cuando nosotros le pedimos alguna idea generativa, él busca por palabras clave.
+Es la búsqueda tradicional.
+¿Y por qué lo hace por palabra clave?
+Porque él no entiende el significado.
+Entonces, si yo le digo de black hat a mouse, y yo le digo, búscame mouse, búscame.
+No mouse, búscame roedor, pues él probablemente no va a encontrar roedor dentro de la frase, porque primero es una palabra que yo le estoy diciendo en español, que la frase está en inglés, y segundo, pues roedor pueden ser muchas cosas, no es solamente ratón.
+Por ejemplo, cuando nosotros antes dentro de los buscadores no teníamos idea incorporada y poníamos, no sé, ropa para ir a la playa, en un buscador tradicional va a devolver cosas que tengan exactamente esas palabras, ropa para playa.
+Si ponemos Facebook, nos va a devolver exactamente lo que diga Facebook dentro de su buscador.
+Y por eso las páginas web tienden a colocar dentro de la página web las keywords más comunes que buscan las personas.
+Pero con la IA generativa actual, la que ha ido evolucionando, ya estamos hablando de el siguiente paso y es la búsqueda semántica y es no buscar por palabra exacta, no buscar roedor dentro de la frase de blackout, ey the mouse.
+Es buscar el significado de roedor dentro de la frase de blackout, either mouse y que la IA logre entender esos significados y poder hacer los cruces y las búsquedas y encontrar la data precisa que necesita.
+Entonces, se me fue una, no he terminado acá.
+Entonces, volviendo, ¿Qué son los embeddings?
+Los embeddings es básicamente la forma de convertir datos, que puede ser como yo les decía, texto, imagen, audio, que yo utilizaba el ejemplo imagen porque parece que es lo más sencillo, convertir esa data en vectores numéricos que capturen el significado, es decir, pasamos de palabras a números, pero no cualquier número, números que representen contexto y significado.
+Entonces, en lugar de estar trabajando contexto cuando trabajamos con IA generativa, la IA trabaja en espacios vectoriales.
+¿Listo?
+Para los que vieron álgebra lineal, cuando tomábamos.
+Cuando tomábamos, No sé si en álgebra lineal todavía se ve eso, pero cuando modelábamos un problema de la vida real y lo representábamos como el problema y como ecuaciones que podían ser en n dimensiones, bueno, esto mismo estamos haciendo con la IAG negativa, estamos representándolo en un espacio vectorial.
+Cosas similares van a estar cerca, cosas diferentes van a estar lejos dentro de ese espacio vectorial.
+Entonces ese es el embedding.
+El embedding estamos convirtiendo la data en vectores.
+¿Qué es lo que queremos con el embedding?
+De que posteriormente, cuando comencemos la etapa de procesamiento, podamos encontrar esas similaridades semánticas o palabras clave dentro del modelo que comencemos a buscar dentro de ese espacio vectorial, en lugar de preguntar, ¿La frase tiene la palabra cat?
+Pues no, tal vez preguntar, ¿La frase tiene una palabra asociada a mascota?
+Y eso es lo que cambia absolutamente todo, todo lo que gira en torno a la idea generativa y la gran diferencia.
+Entonces, ¿Cómo funciona esto?
+El proceso tiene tres pasos clave.
+Primero, codificar en vectores, que son los embeddings, ya lo hablamos, lo he repetido varias veces.
+Segundo, crear un índice, el índex, que es el segundo paso.
+Y tercero, buscar en el espacio vectorial.
+¿Listo?
+Fácil.
+Quiero que se lleven eso hoy y se lo lleven siempre.
+Así funciona la idea generativa en code, index y search.
+Tres pasos sencillos que intenté resumírselos de la mejor manera.
+Cuando tenemos esos vectores, los organizamos en diferentes grupos, los clusterizamos de alguna manera, los agrupamos de tal manera que para cuando pasemos a la etapa de búsqueda, la búsqueda sea rápida y escalable.
+Y es parte de hecho, del éxito que ha sido deepseek cuando lanzamos deepseak hace un año, un año y medio.
+Y cuando hablamos del search, cuando llega la consulta, esa consulta la convertimos en un vector y buscamos lo más cercano.
+Esto es la explicación exacta de lo que hace la IA generativa.
+¿Listo chicos?
+Y lo que quiero que se lleven, lo principal que queremos resolver con los embeddings en la etapa de encode, es poder tomar toda esa data que es multimodal, que puede ser texto, imagen, audio, lo que sea, y capturarlo en conceptos.
+Y segundo, con la búsqueda vectorial, organizar esa data en un index que permita, tercero la búsqueda.
+Ese es como el resumen.
+Yo por acá me copié algo, una analogía que vi, no sé si fue en un video o en una charla que asistí, pero lo tenía por acá en mis notas.
+Y hacen una analogía que me parece súper, súper interesante en el proceso de idea generativa, y es que se asemeja a lo que es un índice de un libro.
+El embedding lo que va a hacer es crear las palabras clave del contenido del libro.
+El índice, pues, es el índice de esas palabras clave.
+Y la búsqueda es simplemente buscar esas palabras clave que encontramos en el índice.
+Pero la diferencia con la IA generativa es que no estamos buscando palabras.
+Vamos a comenzar a buscar significativos significados y no palabras.
+Tal vez palabras también, pero no solo palabras, significados.
+¿Por qué el concepto es poderoso y por qué esto revolucionó totalmente lo que es la inteligencia artificial, no sólo la IA generativa, porque primero habilita cosas que antes no eran posibles con la IA tradicional, estamos realizando comprensión semántica, encontrando resultados que aunque no se usen las mismas palabras pueden referirse a lo mismo o parecerse tener alguna similitud?
+Segundo, estamos trabajando en multimodalidad, como estamos pasando todo a formato vectores, vamos a tener la libertad de trabajar con cualquier formato que nosotros querramos.
+Tercero, la personalización, como trabajamos con modelos base, agregamos capas y volvemos personalizado al modelo, el modelo entiende el contexto y se puede especializar en ese contexto que nosotros le pidamos.
+¿Y cuarto, que vamos a hablarlo más adelante y que ya lo hemos ido hablando en algunas de las clases, es poder tomar esos modelos base que ya tenemos y alimentarlos con contexto relevante de nuestras empresas, del mercado, del contexto en general y a cómo le llamamos a eso?
+Los racks.
+¿Listo?
+¿Qué es lo principal, qué es lo que quiero que entiendan?
+Básicamente cómo es la estructura general de la idea generativa, cómo funciona, que este es el funcionamiento, que no estamos buscando ya solo entender palabras, sino entender significados.
+Creo que es la clave principal y que lo que siempre les he dicho muchas veces, la IA sin contexto va a fallar y es lo que estamos intentando hacer, darle contexto, y bueno, cuando trabajemos sobre los racks, darles contexto de negocio.
+Bien, entonces hablamos un montón de embedding, embedding, embedding del pero vamos a entrar a un punto más técnico, más profundo, un poco más, pero pues como siempre intento explicarlo de la manera más sencilla posible y quiero que entendamos cómo se hace el embedding, qué es lo que está pasando en el embedding, porque yo les estoy diciendo, estamos tomando una palabra y la estamos convirtiendo en un vector, porque queremos comenzar a entender desde la IA el lenguaje.
+¿Alguno sabe cómo es que hace un modelo para convertir un texto en un vector, o algunos se le ocurre alguna manera de hacerlo?
+En álgebra lineal lo veíamos, en cálculo diferencial creo que también.
+Alguien que tenga alguna idea, no necesariamente aplicado a la IA generativa, alguien que se le ocurra cómo convertiría una frase de blackout data mouse en un vector.
+Bueno chicos, que varios saben, en especial los de estadística deben saber, porfa 30 segundos que están tocando mi puerta.
+Listo, ya volví.
+Bueno chicos, entonces les preguntaba cómo se podía entonces convertir un texto a un vector.
+Hay que partir del problema.
+Y el problema es que las máquinas, los modelos, no entienden números, no entienden palabras, perdón, ellos entienden números.
+Entonces tenemos dos retos fundamentales.
+Primero, cómo convertir texto a números, y segundo, cómo hacer que esos números interpreten o muestren el significado semántico del texto que queremos convertir a número.
+Creo que se entiende la intención, ¿Cierto?
+Y aquí es donde nacen los embeddings.
+Hay dos técnicas para realizar embeddings.
+¿Alguien sabe cuáles pueden ser esas dos técnicas para Realizar embeddings?
+Chicos, Yo conozco algo, pero muy superficial, y es que el proceso primero parte, no sé exactamente cómo se llama ese proceso, pero el que conozco es que supongamos que se tiene una frase, entonces, o un documento, por ejemplo, entonces en ese documento pues aparecen muchas palabras, pero esas palabras pueden descomponerse, que es lo que se conoce como el proceso de tokenización, o lo que normalmente todos conocemos que el modelo chat GPT nos cobra por tokens.
+Bueno, es eso, es la descomposición de las palabras.
+Y entonces una de las formas de transformarlo en embeddings es evaluar la frecuencia de cada uno de esos tokens.
+Entonces supongamos que el documento, en el documento el token ar aparece 100 veces, entonces pues ese sería un token, ese ar, el token sería por ejemplo 100.
+Y ya con esos tokens entonces se les asigna como un ID y a partir de ahí ya se transforma en vectores.
+Pero lo que no entiendo muy bien es cómo se hace esa transición de token, que ya es un número, al vector.
+Bueno, lo vamos, voy a intentar explicar porque realmente es complejo y pues ya los modelos lo hacen, pero voy a intentar explicar con la explicación de ahora.
+Pero está perfecto Andrés, gracias.
+Y es una de las maneras en las que se puede hacer.
+Cuando nosotros hablábamos antes de la IA tradicional, si, Antes de entrar a los temas de IA generativa, hay una primera técnica y que nosotros en el pasado intentábamos replicar para cuando intentábamos ejecutar guía generativa, y es una técnica de codificación que se llama One hot.
+Voy a intentar explicarlo con un ejemplo.
+Imaginen que tienen un listado de palabras.
+Tienen un listado de palabras y esas palabras perro, gato, perro, gato, persona y correr.
+Perro, gato, persona y correr, pone el one ho.
+Lo que se espera es convertir el vector de tal manera como se crea una variable dummy, yo lo diría.
+Entonces perro, por ejemplo, sería el vector 1000.
+Son cuatro variables, entonces se pueden crear cuatro posiciones.
+La variable perro sería 1000, la variable gato sería la variable persona y la variable correr.
+Creo que se entiende más o menos.
+Esa era la forma tradicional para nosotros poder ejecutar modelos de inteligencia artificial tradicionales y con lo que intentábamos en el pasado, poder ejecutar modelos de guía generativa.
+¿Qué es lo que pasa?
+Cuando yo les digo, Pues no se está guardando una relación entre las palabras perro, gato, persona, correr, creo que eran las otras que les decía, no se está guardando ninguna relación entre las personas, entre las variables, perdón.
+Y además de que imaginen, yo les estaba dando cuatro posiciones, ahora imagínense un texto entero, tomar todo lo que yo hablado durante la clase y pasarlo a este modelo.
+Pues va a salir que un vector de 10.000 posiciones, de un millón de posiciones, pues no tiene sentido, ¿Sí?
+Y va a ser un modelo donde vamos a tener un vector con 99 ceros, 0,01 unos.
+Finalmente, sí estamos haciendo embedding, porque sí es embedding, sí es vectorizar, pero vamos a tener modelos que van a tener que procesar muchas variables con riesgo de sobreajuste, con riesgo de que podamos perder relación entre los datos.
+Y esa era la manera tradicional.
+Entonces, esa es una de las maneras en las que se puede hacer manera tradicional, en la que seguramente ustedes estarán haciendo también en algunos de sus trabajos.
+Y está bien a la hora de hacer pronósticos, predicciones, clasificaciones, clústering, y está bien.
+Pero la solución real y la que nos permitió ir en el segundo paso con la idea generativa, y acá espero responderle a Andrés un poco de la duda, es que cuando nosotros hablamos de la otra manera de hacer embeddings, que se llaman embeddings densos, es donde ya ponemos interesante un poco la cosa.
+Y es porque estamos intentando vectorizar el texto de tal manera que lo vectoricemos no desde la palabra, sino desde el significado.
+Similaridad semántica, lo que yo les hablaba hace un rato.
+Ustedes me dirán, profe, ¿Cómo se logra eso?
+¿Cómo?
+Sí, suena complejo, no es fácil, voy a intentar explicarlo.
+En lugar de representar las palabras como posiciones, como yo les decía, perro, mil, gato, no, los vamos a representar como un significado en un espacio vectorial.
+¿Cómo funciona?
+Piensen ahora en tomar la palabra perro y vamos a describir perro con atributos, y los atributos de perro pueden ser, no sé, pelo, tamaño, peso, raza, comportamiento, color, no sé, etnia, origen, no sé, estoy inventando cualquier cosa de perro.
+Y las n características que puedan surgir de perro, que intenten darle el significado a perro, esas n características, cada una de esas características se va a volver una posición o una dimensión más bien dentro del vector y se va a convertir en algo como tener perro es el vector 0,80.8, 03090,7, 0.2, donde cada uno de esos cero algo, bueno, todos van a ser entre 0 y 1, representa qué tan relacionada está esa característica con la palabra que está explicando de mejor manera la palabra perro.
+Porque si yo les hablo por ejemplo, de vaca, pues probablemente si tenemos una característica que sea leche, pues el valor que le vamos a dar a leche tal vez es del 0.9, pero el valor que le vamos a dar a negro, pues tal vez no es 0.9, tal vez es 0.1.
+Y de eso se va a encargar el modelo.
+Y ya con modelos base que ya están preconfigurados para realizar y calcular estos pesos.
+Entonces, ¿A qué voy?
+Lo que estamos haciendo es tomar cada una de esas partecitas de lo que le estamos ingresando a nuestro modelo y ya no separarlo por vectores y posiciones, sino separarlo por atributos, características y el peso que tiene cada atributo y característica para influir en esa variable.
+Listo, Creo que ahí se entiende un poco más, espero.
+¿Y qué es lo que queremos lograr con eso?
+Que palabras similares, como lo puede ser, era Juan Sebastián el que nos decía hace un rato con un ejemplo.
+Bueno, bueno, igual volvamos al ejemplo.
+Perro, gate, por ejemplo, que son palabras que pueden ser similares, tienen algún tipo de similitud, se pueden asemejar, pueden estar cercanas, diferente a que si tuviéramos el otro tipo de modelo y palabras como perro y gato no tendrían ninguna relación.
+Eso es, perdón, ya, eso es lo que queremos lograr con este modelo, con el embed intenso, lograr esa similitud semántica y poder asimilar estas variables, entre variables con estos pesos que tenemos.
+Lo más poderoso que estamos logrando con estos modelos es generar relaciones matemáticas y que esto finalmente lo que demuestra es que el modelo entiende una semántica.
+¿Y bueno, yo por acá me robé un ejemplo que es bien cliché cuando se explica modelos de guía generativa y es rey y reina tienen similitud?
+Hombre, y mujer tienen similitud, hombre y rey tienen similitud, reina y mujer tienen similitud.
+Pero qué pasa si al modelo semántico le decimos esto es un rey, pero hay que quitarle que es un hombre, pero hay que adicionarle que es una mujer.
+Entonces esto se parece a un rey, pero te estoy asegurando que no es un hombre y te estoy asegurando que es una mujer.
+Bueno, el modelo con estos tipos de vectores semánticos que les estaba explicando, lo que va a calcular es que finalmente tenemos una reina.
+Y bueno, más que nada sé que los estadísticos van a entender muy bien esto, lo que estamos haciendo finalmente es geometría.
+Geometría en espacios vectoriales.
+Espacios vectoriales, lo que estamos viendo acá, donde por ejemplo, en lo que yo les decía hace un rato, acá tenemos al hombre, acá tenemos al rey, acá tenemos a la mujer, acá tenemos a la reina, pero acá tenemos el perro, el perro va a estar en otro espacio vectorial, pero el hombre, el rey, la reina y la mujer están en el mismo espacio vectorial y están mucho más cerca, lo que quiere decir que hay mucha más similitud entre ellos y entre este.
+Pero bueno, todo es subjetivo, cuando hablamos de tres dimensiones, todo se vuelve muy subjetivo, todo se vuelve abstracto, todo es diferente.
+Y es que quiero que se lleven esto, ya lo vamos a hablar en la siguiente slide, y es cómo podemos ya hacer ese cálculo de qué se parece más a qué que otra cosa.
+Bueno, nada, la principal diferencia tenemos los embeddings densos, los embeddings one hot o dispersos.
+El one hot lo que está haciendo es capturar palabras concretas.
+Problemas que tiene el one hot, que se puede extender demasiado y puede crecer un vector demasiadas posiciones, donde vamos a tener muchísimos y muchísimos ceros.
+Y con los embeddings densos, primero vamos a tener valores semánticos de cada dimensión que vamos a analizar, pero problema requiere un previo entrenamiento, porque necesita comprender cuáles son los atributos que va a tener cada una de estas palabras que estamos analizando.
+¿Cómo se crean estos embeddings?
+¿Cómo se crean ESTOS embeddings densos de los que les vengo hablando?
+Se crean con algo que conocemos muy bien, que son las redes neuronales.
+Ya hay algunos modelos muy famosos de redes neuronales que permiten crear estos embeddings densos.
+Acá noté tres especí wordvec, glow, b y fast text que ya son modelos base que toman grandes cantidades de datos de texto y aprenden qué palabras aparecen en contextos similares.
+Eso como a manera general de los embedded dispersos y los embeddings densos.
+Pero bueno, ahora pasemos a la siguiente etapa de la IA generativa y es hablemos ahora sí de lo que es la indexación y vamos a hablar un poco de la búsqueda, o bueno en la siguiente slide vamos a hablar un poco más de la búsqueda y es entendamos cómo realmente hace la búsqueda la idea generativa de estos embeddings para que lo que nosotros le preguntemos o lo pidamos lo encuentre en segundos o en milisegundos o lo que se demore la IA en procesar.
+Y es que acá pues ya vengo a traer el concepto de la distancia en los espacios vectoriales y es a través de esta distancia en los espacios vectoriales que la IA nos entrega la mejor respuesta posible según las similitudes semánticas de lo que nosotros estemos solicitando.
+¿Alguno sabe qué pasa detrás de estos index?
+¿Alguno sabe cómo se puede medir la similitud entre los embeddings y entre los vectores?
+¿No sabe cómo se hacen estos cálculos chicos, o lo ha escuchado?
+Pues yo tengo algo de idea profe.
+Sí pues bueno, como muestra ahí la imagen, digamos que pues bueno al final lo que se tiene son vectores y pues como todo vector pues tiene magnitud y dirección y pues uno puede calcular distancias entre ellos.
+Ahí muestras algunos ejemplos como la distancia euclidiana, la similitud del coseno, el producto punto, que digamos que uno puede usar una u otra métrica dependiendo que busca, por ejemplo el producto punto solo te va a evaluar la dirección, pero por ejemplo si quisiéramos evaluar magnitud y dirección pues podríamos utilizar similitud del coseno.
+Pero digamos que lo que yo veo de malo en estos usos es que aquí se estarían viendo vector por vector, digamos si estoy utilizando similitud del coseno, quiero buscar la relación o qué tan similares son dos vectores o embeddings, entonces tendría que comparar todos los embeddings y si tenemos una base de datos de millones de embeddings, eso es muy costoso, entonces para esos casos por ejemplo ya hablando de racks que buscamos comparar tal vez millones de vectores o embeddings, entonces ahí ya se utilizan, son técnicas de aproximación que en el fondo utilizan estas métricas de distancia como la similitud del coseno, pero en realidad son aproximaciones, no son cálculos exactos de cuál es el vector más cercano o más parecido, sino que es cuál es el más aproximado, teniendo esas estrategias de como de vecinos más cercanos.
+Por ejemplo, una muy utilizada es la jerárquica navigable small word, que es de las que más se suele utilizar en racks y básicamente está basada en grafos, No busca comparar vector por vector, sino que a través de grafos busca un camino eficiente, un camino eficiente para llegar al grafo más cercano.
+Y una vez llega a ese grafo más cercano, ahí sí compara el pequeño número de vectores que haya entre ellos y encuentra el más cercano.
+Pero en el fondo están basados en estas distancias que muestras ahí.
+Pero en la práctica no suelen usarse directamente esas distancias.
+Gracias Andrés, está excelente la explicación.
+Finalmente pues lo que buscamos es encontrar esos grupos que se parecen mucho más entre sí.
+Pues hay diferentes metodologías, hay muchas.
+Acá yo solo traje como los que bajo la teoría, los cuatro que se deberían usar, que se usan, pero que ya ha cambiado mucho y de hecho con algunos modelos modernos no se aplica todo porque incrementa la capacidad de procesamiento.
+Juan Pablo, creo que tiene la mano levantada.
+Sí, Juan Pablo.
+Sí, era como para comentar también, pero creo que ya.
+Giovanni.
+Ah, no, pero si quiere complementar.
+¿Tienes algo?
+No, digamos, creo que no tengo como para complementar realmente.
+Listo, pero gracias.
+Lo que vayas teniendo, dale, sin problema, prende micrófono y puedes ir complementando.
+Pero sí, lo que nos decía Andrés, estas son metodologías que lo que nos permiten es medir qué tan cerca están los datos entre sí.
+Es básicamente eso, de manera sencilla.
+En un espacio vectorial.
+Señor, ¿Eso tiene que ver como con el positional encode que se ve en la arquitectura de los transformers o es lo que se ve en el posicionamiento de los cuando se hace el encoder?
+Sí, funciona igual.
+Es lo mismo, es lo mismo.
+Tú vas a tener unas coordenadas y a partir de esas coordenadas calculas esto.
+Aquí también entonces se le asigna como el vector posicional, o sea, posición para esos vectores.
+Acá también se le asigna un vector posicional.
+Exactamente, exactamente, exactamente.
+Y a través de ese vector posicional es que se hacen los cálculos de estas distancias para medir la distancia más cercana entre cada uno.
+Y pues quise traer como esta analogía, no es la que más lo trae o lo asemeja, pero me gusta porque no sé si alguno acá biodijo técnico o expresión gráfica y es como cuando veíamos cada uno de los planos de esta imagen, donde vamos a ver una posición que se ve así, se ve así, se ve así, Parece que cada una de estas es de un tamaño diferente, ocupa más espacio y puede que no sea del todo así, ¿Sí?
+Porque lo que vemos no es exactamente lo que representa el espacio vectorial.
+Esperen chicos, denme un momento por favor que me voy a zona qué tengo con ustedes.
+Ya chicos, perdón.
+Entonces, lo que va a hacer finalmente es que a través de estas distancias midamos ese espacio matemáticamente.
+Hay muchas maneras, muchas, muchas maneras.
+Yo traje las cuatro que bajo la teoría son las que se podrían usar o comúnmente se usan y desde álgebra lineal incluso se usan, ya Andrés nos contó algunas.
+Tenemos lo que es la similitud coseno.
+Lo que vamos a hacer es comparar la abertura entre los puntos a través de las fórmulas de coseno y calcular lo que está basado básicamente lo que es la proyección del vector sobre el otro.
+Y de ahí pues calculamos la longitud del vector sobre el otro a través de los cosenos.
+Tenemos lo que es la distancia Manhattan.
+¿Por qué lo llaman distancia Manhattan?
+Estuve investigando, yo no sabía, me enteré cuando estaba preparando la clase.
+Lo llaman por las calles de Nueva York.
+Concepto de calles de Nueva York que son famosas y que se miden las calles de Nueva York es moverse entre ejes básicamente, y es medir los ejes que está recorriendo cada uno de estos vectores.
+Distancia euclidiana, la más, la más común en lo que es el álgebra lineal común regular, que es la línea recta entre dos puntos, la distancia cuadrada, casi que la hipotenusa que hay entre los dos puntos, la línea recta más corta que une dos puntos, esa es la distancia euclidiana.
+Y el producto punto que ya nos decía Andrés, que ya combina lo que es la dirección, los cosenos y la magnitud de el vector y nos va a permitir saber cuál es la magnitud real del vector.
+¿Cualquiera está bien?
+Depende del modelo, se usan diferentes, hay nuevos, tenemos vecinos cercanos, tenemos muchos otros más que nos van a permitir saber cuál es el más cercano y cuál es el más apropiado para el modelo.
+Ya desde los modelos base se usan.
+Tenemos también desde Google, Google ya usa uno que se llama el vecinos cercanos escalables, algo así, no recuerdo bien cómo se llama, es un algoritmo base basado en los servicios de Google.
+Como siempre Google tiene una capacidad de inversión muy grande y operativa y de procesamiento y pues saca modelos base que son muy útiles.
+Problema de estos modelos, como nos decía Andrés, si tenemos millones de vectores, pues buscar uno por uno pues va a ser lento, costoso y no va a ser para nada escalable.
+Y por eso lo más común, vecinos más cercanos, Google y en especial pues Convertex AI, el ya usa vecinos más cercanos escalables creo que se llama, lo pueden buscar y pues lo que nos permite es justamente eso, acelerar un poco más, no es lo más preciso, pero es lo que más nos puede acelerar el proceso, menos propenso a errores, menos propenso a alucinaciones.
+¿Y qué más se acerca de este tipo de mediciones que tenemos acá?
+Tenía esto dentro de mis notas.
+Ah bueno, tengo algo importante y es que en el modelo que utiliza Google de vecinos más cercanos, vecinos más cercanos escalables lo vamos a llamar, que es el de Google, que no es el mismo de vecinos más cercanos, el concepto es el mismo, pero el vecinos más cercanos de Google utiliza algo un poquito más diferente.
+Y lo estuve investigando y acá les traje tres capas clave que utiliza el vecino más cercano escalable de Google de indexación.
+Primero, él utiliza algo que se llama la reducción del espacio de búsqueda, divide el espacio en zonas vectoriales.
+Esto es lo mismo que hace un árbol de decisiones, lo mismo que hacen vecinos más cercanos, es lo mismo, busca donde es más probable encontrar resultados relevantes y lo que hablábamos hace un rato, no es lo más exacto, pero tiene un buen margen de accuracy.
+Segundo, cuantización de datos y lo que hace es comprimir los vectores, comprime esos vectores buscando menos memoria, menos procesamiento utilizado y más velocidad al modelo.
+Y tercero, lógica de negocio, y lo que yo hablaba con algunos, cuando utilizamos algunos filtros de lógica de negocio, como por ejemplo filtrar, ya sabemos que queremos solo buscar por gatos negros, solo queremos buscar por, no sé, temáticas de Colombia, solo queremos buscar por, no sé, esos filtros de negocio que ya sabemos por dónde queremos indicar, va a permitir filtrar la data y pues no ejecutar en todo el aspecto de data que tenemos, sino sobre esos clústeres específicos de la data.
+Y.
+Finalmente lo que vamos a tener pues es el proceso que estamos completando.
+Ya entendimos cómo se codifican los datos a través de los embeddings, que tenemos dos posibilidades que hoy se usa.
+Una, el proceso indexación, que es donde calculamos el espacio vectorial.
+Hay diferentes maneras de calcular esa distancia dentro del espacio vectorial.
+Hoy lo que más se usa, vecinos más cercanos.
+Google utiliza vecinos más cercanos escalables de Google.
+Tenemos estas otras cuatro metodologías que pueden ser costosas, largas, cero escalables, pero es lo más exacto que podemos tener y es lo que está mejorando y potenciando la idea generativa que tenemos hoy.
+Listo.
+Y ahora en la tercera etapa, y es la etapa de Search.
+En la etapa de Search ya es el servicio que está completamente administrado por el proveedor que tengamos, caso Google Vertex AI, donde nosotros ya en la etapa de Search vamos a poder construir lo que son los motores de búsqueda, los chatbots, e integrar con pipeline de datos, integrar con nuestros pipelines de datos.
+Y lo más importante, convertir toda la teoría de embebings y de index en una solución empresarial lista para despliegue, lista para poner en productivo.
+Y acá es donde yo quiero que enlacen con sus trabajos.
+Y es cuando nosotros tomamos estas herramientas digitales, técnicas de negocio, perdón, estas herramientas digitales, técnicas digitales y lo combinamos con el negocio, comenzamos a obtener los flujos en tu en digitales, flujos end to end digitales que van a permitir crear un proceso de negocio end to end, de inicio a fin, donde vayamos a tener datos, si es algo relacionado y generativa, generación de embeddings, creación de los index, el endpoint, la consulta del cliente y todo lo que necesitamos desde el search.
+Y desde el Search ya hablamos de cómo mandamos en productivo nuestra herramienta y cómo nuestro usuario lo va a utilizar.
+¿Cómo puede ser este end to end digital?
+Me lo imagino algo así, un end to end digital aplicado con IA generativa.
+Listo.
+¿Primero tenemos los datos, datos que pueden ser ventas, productos, inventarios, documentos, fichas técnicas, todo lo almacenamos donde?
+Típicamente en BigQuery almacenamos esos datos en la nube.
+Con esos datos generamos los embeddings, usamos modelos ya pre entrenados, ya hay APIs, Vertex AI utiliza algunas APIs.
+Generamos los embeddings y generamos descripciones de estos datos que nosotros tenemos y generamos diferentes vectores de n dimensiones que vamos a utilizar para la similitud semántica, creamos los index, organizamos estos vectores en diferentes espacios vectoriales para realizar búsquedas rápidas.
+Ahí utilizamos el algoritmo que nosotros querramos, vecinos más cercanos, probablemente las métricas de distancia que nosotros querramos, y creamos estos index y siguiente, desplegamos el endpoint, Tomamos este index y desplegamos esto como un servicio y creamos esa aplicación frontend, sea chatbot, sea un dashboard, sea una página web, lo que sea, que consulte en tiempo real todo lo que tenemos en el backend.
+Finalmente, ¿Qué es lo que queremos?
+Que el usuario haga una pregunta, haga una consulta, genere una acción y se convierta esto en un embedding, se compara contra el index el índice y se devuelva con el resultado más similar a partir del cálculo que hagamos y que pues todo esto se haga en el tiempo x que requiramos, que ojalá sean segundos desde vértex e, según el nivel de madurez y el nivel de control que nosotros queramos.
+El nivel de abstracción, cuando hablábamos de abstracción en los temas de liderazgo digital, podemos tenerlo desde implementaciones sin código, implementaciones con bajo código y implementaciones con código, donde vamos a tener los notebooks, los jupyter notebooks, podemos hacer los llamados de las APIs, podemos meterle mano a estos endureales, integrar con datos de pipeline productivo, bla, bla, bla.
+Decisiones importantes.
+¿Cuál va a ser el algoritmo de búsqueda?
+¿Cuál va a Ser la métrica de similitud?
+¿Cuál va A ser la dimensionalidad de nuestro modelo?
+Pues entre más dimensiones tengamos, más atributos, más preciso, más potente, más robusto, pero de ahí más costo y ya.
+Y con eso vamos a poder generar nuestro modelo.
+Lo estoy intentando explicar de manera general, y cuando diseñan su end to end, siempre preguntarse lo que les he dicho y lo que va a venir para el trabajo final de la materia.
+¿Dónde están mis datos?
+¿De dónde los voy a consumir?
+Tal vez no es un bigquery, tal vez un CRM, tal vez es un ERP, Algunos ERP ya permiten la integración en tiempo real, lo cual está muy bueno, ¿Cómo los convierto en embeddings?
+¿Cómo los indexo?
+¿Y qué experiencia va a tener el usuario?
+¿Cuál va a ser ese demo?
+¿Cuál va A ser ese mockup que alineo con el negocio para presentar la solución final?
+Y este debería ser el endpoint.
+Listo.
+Ahora, hablando de algo complementario a lo que venimos tocando en la clase y son los racks.
+Los racks ya lo hemos venido hablando, pero es algo muy importante.
+Cuando ya hablamos de las soluciones más específicas para nuestras organizaciones, necesitamos hablar de los racks.
+ChatGPT, Gemini, Deepseek, Cloud, bla, bla, bla, bla, bla, bla, Grok, bla, bla, bla, bla, bla.
+Los n modelos que conozcan ustedes y que seguramente conocen más que yo, no tienen acceso a los datos de nuestras empresas, algunos ni siquiera tienen datos a Internet, pueden estar desactualizados, pueden no hacer sentido con nuestro contexto de negocio, pueden alucinar y responder con mucha, mucha seguridad, se los digo por experiencia, cosas que no tienen absoluto sentido.
+Entonces ahí es donde viene la pregunta clave.
+¿Y cómo hacemos que la IA generativa responda con datos reales, actuales y confiables?
+Lo que yo justamente necesito.
+Y ahí es donde entra el Rack Retrieval Augmented Generation.
+Y lo que busca, desglosemos el concepto, es búsqueda retrieval, encontrar información real a través de IA generativa, construir la respuesta y en palabras simples, darle como cuando nosotros le colocamos, bueno, ya eso ya no se hace, pero cuando nosotros le adicionamos memoria a nuestro computador de manera física, que le comprábamos antes más memoria a los computadores y lo conectábamos, es darle esa memoria externa a nuestra solución de idea generativa, darle esa memoria adicional para que él tenga mucho más contexto de la data.
+¿Cómo le podemos dar esto a nuestros modelos con datos externos?
+Inyectándole documentos, bases de datos, conectándolo a bases de datos en tiempo real, PDF, políticas, reportes, todo lo que podamos conectar, como lo vimos hace un rato.
+Convirtiendo en veins estos datos externos, igual que vimos antes, guardándolos en un vector.
+¿Quién puede hacer esto?
+Herramientas, APIs que ya hay, Vertex, AI lo puede hacer.
+Convierte estos datos externos en embeddings, y una vez convierta estos datos externos en embeddings, crear el index.
+Y una vez tenga el index, mandarlo a productivo y crear la experiencia para el usuario, para que el usuario comience a preguntar ¿Cuántos días de vacaciones tengo hoy?
+¿Y de manera muy conversacional y en lenguaje natural, podamos responder al usuario cuántos días de vacaciones tiene hoy?
+Algo que probablemente sí, probablemente no, pues lléven a chatgpt, deepseek, no van a poder responder porque no tienen acceso a este tipo de cosas.
+¿Todo basado en que?
+Lo que hablábamos hace un rato, similitud semántica o búsqueda semántica, como lo quieran llamar.
+Búsqueda por el vecino más cercano puede ser.
+Y pues finalmente, ¿Qué es lo que ganamos?
+Que con el RAC pues vamos a tener respuestas basadas en los datos contexto de nuestro.
+De nuestra.
+Vamos a obtener respuestas con datos del contexto en el que estemos.
+Bien, eso básicamente.
+Y ahora un último concepto, un último concepto y es el concepto de búsqueda híbrida.
+Y el concepto de búsqueda híbrida, como dice búsqueda híbrida, lo que plantea es la búsqueda semántica más la búsqueda por palabra.
+Y es sencillo, intenté representarlo en este gráfico de manera sencilla.
+Tenemos el input y el input puede irse por la búsqueda semántica, por lo que más se asimile o por la búsqueda por palabra, por la palabra exacta.
+Y es que tal vez cuando nosotros buscamos un SKU en específico, el SKU, por ejemplo, el éxito tiene un SKU específico para el televisor led de 55 pulgadas LG y el SKU es el AAA 111.
+Entonces si yo le ingreso a mi modelo el AAA 111, pues él no debería hacer una búsqueda semántica, él debería hacer una búsqueda por palabra, porque le estoy dando la palabra exacta.
+Y a eso iba, por eso no quería satanizar la búsqueda por palabra.
+El One Hot no lo quiero satanizar porque es una manera de potencializar aún más nuestros modelos y reducir aún más las alucinaciones.
+Y es que cuando le entregamos un valor exacto, pues él debería ejecutar esto, va a ejecutar menos, va a consumir menos procesamiento, va a ser mucho más rápido y va a entregarnos algo mucho más exacto de lo que podría ser la búsqueda semántica.
+Diferente a si le ingresamos al modelo televisor LED LG, bueno, él va a buscar dentro de los de cincuenta y cinco, sesenta, setenta, ochenta, noventa pulgadas, todos los que hay.
+Diferente a si le ingreso directamente el SKU específico, igual, siempre va a correr el ranking, siempre va a ser el filtro y finalmente me va a dar el output.
+¿Cuál es mi consejo?
+Y pues ya en todas las ideas generativas hay ninguna de las dos por sí sola es suficiente.
+La búsqueda semántica es muy poderosa entendiendo el contexto, entendiendo el significado.
+La búsqueda por palabra clave es muy poderosa entendiendo términos exactos.
+Y el ejemplo más claro son SK, la búsqueda híbrida finalmente lo que está haciendo es combinar lo mejor de ambos mundos, comprender el significado, búsqueda semántica, detectar coincidencias, búsqueda de palabras clave, qué vamos a tener Resultados más precisos, menos alucinaciones y resultados mucho más útiles.
+¿Cómo funciona ya en lo técnico?
+Igual, codificación, se generan los embeddings densos semánticos, se generan los embeddings dispersos basados en tokens y en vectores de posiciones, se indexa la información, ambos tipos de BEI se almacenan y se indexan.
+Claro, acá ya estamos hablando de dos tipos de veins, entonces el recurso que se va a consumir es mucho mayor.
+Tercero, la búsqueda.
+Se ejecuta la consulta en ambos espacios, en el espacio semántico, significado y en el espacio de palabras, que es un espacio léxico, un espacio de vectores de posiciones.
+Se hace el ranking, se combinan los resultados usando un algoritmo de.
+Acá se me olvida chicos, RRF, no me acuerdo específicamente qué significa las siglas, pero bueno, es el algoritmo que combina estas matrices que se generan y el algoritmo lo que va a priorizar son los resultados que aparezcan mejor posicionados en ambas búsquedas, independientemente si es semántico o es por palabra clave.
+Y el resultado finalmente es la respuesta más relevante y más acercada a lo que necesitamos con exactitud.
+Listo, Así funciona la búsqueda híbrida RRF.
+Ahorita lo busco y se los digo en después del descanso.
+Bien, hasta ahí ¿Alguien tiene preguntas, dudas, consultas?
+RRF traduce puntuación de búsqueda híbrida reciprocal, rank fusion y es lo que les decía, evalúa las puntuaciones en ambos tipos de búsqueda.
+Bien chicos, hasta hay preguntas, dudas, consultas.
+Si no hay, podemos dar 15 minutos de descanso entonces veo que no hay, entonces nos vemos 6 y 10 acá mismo para continuar con la clase.
+¿Listo chicos, 6 y 10, nos vemos entonces, aprovechen el espacio para hacer una pausa activa?
+Ya nos vemos, hasta luego.
+La.
+Hola chicos, ¿Me escuchan?
+Hola profe.
+Sí señor, gracias Santiago, qué bueno.
+Listo chicos, como segunda parte tengo un ejercicio en vértex, un ejercicio de análisis de imágenes, donde vamos a cargar una imagen, le vamos a hacer ciertas preguntas y nos va a dar respuesta a esas preguntas.
+De pronto ya alguno de ustedes lo hicieron, es del mismo laboratorio de la clase pasada, pero un ejercicio en particular que no alcanzamos a hacer, pero quisiera no dejar para lo último lo que tenía, y es la próxima sesión, y es solucionarles dudas respecto a la próxima sesión, consultas que tengan, explicarles en qué va a consistir la sesión, que deberían traer.
+Entonces, para la próxima sesión ya tenemos nuestra entrega final, que es la consolidación de las cuatro entregas que les he ido dejando progresivamente, más o menos cada tres semanas, cada cuatro semanas más o menos, les iba dejando estas entregas.
+¿Y cuál es el objetivo?
+Extraer el planteamiento de un end to end digital, donde apliquen lo que hemos ido aprendiendo durante las clases.
+Esta clase tiene una componente que es liderazgo, es parte del nombre de esta clase, donde muestren cómo pueden llevar su liderazgo digital a esa organización donde la están dirigiendo, sea su emprendimiento, sea su empresa, sea otra empresa, cómo hacen el planteamiento del proyecto y qué herramientas de las que hemos ido viendo van a involucrar dentro de este proyecto.
+Y para eso, durante las cuatro entregas que yo les he dado, les he ido dando como el parámetro, el paso a paso de lo que deberían seguir.
+Sin embargo, yo preparé un documento que ya les voy a mostrar, Que les voy a estar mandando por correo, probablemente después de esta clase, con todos los parámetros del trabajo final.
+Estos son los parámetros del trabajo final.
+Vamos a comenzar acá la introducción.
+El trabajo final del curso de Generative AI Líder, donde vamos a trabajar sobre liderazgo digital y estrategia digital con IA Generativa.
+Consiste en una propuesta end to end digital que aborde un problema, dolor o necesidad desconocida en sus organizaciones, empresas, diciendo otras o emprendimientos.
+Ya ustedes me pasaron sus propuestas, yo ya las tengo, van a trabajar sobre esas, espero ya hayan estado adelantando sobre esas.
+El objetivo es que demuestren su experiencia en los conceptos aprendidos durante el curso, aplicando liderazgo digital y estrategias de digitalización, con foco en la guía generativa, es decir, automatización y potenciación, para proponer una solución innovadora, viable y convincente que puedan vender, entre comillas, a sus organizaciones para su implementación.
+La presentación del trabajo final se realizará durante un evento de dos horas.
+Nos podemos extender, lo planifique dos horas más que nada porque van a venir dos expertas del mercado digital que van a ser parte de los jurados del proyecto.
+La idea es que junto a mí voy a ponderar las notas que los tres les vamos a dar, los dos jurados y yo.
+Y esa va a ser la nota final del proyecto.
+Dos horas, por lo que pues hay personas externas, no les puedo tomar más de su tiempo, les voy a tomar dos horas.
+Entonces procurar que sea dentro de las dos horas.
+Igual si nos extendemos un poco, no pasa nada.
+Van a ser tres jurados, yo voy a hacer uno de esos jurados y vamos a proporcionar retroalimentación a cada uno de los grupos.
+Cada grupo va a tener 30 minutos para presentar y van a ser cinco minutos de preguntas y retroalimentación.
+Termina grupo 1.
+Preguntas que nosotros tengamos, ustedes van a contestar.
+Dudas que nosotros Tengamos, ustedes contestan y les damos una retroalimentación.
+En cinco minutos terminamos ese espacio.
+Pasamos al siguiente 30.
+Cinco minutos.
+Siguiente 30.
+5 minutos.
+Entonces procurar primero tener las presentaciones listas, estar todos en la sesión.
+Es mandatorio estar en la sesión.
+¿Qué más?
+Ah, bueno, se sugiere que la presentación sea en diapositivas.
+Es una sugerencia.
+Puede ser PowerPoint, puede ser Google Slides, puede ser Canva o algo similar, Plataforma, herramienta que ustedes decidan utilizar, por mí está bien, es mi sugerencia.
+La idea es que sea una presentación clara, visual y profesional, que incluyan gráficos, diagramas y mockups para ilustrar la solución.
+Yo les voy a habilitar un espacio en Teams para que suban ahí.
+La presentación.
+Va a ser a las 4 de la tarde, la hora límite para subir la presentación de la otra semana.
+Cada sección que les voy a mostrar a continuación debería presentar o reflejar, más que presentar, reflejar los conocimientos que han ido adquiriendo durante el curso con enfoque en Liderazgo Digital, Estrategia en Digitalización y Estrategia con IA.
+Asegúrense de especificar qué herramientas digitales se usarán en cada etapa del end to end y cómo el liderazgo digital va a facilitar la opción y ejecutar esa herramienta dentro de la organización.
+Acá tengo como el paso a paso de lo que sugiero que debería tener la presentación.
+No necesariamente es una diapositiva por cada una de estas secciones, no.
+Lo pueden consolidar en varias.
+Es solamente lo que considero que debería contener esa presentación.
+Presentación de los consultores, Presentación del cliente o la organización, Necesidad del negocio, El end to end, Aquí hay varios puntos del end to end.
+Y finalmente cerrar con una conclusión y acá yo les doy los parámetros.
+Algunas recomendaciones.
+Sean muy concisos y vayan al grano en la presentación.
+Usen visualizaciones para hacer la propuesta más atractiva.
+Enfóquense en el impacto que tendrá la solución en la organización.
+Practiquen el storytelling en cómo hablan, cómo presentan, cómo se expresan.
+Va a haber un jurado, entonces, pues no solo soy yo, ellos ya tienen algunos parámetros y son expertos que aprecio por su experiencia, por su conocimiento, por sus estudios.
+Cumplan el tiempo y tengan presentaciones preparadas, así todos pueden presentar en el tiempo que tienen, pues son tres horas de clase, 30 minutos cada grupo, es decir, estamos pronosticando hora y media, 15 minutos en total de feedback.
+Al final vamos a dar un feedback general para todos.
+Entonces, pues ahí hay más que tiempo de sobra.
+Criterios de calificación, 30 identificación y justificación de la necesidad, 50 presentación de la solución en tu digital, que es todo, y 20 calidad de la presentación y el mocap es básicamente eso.
+Acá hay algunas como descripciones y expectativas de lo que creo, considero que debería tener su presentación.
+Creo que está muy claro el paso a paso, no es nada diferente a lo que hayamos visto, a los conceptos.
+Quiero ver cómo los aplican, cómo los interiorizaron, cómo lo van a hacer.
+Muy importante la justificación financiera.
+Cuando hablamos de proyectos y más proyectos digitales, hay que justificar muy bien, esto es lo que vamos a invertir y esto es lo que vamos a ganar.
+¿Por qué creemos que necesitamos invertir esto y por qué creemos que vamos a ganar esto?
+Y ya, eso es finalmente el trabajo final de acá.
+¿Tienen dudas, preguntas, consultas?
+Es el momento, chicos.
+Sí, profe.
+¿En la presentación exponemos únicamente las slides o también tenemos que destinar parte del tiempo al mockup, nos entabló o en lo que tengamos?
+Si, todo, todo, 30 minutos para todo, tanto presentación, como mockup, como demo que tengan.
+Listo, profe, con gusto tienen de aquí hasta el otro viernes para que me pregunten, me consulten si necesitan un espacio, que me avisen para poderlos ayudar antes de la sesión, que si algo no está claro o o en algo están trabados, algo no saben cómo solucionarlo, me puedan preguntar.
+Y pues nada, chicos, esto es como el resumen general de lo que yo quiero que se lleven para que ustedes puedan liderar la transformación digital de sus organizaciones, de sus empresas, que generen impacto, que es finalmente lo que espero.
+¿Ya?
+Básicamente eso.
+Voy a dar un repaso rápido por los grupos que tengo, para que me puedan confirmar.
+Estos son los grupos que tengo.
+¿Están correctos?
+¿Alguna modificación?
+¿Alguien que se haya salido?
+¿Alguien que SE HAYA separado?
+No, profe, todo bien.
+Listo, Perfecto.
+Listo, chicos, entonces.
+Bien, esa va a ser la tarea.
+Bien, Esto va a ser el resumen general entonces, del curso.
+Nos Vemos a las 4 la próxima semana, puntuales, porfa.
+Comenzamos también 4 y 5.
+Vamos a tener también un espacio con los jurados para que los conozcan, muy pequeño, para que ellos les hablen un poco de ustedes y por fa, háganlo muy bien.
+Y con eso cerraríamos el curso.
+Para cerrar, chicos, vamos a cerrar con.
+Dime, Michelle.
+Profesora, ¿Que al finalizar la clase, te podemos molestar unos 5 minuticos?
+Sí, claro que sí.
+Listo, vamos a cerrar con este último ejercicio, que es Diseño de instrucciones en Vertex AI.
+Es el laboratorio desafío que hicimos la clase pasada, pero en el cuarto punto, que es hacer algunos temas de imágenes.
+Voy a pasarlo muy rápido y se los dejo de tarea.
+Y de ahí, si quieren, me quedo con los estudiantes que tengan dudas para aprovechar el espacio.
+Recién vi que Andrés compartió lo de la arquitectura, así que muchas gracias.
+Este es el laboratorio, es este de acá.
+Y el ejercicio, como también se demora un poco, voy a explicarlo para que lo puedan desarrollar mientras estoy con el equipo de Michelle solucionándoles algunas dudas.
+Entonces.
+Perdón, ¿Es el ejercicio 4, no?
+¿Estoy mal?
+Sí, es el ejercicio 4.
+Listo, perfecto.
+Entonces, el ejercicio 4 dice.
+En esta tarea usarás la interfaz de instrucciones principal de vertexci Studio con el modelo Gemini para analizar una imagen y extraer información de ella.
+En este curso se demuestra cómo diseñar instrucciones.
+Cómo diseñar instrucciones para varias tareas analíticas, como la extracción de texto y la búsqueda de respuestas basadas en contenido visual.
+Perdón, chicos, voy a apagar cámara, estoy muy agripado.
+Bien, entonces, en este ejercicio, pues lo que se espera es trabajar sobre Vértex.
+Me está abriendo.
+Trabajar sobre.
+Ah, ya me abrió.
+Trabajar sobre Vértex y analizar una imagen que ya está dentro de Google, que vamos a subir y hacer algunas pruebas de análisis sobre esa imagen.
+Es un ejercicio muy muy sencillo, pero pues como hoy tuvimos una componente de cómo funcionan los embeddings y cómo se trabajan sobre las imágenes, me gustaría mostrarles rápidamente cómo funcionan y que ustedes ya más que nada se lo lleven para la casa para que lo puedan trabajar.
+Entonces, ¿Cómo es el ejercicio?
+Van a ingresar a Vertex AI y una vez ingresen a Vertex AI vamos a ingresar acá, al igual que siempre vamos a darle en crear nuevo chat.
+Perfecto, una vez le demos en crear nuevo chat, vamos a cargar la imagen que queremos analizar.
+Entonces vamos a darle acá en el import from cloud storage y por acá en este bucket tenemos esta imagen y bien, vamos a darle a esta imagen y listo, se carga la imagen.
+Vamos a pegar nuestro prompt, que queremos que genere un título breve, menos de cinco palabras, que escriba la imagen en una dos oraciones y que extraiga todo el texto visible de la imagen.
+Vamos a cambiarlo para un modelo más rápido, más liviano, 2.5 flash y le vamos a dar enviar y de la casa demorar algunos segundos en procesar pero que quiero que se lleven, Fue bastante rápido, menos mal que pues a través de Vertex Eye como es un una plataforma multimodal, además de nosotros poderle pasar texto, como usualmente le pasamos datasets, también podemos pasarle algunos datasets de imágenes para que él nos pueda procesar esas imágenes y de ahí sacar algunos modelos mucho más estructurados y que de hecho si queremos sobre esta misma data trabajar podemos hacerlo y podemos preguntarle como basado en los vuelos, qué porcentaje salen antes de las once y media y muéstrame los cálculos.
+Entonces le voy a pedir que me haga un cálculo de la data y finalmente él me hace los cálculos de manera muy rápida y así es parte del ejercicio.
+Listo, con esto ya tendrían este punto, como ven es muy sencillo, solamente quería mostrarles parte del procesamiento, ya si quieren ver algo de más detallado del modelo, acá pueden ajustar la temperatura, podemos probar diferentes temperaturas, la respuesta debería ser un poco diferente dependiendo la temperatura, el límite de tokens, podemos jugar también con esto, cuántos tokens queremos que nos muestre y podemos hacer algunos juegos con esto, incluso si queremos probar alguno de los otros modelos que hay, podemos probarlo, pero pues yo recomiendo 2.5 flash.
+De hecho, creo que en el laboratorio sugieren también hacerlo con 2.5 flash, por lo que va a procesar más rápido.
+Los otros se pueden demorar bastante.
+Entonces.
+Entonces, bien, este es el ejercicio.
+Terminenlo con el quinto.
+El quinto ya es para generar contenido multimedia.
+Es muy, muy sencillo.
+No es más que Screening Prompt.
+Bueno, intentémoslo hacer acá, a ver si no se demora mucho.
+Vamos a ir a New Chat y le vamos a dar en Imagen.
+Y en imagen vamos a poner el prompt que nos sugiere acá el laboratorio, que es un prompt para crear una imagen súper realista.
+Le voy a dar, no sé cuánto se demore, puede que se demore un poco.
+Y ya nos va a crear una imagen súper realista.
+Entonces, esto es a lo que me refiero de que desde Vertex podemos trabajar modelos multimodales.
+Eso a manera muy, muy genérica.
+Bueno, acá él se demora bastante, por lo que ya le estoy pidiendo crear algo, pero quería que se llevaran ese concepto.
+Listo, chicos, hasta acá iba la clase de hoy.
+Abro el espacio para los que se quieran quedar y tengan preguntas, grupos que tengan preguntas o preguntas particulares que nos podamos quedar.
+Si quieren, ahora me quedo con Michelle, me pueden llamar a un chat compartido, voy con ustedes y los atiendo.
+Vuelvo a esta sesión general y los que estén acá, los voy atendiendo en orden por los que hayan levantado la mano, ¿Les parece?
+Los que no tengan consultas, dudas, nada particular, los libero, los libero para que puedan salir de la clase.
+Y los que se queden, pues acá nos quedamos.
+Entonces, chicos, muchas gracias por el espacio, por la sesión de hoy, por haber participado.
+Y nos vemos en la clase dentro de ocho días.
+Entonces, quedó pendiente a la llamada.
+Gracias.

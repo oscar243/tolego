@@ -1,0 +1,404 @@
+Cuando hablamos de la estrategia de Inteligencia Artificial, lo ideal es que nos centremos en dos principales stakeholders.
+Estos dos principales stakeholders son las dos personas o los dos interesados a los cuales deberíamos intentar influenciar principalmente a la hora de plantear una solución o una estrategia Inteligencia Artificial o de una herramienta digital en general.
+¿Por qué?
+Porque cada uno tiene un nivel de influencia grande la compañía.
+Cuando nosotros hablamos del Sea Level, el Sea Level es la persona que tiene la visión clara de la compañía, es de la persona que deberíamos contar el patrocinio, no necesariamente el CEO, puede ser el Chief Data Officer, el el Chief Artificial Intelligence Officer, el CTO, bla, bla, bla, bla, bla.
+Lo importante es contar con esta persona que tenga un nivel ejecutivo alto, que tenga una visión clara del negocio y por lo tanto necesitamos explicarle y hacerle entender para que tenga una visión, hacerle entender nuestra herramienta digital para que tenga una visión clara de la implementación de esa herramienta digital que nosotros queremos lanzar, implementar, desarrollar dentro de la compañía.
+A esa persona es a la que le deberíamos hacer entender el papel fundamental que tiene la aplicación de esa tecnología que estamos proponiendo dentro de la compañía y que es una tecnología tendencia que va acorde a la tendencia y que tiene una proyección de ROI de retorno de los ingresos apropiada para la organización.
+¿Cómo lo deberíamos hacer?
+Y pues este es parte de mis consejos.
+Todas estas iniciativas de IA generativa, todas estas iniciativas de herramientas digitales se deben alinear a los objetivos comerciales de la compañía, compartir los mismos KPIs que está compartiendo la compañía, porque si logramos ajustar o más que ajustar, buscar esta solución apropiada que vaya con en la misma vía de los KPI de la compañía, vamos a asegurar de que probablemente estos niveles C Level aseguren una inversión para desarrollar estas herramientas que nosotros estamos proponiendo.
+Y pues si aseguramos estos recursos que nosotros necesitamos para hacer el desarrollo que necesitamos, ya podemos comenzar a pasar a una siguiente etapa de lo que es el proyecto de la solución digital que estamos proponiendo.
+Pero también hay un segundo nivel del cual nosotros necesitamos el patrocinio.
+Y pues usualmente yo recomiendo sea, podemos ir de manera ascendente o descendente, podemos ir directamente desde el Cent Level y luego pasar a la gerencia, muchas veces es más fácil, o podemos pasar de la gerencia al C Level, a veces también es más fácil, depende mucho la persona y el relacionamiento que tengamos con la persona.
+Pero una vez tengamos el apoyo del si level o vayamos a hacerlo de primero, como nosotros decidamos que pueda ser, el orden de la estrategia, necesitamos sí o sí, lo importante es asegurar también el patrocinio y la influencia sobre las gerencias y por lo tanto sobre los colaboradores que están dentro de esa gerencia.
+Cuando hablamos de las gerencias, ya los que son los líderes del área, los que debajo de ellos tienen los operativos, los ejecutores, los especialistas que van a desarrollar, que van a usar, que no necesariamente están envueltos en lo que es el desarrollo de la herramienta digital, pero que sí están envueltos en usar la herramienta, pueden ser cualquiera de los dos.
+Pero una vez tengamos el patrocinio de esas gerencias, y lo ideal es que el patrocinio de esas gerencias vengan de esas gerencias que están en la operación diaria, vamos primero a obtener que esa persona sea nuestro principal impulsor de la adopción de esa solución digital que vamos a traer a la compañía en su área.
+Y si logramos que un área y una gerencia se adopte y mostrar un caso de éxito, pues 100% seguro vamos a poderlo implementar en otras gerencias y en otras áreas.
+Además de eso, a mí me parece clave también influenciar sobre estas áreas de gerencia, porque ellos son los que nos van a permitir la identificación del problema y del problema del día a día de ellos, del día a día de la compañía y a partir de ahí que nosotros pensemos cómo con nuestras soluciones, con las soluciones que aún no sabemos que existen y que vamos a comenzar a investigar, cómo podemos solventar eso.
+Ellos son finalmente los que van a promover primero la innovación digital de los procesos y promover pues obviamente lo que es el aumento de la productividad, la eficiencia de los costos, los ingresos, lo que hemos hablado durante todo las clases.
+Ellos son entonces dos partes, si leve para asegurarnos primero de contar con los recursos y la visión de la compañía y como nosotros hacemos de que nuestra solución esté encaminada a los KPI de la compañía y segundo, la gerencia, porque son los que finalmente van a promover nuestras soluciones digitales con sus equipos y que además de promover esas soluciones digitales con sus equipos, nos van a entregar nuevos retos que van a promover la innovación tecnológica.
+Me gusta algunas recomendaciones que tenemos y es que la implementación de estas soluciones de inteligencia artificial o soluciones digitales en una organización debe adoptar una estrategia multidireccional.
+Es una estrategia que no apuntar a un único lado, a un único grupo.
+¿A qué me refiero con esto?
+A que la estrategia requiere desarrollar estrategias, diferentes estrategias dentro de la estrategia que se enfoquen los siguientes aspectos, que son estos seis que tengo listados acá.
+Que primero haya un enfoque estratégico, que segundo haya una exploración, tercero inteligencia artificial responsable, que ya hay muchos temas sobre esto, cuarto recursos, quinto impacto y sexto mejora continua, que no es nada diferente de lo que estaba hablando cuando sucedía lo de acá arriba.
+Entonces cuando nosotros hablamos del enfoque estratégico, hablamos de cómo vamos a impactar a nuestros principales stakeholders.
+Entonces, por ejemplo, cuando hablamos de los gerentes y colaboradores, lo más urgente es identificar en el trabajo diario qué está sucediendo, buscar esos desafíos del mundo real, porque van a ser el principal punto de partida que ustedes en su empresas, negocios, emprendimientos, día a día va a ser ese punto de partida para que ustedes comiencen a desarrollar esas herramientas, soluciones, desarrollos de IA digitales que generen un impacto significativo para la organización en la que ustedes están.
+Cuando, bueno, me voy a volver uno.
+Cuando nosotros hablamos del Sea Level, mi sugerencia como Nicolás es que se concentren en un área específica que quieran impactar con la IA o con la solución digital.
+Es el lugar donde ustedes consideren que con una solución de IA puedan tener un impacto significativo en la organización.
+Siempre prioricen los casos de uso donde sea más fácil implementaría y donde tenga más valor y por lo tanto donde se va a garantizar el retorno de la inversión.
+Ahorita les voy a enseñar un poco, les voy a enseñar mucho más de cómo hacerlo y vamos a hacer un ejercicio sobre esto.
+Ahora ya cuando hablamos de la estrategia de exploración, es donde ya debemos comenzar a involucrar todo lo que es cultura organizacional, cultura digital en la organización.
+Es comenzar a capacitar los empleados para que prueben esas herramientas de IA y digitales que estamos trayendo al negocio.
+El objetivo nosotros en la estrategia de exploración es que fomentemos un entorno de colaboración en donde todos los colaboradores, nosotros nos sintamos parte del ADN innovador de la compañía, de que estamos haciendo algo diferente por la compañía, donde pueden compartir información e ideas y se genera ese sentimiento de comunidad para que se aproveche al máximo las soluciones digitales que estamos trayendo.
+Tercero, IA responsable, que es un tema que ahora se habla mucho, de hecho Google tiene incluso algunos cursos dedicados 100% al tema de IA responsable, me hace totalmente sentido, yo en unas clases pasadas les mostraba el mundo distópico donde Ultrón ganaba la batalla.
+Y es que cuando hablamos de Inteligencia Artificial responsable, debemos comenzar a pensar de manera proactiva sobre cuáles son los posibles errores y consecuencias de no hacer un buen uso de la inteligencia artificial, o la implementamos, la usan y qué puede pasar por un mal uso, qué puede pasar por un error, esos escenarios que hoy no estamos previendo y me incluyo, muchas veces cuando lanzamos soluciones digitales cometemos el grave error de desarrollar estas soluciones digitales y no pensar en qué pasaría si falla, qué pasaría si se le ha dado mal uso, qué pasaría si no es así.
+Y ahora les voy a contar una historia, cuando hablamos de los recursos, estos pueden ser varios tipos de recursos, pero se debe pensar primero en los datos a los que vamos a acceder, que estos sean de calidad para poder entrenar los modelos de de IA, las soluciones digitales que trabajan con datos, Que sí, que finalmente lo que hagamos es ver lo que es el dato como un recurso valioso, un activo de la compañía.
+Y segundo, algo que también sucede demasiado es que ya nosotros que trabajamos en temas digitales, como ingenieros de inteligencia artificial, como ingenieros de datos, como analistas de datos, científicos de datos, etc, etc, etc.
+Nosotros que trabajamos en esto y que muchos tenemos que relacionarnos con lo que es el negocio puro de nuestras compañías, los Kiaco, managers, vendedores, mercadeo, bla bla bla.
+Sabemos que algo que pasa mucho es algo que yo lo llamo reciclar, y es que nos piden algo, o le piden algo a alguien del equipo, o le piden algo a la gerencia del equipo, pensamos en desarrollarlo y resulta que la compañía ya pagaba por eso, ya había desarrollado eso o ya había algo base de lo cual podíamos alimentarnos, usar o partir de ahí, y es que siempre consideremos lo que ya se ha hecho en cuanto a documentación, a herramientas, incluso lo que ya se paga, porque pasa mucho en las compañías, pasa mucho las compañías grandes nos olvidamos de las herramientas que ya tenemos y que hay herramientas muy buenas por las cuales ya se pagan.
+Entonces, no todo se tiene que desarrollar.
+Muchas veces no es más allá de buscar siguiente.
+Y yo se los decía con El tema del C Level, es establecer los KPIs.
+Establecer los KPIs para medir el impacto real de la IA.
+KPIs que sean coherentes con las ambiciones del negocio, que puedan ayudar a medir el aporte de nuestras soluciones digitales, el aporte de la inteligencia artificial en la compañía.
+Lo que yo les decía, las soluciones deben ir alineadas a la visión del negocio.
+¿Que da la visión?
+¿A dónde apunta la visión del negocio?
+A ciertos KPI.
+Por eso nuestras herramientas deberían tener la capacidad de poderse medir a través de los KPI del negocio.
+Y por último, algo muy importante, y es parte de lo que yo les decía, que nos puede proporcionar lo que son las gerencias, los equipos, los colaboradores, los que están en el día a día, es la mejora continua.
+Y es algo que se debe adoptar.
+Adoptar el enfoque iterativo, implementar sistemas de recolección de feedback.
+Yo les decía, se les olvida, a muchas personas se nos olvida demasiado implementar estos sistemas, estos mecanismos para recopilar el feedback de los clientes, garantizar que cumplamos con las expectativas del cliente o del usuario y además que esto nos sirva como sustento para buscar mejoras.
+OK, la inversión son 15 mil dólares más de lo que ya estamos invirtiendo hoy.
+¿Por qué vamos a invertir 15 mil dólares mÁs?
+Bueno, porque tenemos al menos un comentario diario donde nos comentan que necesitan esto de manera urgente.
+Y bueno, y a la final es la voz del cliente, del usuario, y ahí vamos a poder apalancar nuestros proyectos y vamos a poder apalancar esto que es la mejora continua.
+¿Cómo lo mejoramos?
+Y yo hablaba, creo que Andrés le conté muy rápido la semana pasada cuando estábamos allá en la charla.
+Hace poco lanzamos nuestro canal de atención virtual.
+En mi empresa yo lideré esta iniciativa, una iniciativa muy, muy grande, con muchos equipos envueltos en esta iniciativa.
+Equipos de negocio, equipos de mercade, desarrolladores, ingenieros de datos, product owners, scrum masters, bueno, una cantidad de gente casi me volvía loco con este.
+Hola, hola, ahí volví, se me volvió a caer el Internet.
+¿Logran escucharme chicos?
+¿Hasta dónde me escucharon?
+¿Alcanzaron a escuchar?
+Mucha gente, tenía gran cantidad de gente.
+Decías que te estabas volviendo loco.
+Mucha gente.
+Bien, gracias, gracias.
+Bien, bueno, no me perdí mucho la conversación, menos mal.
+Un momento, estoy acá escribiendo a Movistar otra vez estoy conectado a mi celular chicos, entonces me avisan.
+Bien, no perdí mucho la conversación, lo cual es bueno.
+Entonces nada chicos, les estaba contando este proyecto, mucha gente envuelta en este proyecto hace más o menos dos años, pues como muchos de ustedes, yo también pertenezco a un área digital donde mi cliente principal son los internos de la compañía, pero pues a la final somos una compañía que se dedica justamente a vender y por lo tanto el cliente final es finalmente el más importante de todos y las acciones que uno realiza deben detonar y deben terminar en cómo impacta ese cliente final.
+Me fui a hablar con clientes, a ir con los comerciales, a entender qué estaba sucediendo, recibí mucho feedback de los clientes y comencé a entender parte de sus necesidades, sus dolores y qué estaba sucediendo y se repetía muchas, muchas, muchas veces.
+Como nosotros no podemos depender de un agente físico, no podemos depender de una atención de 8 horas de un comercial de 8 de la mañana a 6 de la tarde, que trabaje y se desconecte luego, no podemos depender de retrasos en las respuestas, no podemos depender de dos, tres días para encontrar justamente lo que necesitaba, para solicitar justamente lo que necesitaba, no puedo depender de eso.
+¿Y bueno, yo dije pues por qué no hacemos algo sencillo, algo que ya la mayoría de empresas tienen y es un canal de atención por WhatsApp y así como hoy que justamente me está acá respondiendo el bot de Movistar y los de Claro y los de las medicinas y los de todo, por qué no a través de un bot, pues simplemente generamos una atención que se conecta a nuestras bases de datos y sea capaz de responder algunas preguntas básicas a nuestros clientes, por qué no?
+Este es un mercado muy complejo chicos, porque es un mercado eléctrico, es un mercado muy técnico, es un mercado muy industrial, donde los clientes son clientes, Ecopetrol, Enel, empresas muy grandes, muy, muy técnicas y esto no lo había.
+Lo normal es tener una atención de este tipo para un público más consumidor.
+Como nosotros comenzamos el proyecto, lo primero, traer una iniciativa de estas que es tan innovadora para un mercado tan tradicional, no para el mercado de afuera, porque es algo que ya existía, es algo que ya muchas empresas hacen y hacían.
+Pero traer esto a un mercado que es tan diferente, donde otras empresas similares competencia no lo hacen, era muy difícil.
+Pero por eso, primero mi estrategia fue ganarme estas personas que están mucho más de la mano de estas personas.
+Y yo que me codeaba con estas personas, intentar convencerlas, influirlas, de cómo voy a ayudarles a conseguir que sus KPI, que sus KPIs, como ustedes les digan, que sus métricas N van a mejorar a través de esto, en lo que yo creo.
+Y una vez los tengo a bordo conmigo, una vez los tenía a bordo conmigo, como todos juntos llegamos a esta persona, porque estábamos hablando de una inversión muy, muy grande, 150 mil dólares muy, muy grande, por todo lo que implica detrás solamente el setup, ya el mantenimiento es otra cosa.
+Entonces así fue como primero de una necesidad surgió, de una conversación de visita, surgió una idea que se fue extendiendo mucho más, mucho, mucho más.
+Mi enfoque estratégico fue primero llegar a la gerencia y luego pasar al cento.
+En la etapa de exploración comencé a enseñarle a la gerencia, bueno, el tema responsable.
+Esto fue mucho más adelante, cuando comenzamos a entender más de cómo podía funcionar la IA generativa en nuestros sistemas, cómo asegurábamos los recursos con el C Level, cómo establecemos los KPI de éxito.
+Y hoy los KPI de éxito de lo que ya desarrollamos, de esta idea generativa, que ya, o IA generativa no, más bien un chatbot que generamos en WhatsApp, que tiene ia generativa, que tiene automatizaciones, que tiene integraciones con CRM, con ACEFMC, con LRP, bueno, y muchas otras cosas con PIM.
+Y bueno, y ahí me voy acordando de cosas como esa cantidad de integraciones y digitalización en la que se estaba pensando, cómo iba alineada con los KPI, Porque hoy mi KPI, chicos, en lo absoluto es poder completar una integración, o es poder lanzar la herramienta.
+No, definitivamente no es ventas, es el uso y la satisfacción.
+Tres KPIs que pueden ser 100% los mismos de un comercial que está en la calle vendiendo.
+Entonces es como la solución comienza a pensar en negocio.
+Porque claro, yo tengo unos KPI internos, pero esos KPI internos a la final no interesan tanto para el negocio.
+Y bueno, hoy estamos hablando de mejora continua, hoy ya estamos hablando de un siguiente nivel en esta herramienta de comprar algunas integraciones aún más costosas con Gemini para evolucionar aún más la herramienta.
+¿Y cómo lo estoy haciendo?
+Porque hoy ya estoy recibiendo feedback de clientes, 300 contestaciones a las encuestas mensualmente, 300 mensualmente, en tres meses de salida son 900 respaldos que tengo de qué es lo que necesitamos para mejorar.
+Entonces, bueno, esa pequeña historia muy, muy rápida, a manera de ejemplo de cómo hacemos que las soluciones comiencen a pensar en negocio, porque es lo principal, es lo que le va a dar vida a nuestra idea.
+Y cuando lo vean materializado, van a comenzar a entender todo esto que les estoy hablando, o ya lo están viviendo y lo están entendiendo muy bien.
+Y bueno, para esto hay una estrategia muy, muy buena que les quiero enseñar, que me gusta mucho.
+Yo ya la había aprendido hace tres, cuatro años, la volví a ver en los materiales de Google hace dos años que comencé a trabajar en la materia y en lograr la certificación para ustedes, bueno, más que la certificación, el convenio.
+Y es una estrategia que se llama la matriz creativa.
+¿Alguien de pronto ya llegó a este punto en las clases, en la plataforma, o alguien ya lo ha hecho aparte o lo ha escuchado alguno de ustedes chicos?
+¿Ninguno?
+¿Alguno que sí o que no?
+Bueno, la Matriz Creativa.
+Un momento.
+La Matriz Creativa.
+La Matriz Creativa es una estrategia.
+Una estrategia para darnos a nosotros esa ruta de cuál es el mejor entuen digital posible para nosotros poder desarrollar en nuestras organizaciones.
+Un momento chicos, me están escribiendo los de Movistar.
+Bien, ya volví, perdón.
+La Matriz Creativa, recapitulando, es una estrategia que a mí me gusta mucho, más que una estrategia, es una herramienta que me ayuda y me ha ayudado a pensar en cuál es esa solución digital de IA o de automatización que mejor puede ayudar a mi empresa.
+Y esta matriz justamente lo que me ayuda es a identificar cuál reto yo debería priorizar en mi estrategia digital.
+Yo como líder, yo como ingeniero, yo como especialista, como analista científico, lo que sea.
+Me gusta mucho porque a mi equipo se lo he planteado y lo hemos hecho en algunos workshops, nos ha ayudado mucho a pensar de cómo, qué manera nosotros podemos ayudar al negocio con las iniciativas y herramientas que tenemos y para crear la matriz creativa es súper, súper, súper fácil.
+En un workshop de veinte, treinta minutos pueden salir muchísimas ideas.
+Solamente necesitamos dos cosas y son dos ejes.
+Y abajo de ese ejemplo del eje Y, vamos a tener en lo que son herramientas, soluciones y lo que cruzar, interceptar cada productividad, bla, bla, bla, con las necesidades del negocio.
+En las intersecciones lo que vamos a hacer es que vamos a escribir mucho detalle, qué es lo que exactamente vamos a hacer para cubrir esa necesidad del negocio con esa herramienta digital o solución digital.
+En las prioridades del negocio, deberíamos acomodar de mayor a menor, siendo la parte más alta del eje Y, lo que es lo más prioritario para el negocio, sentarnos con la persona experta de ese negocio, con el Product Owner, o con el gerente de esa área, o con el comercial de esa área, o con esa persona de negocio que nos está dando el INSA como tal.
+Deberíamos sentarnos con esa persona y entender cuál es su prioridad.
+Un, dos, tres.
+Para mí, cuando hay más de cinco prioridades, ya nada es prioritario.
+Entonces deberían ser para mí, para mí chicos, máximo cinco prioridades.
+Pero bueno, muchas veces las organizaciones con eso se pasa.
+En el eje ya deberíamos tener eso, cuáles son las prioridades del negocio.
+Y en el eje X, ah bueno, y lo que les decía, acomodo de mayor a menor, de lo más prioritario a lo menos prioritario.
+Y en el eje X deberíamos tener esas herramientas digitales, desde la más viable hasta la menos viable, o soluciones digitales que nosotros tengamos, ya sea implementadas, por implementar, por desarrollar, por lanzar, por los que yo uso.
+Esto que les voy a entregar es lo que yo uso para mi equipo, liderando la estrategia digital de mi empresa.
+Y finalmente esto lo tomé de Google.
+Deberíamos tener algo así, una idea, una acción, una estrategia clara, concreta, de qué deberíamos hacer, cruzando esa prioridad de negocio con esa solución y finalmente cuál es vamos a poder armar.
+Profe, se está entrecortando de nuevo.
+Ahí ya mejor.
+Hola, Hola.
+Otra vez.
+Se le escucha muy de vez en cuando.
+Perdón, creo me volví a caer.
+Qué pena con ustedes, Movistar está fallando demasiado.
+¿Escuchan?
+Hola chicos, ya volví.
+Creo que ya volví.
+Porfa confírme.
+Si se me vuelve a caer el Internet, chicos, lo mejor es reprogramar la clase, porque estoy teniendo muchos problemas con mi red y pues me da pena con ustedes tener que interrumpir tanto la clase.
+¿Me confirman porfa si me pueden escuchar?
+¿Escuchar?
+Sí, sí.
+Listo, Voy a intentar compartiendo de nuevo, espero no se me caiga otra vez.
+Listo, ahí creo que ya listo.
+Bien, perfecto.
+Entonces, parte de lo que les decía es que pues esta matriz es muy sencilla de realizar, solamente dos ejes, prioridades del negocio, soluciones digitales y las estrategias claras en este, en la parte de la intersección de los dos ejes.
+Pero más allá de eso, traje un ejemplo de cinco prioridades.
+En una conversación con el negocio me dijeron, tenemos estas cinco prioridades y a partir de acá comencé a mapear que yo como soluciones, plataformas, herramientas, IA, tengo disponible para poder desarrollar y lo coloqué en el eje X, Bueno, en este caso modifique el eje Y, lo dejé arriba, pero es el eje X, y comencé a cruzar cada una de las herramientas, plataformas que tengo con cada una de las prioridades que tenemos.
+Estrategias concretas, la idea es que sean más que estrategias, que sean acciones concretas de qué hacer para poder atacar cada una de esas prioridades.
+Y lo acomodo desde, primero, la necesidad, la necesidad no, sino la prioridad, o bueno, sí, necesidad del negocio, pero la prioridad número uno del negocio hasta la última y las herramientas más viables a la menos viable, como yo desde mis sugerencias, lo acomodo primero, esas herramientas, soluciones digitales en las que simplemente necesitamos impulsar la adopción en lo que ya existe, ya tenemos, pero hoy no se está usando tanto y simplemente necesitamos algo que nos ayude a impulsar la adopción de esa solución digital que tenemos.
+Siguiente, las herramientas soluciones que nosotros tenemos por mejorar, ya las lanzamos, ya las utilizan, ya las implementamos, pero necesitan una mejora, necesitan una mejora y esa mejora ayudaría a que podamos alcanzar esas metas del negocio.
+Necesitamos mejorar esas soluciones digitales, lanzar esas cosas que estamos en plan de construcción, que tenemos planificadas para hacer este año, que tenemos planificadas para entregar en quetzales, tres quetzales, cuatro quetzales, este mes, el otro mes, etc.
+Etc.
+Que ya estamos trabajando en ellas y que lo que hace falta es lanzar, porque estamos construyéndolas, estamos en un plan, estamos en el roadmap de lanzamiento, pero no las hemos lanzado, así que lo que hace falta es lanzar.
+Y por último, lo que necesitamos construir.
+Y de acá pues se desprende algo que yo llamo el nivel de esfuerzo y es qué tanto esfuerzo requerimos para trabajar, para impulsar, mejorar, lanzar, construir, trabajar en general con esa solución digital.
+Y pues para mí lo que menos esfuerzo implica es justamente cuando hablamos de impulsar una opción.
+Ya lo que más esfuerzo implica es cuando hablamos desde cero, construirla.
+Y ahí es donde yo lo organizo de nivel menor al mayor.
+¿Listo?
+Y ahora cuando hablamos de prioridades, hablamos de esas prioridades que van de la más importante para el negocio a la menos importante para el negocio.
+Y de acá se desprende mi matriz, algunas secciones y es lo que yo como sugerencia les doy a ustedes para sus empresas, sus actividades diarias, es cómo poder clasificar cada una de estas acciones.
+Y es primero, lo que van a tener acá abajo no va a ser prioritario, casi acá en su mayoría, yo lo extrapolé a casi todo lo que está abajo no va a ser prioridad, porque primero, no es tan prioritario para el negocio.
+Segundo, va a requerir un alto esfuerzo, en especial lo que estamos hablando acá y donde nosotros deberíamos enfocarnos es en la parte de arriba.
+Esta es mi sugerencia.
+Porque estas iniciativas que se encuentran entre lanzar y construir van a ser iniciativas estratégicas, que van a ser estrategias a mediano largo plazo que vamos a poder estar desarrollando.
+Pero estas acciones que nosotros tenemos en esta parte son victorias tempranas.
+Son victorias tempranas porque primero, requerimos un bajo esfuerzo y segundo, van a impactar en un gran nivel a nuestra compañía.
+Estas victorias tempranas es donde nos deberíamos enfocar.
+Luego deberíamos pasar para acá y luego deberíamos pasar para acá.
+¿Cuál es mi sugerencia?
+Yo esto lo construyó al menos una vez cada quarter, lo trabajo cada tres meses y de acá salen las acciones y nuestras prioridades en lo que nos debemos enfocar.
+Y es normal que esto vaya rotando, que posiblemente iniciativas estratégicas se vuelvan victorias tempranas, que cosas que no sean prioridad incluso pasen a ser victorias tempranas o incluso pasen a ser iniciativas estratégicas.
+¿Por qué?
+Porque el negocio es muy dinámico, varía demasiado.
+Todo lo que tenemos en este eje va a variar demasiado y las herramientas que tenemos acá van a ir mejorando, vamos a ir lanzando, vamos a ir impulsando, algunas van a quedar obsoletas, otras van a quedar mucho más potentes, otras las tenemos con proveedores, van a venir muchas más soluciones, nuevas ideas, nuevos esfuerzos.
+Entonces van a pasar muchas cosas que nos van a ayudar justamente a que esto sea mucho más dinámico.
+Pero mi sugerencia es al menos cada tres meses estar haciéndolo.
+Y acá vamos a tener justamente de manera muy, muy clara lo que es el end to end de toda nuestra solución.
+¿Listo?
+Entonces espero les haya quedado clara la matriz.
+Perdón por las interrupciones, me parecía muy, muy importante.
+Y quiero que toquemos uno de los conceptos más importantes cuando estamos desplegando soluciones digitales, y es cómo influenciar a la organización para que se mantenga al frente de la IA.
+Cuando hablo de la IA, hablo de la IA como una solución digital, porque es la solución digital hoy que es más tendencia.
+Y cuando nosotros creamos estas estrategias para implementar las soluciones de Inteligencia Artificial, consideramos primero priorizar el pensamiento estratégico.
+Debemos siempre considerar priorizar el pensamiento estratégico antes que la ejecución.
+Para esto, para comenzar a pensar estratégicamente, antes que ejecutar sin un mapa claro de lo que debemos hacer, debemos diferenciar claramente si el uso que le vamos a dar a la Inteligencia Artificial, a nuestra solución digital, va a ser para potenciar o automatizar.
+Si se usa para potenciar o mejorar un proceso, la IA que vayamos a implementar o solución digital que vayamos a implementar, como mínimo debe tener primero, pensamiento crítico y resolución de problemas.
+Y cuando me refiero a esto es que hoy ya con la IA que tenemos, que es la IA generativa, debemos poder brindar información y datos al negocio.
+Segundo, estas soluciones digitales deben tener innovación y creatividad.
+La IA generativa de la que hablamos hoy, puede ayudar a generar ideas, bueno, generar, replicar, dar más coherencia a algunas ideas y explorar muchas más posibilidades que tal vez se nos escapan o lo que unifica tantos datos.
+Y tercero, planificación y visión estratégica.
+La IA que vayamos a lanzar, usar en un proceso para potenciar o mejorar un proceso, debería podernos ayudar con previsiones del mercado, de lo que va a suceder en nuestro mercado y análisis de tendencias del mismo.
+Y cuando hablamos de automatizar, debe como mínimo poder realizar esas tareas repetitivas del negocio de nosotros, cosas como entradas de datos, recuperación de información, comunicación, generación de código, automatización de procesos, bla, bla bla bla, o toda tarea que demande mucho tiempo y recursos, o yo siempre le digo a mi equipo, si algo se hace muchas veces de la misma manera es porque se debe automatizar.
+Todo eso que involucre muchas cosas repetitivas diarias debería ser el mínimo que nos debería asegurar nuestra solución para automatizar.
+Entonces, primera cosa estratégica que debemos pensar ¿Estamos buscando potenciar algún proceso o estamos buscando automatizar algún proceso?
+Así que bueno, traje un vídeo, me traje este vídeo porque me gustó mucho, fue un vídeo que pasaron justamente en la plataforma, no quería dejarlo pasar porque me gustó mucho, mucho, mucho.
+El vídeo es muy corto y resume muy bien lo que es el caso de éxito de Warner Bros.
+Implementando algo muy, muy básico, muy tendencia y que pues los ayudó primero a reducir costos un 50% y segundo disminuir tiempo operativo 80%, un tiempo operativo que dedicaban personas a hacer algo que para mí no tenía ningún sentido de hacer de manera manual.
+Entonces, si están ahí conmigo, por favor reacciónenme con corazoncitos, manitas arriba, lo que quieran y me dicen si pueden ver el vídeo y escucharlo un momento que voy a darle acá para que puedan escuchar y porfa me reaccionan que les digo como añitos o algo creo.
+Pueden escuchar, Esperen, les pongo subtítulos, creo que hay en español.
+No chicos, no hay en español, entonces se los dejo en inglés.
+To create a product that we internally nicknamed Caption AI and the aim was to use machine learning to drive a more efficient approach to captioning the partnership with Google and with Accenture, we were able to lay a foundation that allowed us to change our core IP from a data primarily used for distribution and viewing to a data asset that could be used for machine learning and maximal machine learning.
+Pausarlo porque creo que si se los pongo en YouTube si lo van a poder escuchar en español.
+Ahora que me acordé, La biblioteca de Warner Brothers Discoveries es grande y única.
+Durante mucho tiempo ha sido el principal impulsor del negocio de la empresa.
+Nos asociamos con Google Cloud para crear un producto al que internamente llamamos Caption AI y el objetivo era utilizar el aprendizaje automático para impulsar un enfoque más eficiente de lo subtítulo.
+La asociación con Google y Accenture nos permitió sentar las bases que nos permitieron cambiar nuestra propiedad intelectual principal de datos utilizados principalmente para la distribución y visualización, a un activo de datos que podría utilizarse para el aprendizaje automático y obtener los máximos resultados de aprendizaje automático.
+Cuando obtenemos el archivo de subtítulos de Caption AI, en realidad parece un poco mágico, porque simplemente aparece en una carpeta y luego lo arrastramos y soltamos en el software y ya tiene el código de tiempo, el formato y está listo para editar.
+Y todo lo que tenemos que hacer es verificar que todas las palabras sean correctas y que el archivo esté sincronizado.
+Antes, un programa como este tardaba unas cuatro horas, y ahora, como solo estamos revisando y confirmando que todo esté correcto, a veces se reduce a menos de una hora para un programa de media hora.
+Me facilita mucho el trabajo utilizar este tipo de modelo híbrido en el que tenemos la transcripción generada por la IA de subtítulos y luego un humano que la revisa.
+Es mucho más rápido, pero también nos ofrece un producto final de mayor calidad para nuestros espectadores.
+La guía de subtítulos ha tenido un impacto increíble.
+Lo que estamos viendo es algo así como una reducción del 50% en los costes generales.
+En general, una reducción del 80% en el tiempo que llevaría subtitular manualmente un archivo sin utilizar el aprendizaje automático.
+Una de las cosas que realmente apreciamos de Vertex AI es que además de los modelos específicos de Google Cloud, la plataforma es bastante independiente en cuanto a la elección del modelo.
+Y ese tipo de flexibilidad nos permite experimentar realmente con el modelo perfecto para el caso de uso particular.
+El vídeo es la próxima frontera del aprendizaje automático y estamos encantados de asociarnos con Google Cloud para lograrlo.
+¿Listo chicos?
+Ese era el ejemplo de Warner Bros.
+Que me parece muy interesante porque justamente lo que hicieron fue tomar una solución muy básica alineado con, primero las necesidades organizacionales de Warner Bros, Una compañía que se dedica a las películas, y utilizaron una solución de IA.
+Obviamente Google vende su solución de Google, pero para poder impactar de manera rápida el negocio.
+Así es que básicamente lo están haciendo.
+Entonces, me gustó mucho el ejemplo y se los quería traer un momento.
+Yo les vuelvo a compartir.
+Listo.
+Entonces, ¿Recuerdan clases anteriores cuando nosotros hablábamos de los modelos base esos modelos que usualmente los utilizamos en el Deep Learning, se entrena solo como refresh rápido?
+Esos modelos base son los que se entrenan con conjuntos de datos muy, muy grandes, que aprenden de esos conjuntos de datos muy, muy grandes y que pueden realizar tareas de manera muy general.
+Esos modelos base, pues como bien lo dice la palabra, modelos base, es lo que permite sentar las bases para comenzar a trabajar en un modelo mucho más complejo y robusto, bien sea de IA generativa, De IA generativa o de lo que sea, pero que permite sentar justamente esas bases y pues podernos ahorrar un montón de trabajo y hacer algo mucho más especializado.
+Lo que permite es que nosotros como desarrolladores, sea con la plataforma que contratemos o con la API que nos conectemos, como lo veíamos, bueno, luego les comparto el contenido a los que no fueron, a los que no pudieron ir, pero como lo veíamos con el ejemplo que nos ponía Andrés de cómo se conectaba OpenCloud, Cómo pues él simplemente se conecta a través de una API y ya va comenzando a hacer su modelo mucho más especializado y va creando esos agentes que le ejecuten acciones mucho más especializadas.
+Esto es lo que permite a desarrolladores como Andrés, los ingenieros en IA que trabajen acá, desarrollar un modelo mucho más específico, mucho más robusto de una aplicación en concreto.
+Hay un ejemplo que me gustó mucho y es pensar en un modelo base como un alumno muy, muy avanzado, como un estudiante que se leyó todos los libros de la Perdemos de nuevo.
+Bueno, volví, parece que rápido, ojalá no se me caiga más, pero bueno, vamos avanzando en la clase.
+Voy a intentar ir avanzando así de a poco.
+Chicos, de nuevo excusas, es un problema de caída Movistar en mi zona y es lo único que tengo, pero espero que me escuchen, ¿Me pueden reaccionar chicos o contestar a alguien que me escuchan bien porfa, para poder ir avanzando?
+Gracias, gracias.
+Bien, de nuevo, si me caigo, por favor avísen.
+Pero nada, lo que les explicaba es que básicamente me gustaba mucho este ejemplo de los modelos base, verlos como el alumno muy, muy avanzado, que sabe de todo, que sabe, se leyó absolutamente todo lo que hay en la biblioteca, en los libros, en artículos, en la web sobre ciencia, datos, y le permite a otros estudiantes enseñarles de este aprendizaje que hizo largo, profundo, extenso para que estos estudiantes se adapten a tareas específicas.
+Y este estudiante tiene un conocimiento general de todo lo que está pasando.
+Eso es básicamente el modelo base y es lo que nos va a permitir ahora más adelante la clase, ojalá alcancemos, que vamos a comenzar a ver agentes y vamos a comenzar a hablar de agentes para que la próxima clase comencemos a probar Vertex, lo que permite justamente poder trabajar sobre estos agentes.
+Ahora, al hablar de modelos bases, se debe hablar de lo que es el LLM.
+¿Qué es LLM?
+Ya muchos de ustedes lo conocen, otros no.
+Traduce Large Language Model, modelos de lenguaje grande en español.
+Y el LLM.
+¿Por qué hablo del LLM?
+Porque es el modelo base más famoso que hay.
+Son modelos diseñados para comprender el lenguaje humano.
+El LLM es básicamente lo que le permite a la IA generativa poder traducir idiomas, escribir texto, generar contenido creativo, responder preguntas de manera fluida, abiertas, cerradas, bueno, como sea.
+¿Y es probable que el LLM sea el modelo de base más usado en el mundo?
+Yo estoy completamente seguro de que sí, porque, pues, por ejemplo, en los chatbots, en los chatbots de IA generativa como Gemini, como ChatGPT, como todas las ideas generativas que hay, se usa el concepto del LLM y es el modelo base para que funcione la guía generativa y por eso es tan, tan importante.
+Otro de los modelos base famosos son los modelos de difusión.
+Los modelos de difusión a la final son parecidos a los LLM, con la diferencia de que los modelos de difusión están especializados en la generación de imágenes, audios, videos, todo lo que tenga como algún formato de ruido, diría yo, y que toma todo este formato como de ruido en datos estructurados.
+¿Listo?
+Entonces tenemos los modelos de difusión y los LLM, que son los dos modelos base más usados en todo el mundo.
+Pero pues, como vamos a hablar de una IA generativa en específico, yo quiero profundizar un poco más en los LLM y voy a profundizar un poco en los LLM porque quiero que lo entendamos muy bien para poder adentrarnos más y más y más en.
+Estamos adentrándonos más y más en las capas de lo que es la guía generativa.
+Primero, los LLM son modelos que tienen el propósito de pre entrenarse y luego que se ajusten para fines específicos.
+Pre entrenarse, Modelos base y fines específicos.
+Lo que les habla de los agentes.
+¿Pero bueno, ustedes me dirán qué quiere decir realmente pre entrenarse y ajustar?
+¿Qué quiere decir eso?
+Bueno, en inglés que lo conocen muy bien, el fightuning.
+Me traje este ejemplo porque me gusta mucho y es, imagínense un perro, un perro salvaje de casa, un perro de finca, que está no domesticado, que se dedica a comer animales, a cazar, andar en manada, casi como un lobo, un perro salvaje.
+Cuando nosotros hablamos de pre entrenar el modelo y ajustarlo, es como si nosotros comenzáramos enseñarle a ese perro salvaje algunas acciones y convertirlo en algo más así que suena chistoso y es entrenarlo con órdenes básicas, como lo hacemos con un perro sentado la pata, vamos, bueno, muchas palabras y eso está perfecto para un perro cotidiano, solo para un perro cotidiano, porque estamos tomando algo que es desordenado, algo que es difícil de manejar, en algo que con algunas instrucciones puede ser mucho más manejable para nosotros.
+Pero con el LLM vamos un poco más allá, y es que además de perros de casa, como el niño que se llama Coco y lo tengo acá al lado mío, además de esos perros de casa, pues de casa, no de casa de casar, sino de casa de hogar, pues también hay perros especializados, los perros policía que vemos en el andino, los perros de ayuda, los de apoyo emocional, los perros de casa de casa de cazar, etc.
+Etc.
+No me acuerdo de más.
+Pero esos perros que necesitan un entrenamiento especial, pues es lo mismo con los LLM, se usan para temas generales y casi cotidianos, pero la facilidad es que los LLM se pueden personalizar para resolver escenarios específicos.
+Eso es lo que buscamos con los LLM.
+Desglosémoslo en tres palabras.
+Son largos, lo que indica que el conjunto de entrenamientos y lo que yo les he venido viniendo diciendo con los modelos base, el conjunto de entrenamiento es muy grande, hablamos de lo mínimo, petabytes.
+Segundo, el proceso.
+Ah bueno, y además de que nos referimos también a que hablamos de petabytes, para los que trabajen con Machine Learning o los que sean ingenieros de Machine Learning me van a entender muy bien.
+También hablamos de los parámetros, y es que se entrena con muchos parámetros.
+Cuando hablo de parámetros, lo mismo que en Machine Learning conocemos como los hiperparámetros del modelo.
+Y cuando hablamos de los hiperparámetros hacemos referencia a ese conocimiento que aprendió el modelo.
+Es básicamente lo que les estoy diciendo, chicos.
+Es básicamente la capacidad que tiene el modelo para resolver un problema.
+Esos son los hiperparámetros.
+Y eso, por eso es un modelo largo, por eso, porque tiene muchos parámetros, porque tiene muchos datos y porque esos datos, hablamos desde petabytes hacia arriba, zeta, bla, bla, bla, bla, todo lo que viene ahí arriba.
+Pero también tienen un propósito general.
+Significa que los modelos son suficientes para solucionar problemas comunes.
+Hasta ahí, un modelo LLM general es suficiente para resolver algo común.
+Y por último, son modelos pre entrenados y ajustados.
+Es decir, que si el modelo está entrenado previamente con un gran conjunto de datos para uso general, como lo dijimos en el segundo punto, y lo podemos ajustar a un conjunto de datos más pequeño que definimos para un uso específico de los datos, vamos a poder hacer que el modelo tenga la capacidad específica de ayudarnos con algo.
+¿Listo?
+Ahí ya hablamos de un modelo de LLM ajustado con Fightuning para una aplicación en específico.
+¿Listo?
+Bien.
+Ahora, casos de uso de los LLM primo, un modelo se puede usar para distintas tareas.
+Profe, se te está cortando.
+Gracias, Miguel.
+Ahí creo que volví, ¿Cierto?
+¿Escuchan bien?
+Creo que sí.
+Listo, gracias igual.
+Me avisas, me avisas y me vuelvo a ir.
+Entonces, como son modelos muy generales, pues nos ayudan para estas cosas básicas.
+Lo que les decía es, por ejemplo, es básico en WhatsApp, en los chats que hay ahora, en las búsquedas de Google, etcétera, etcétera, pues que ya tenemos predicción de textos, la letra que va a venir, la palabra que va a venir, clasificación de texto muy, muy útil.
+Y responder preguntas, responder preguntas generales.
+Lo más importante es que los LLM requieren datos de entrenamiento de campos mínimos cuando se busca personalizar para resolver el problema en específico.
+Y que podemos mejorar el rendimiento de los modelos de lenguaje añadiendo más datos y más parámetros.
+Entre más datos y más parámetros, hiperparámetros agreguemos a nuestro modelo, mejor va a ser su funcionamiento.
+Pero pues acá ya viene algo importante, es la capacidad de procesamiento.
+Y por eso lo hablábamos en la primera clase, entre más y más pasa el tiempo, más y más procesamiento necesitamos y por lo tanto, más y más transistores necesitamos y en algún momento no vamos a poder tener toda la llena, la tierra llena de transistores en el mundo.
+Entonces, hoy tenemos una limitación en términos de procesamiento pero ya sabemos que con la IA generativa rompemos esta barrera que hablábamos anteriormente, donde si le metemos más y más datos al modelo, ya llega a su máximo.
+Pues acá no tanto.
+Y es que los LLM, como hablábamos la clase pasada, se basan en algo que es el Transformer Model.
+Este es el concepto súper, súper básico, donde tenemos un input, donde el Transformer está conformado por el encoding y el decoding, donde lo que hace básicamente el codificador es codificar la secuencia entrada, lo que nos está entrando, la codifica para que el decodificador que aprende a decodificar lo que le estamos metiendo, entienda decodificar y pues decodifique y nos entregue el output que esperamos.
+Comparado el LLM con los modelos tradicionales de inteligencia artificial, con el LLM no vamos a necesitar ser expertos en entrenamiento, no vamos a necesitar ser expertos en entrenar un modelo como pasa en la guía tradicional, solo se necesita pensar en las validaciones apropiadas, que era un poco de lo que nos hablaba la clase pasada Erika, creo que se llamaba en la primera.
+En la primera charla que tuvimos.
+Y bueno, hay un concepto que me parece interesante y es el concepto de la búsqueda de respuestas o QA, que es un subcampo de lo que es el procesamiento del lenguaje natural, que se encarga de responder automáticamente preguntas planteadas en lenguaje natural.
+Usualmente los sistemas de QA suelen entrenarse con grandes cantidades de texto y código y pueden responder a varias preguntas.
+La clave es que se requería conocimiento sobre el negocio para desarrollar estos modelos de búsqueda de respuesta, y ya con lo que estamos hablando de idea generativa, ya no se requiere.
+Y los modelos de QA permiten que el modelo genere respuestas basadas en el componente texto del negocio.
+Por eso acá me traje este pantallazo si hablamos de finanzas, educación, mercadeo, ventas, etcétera, etcétera, etcétera.
+Y bueno, como estamos hablando de los LLM, necesitamos hablar de los tres tipos que tenemos.
+Primero tenemos lo que es el LLM genérico, donde el modelo predice la siguiente palabra según el lenguaje, los datos de entrenamiento, si lo entrenamos con inglés, español, bla, bla, bla, bla, con lo que sea, lo que está haciendo un LLM genérico es intentar predecir la palabra que sigue, la palabra que viene, la palabra más probable.
+Así funcionan pues lo que hablamos los sistemas de autocompletar, de WhatsApp, redes sociales, de la web, de lo que sea.
+Tenemos los modelos ajustados por instrucciones, donde ya en este modelo está entrenado para predecir una respuesta a una instrucción proporcionada a una instrucción que proporcionemos en la entrada.
+Por ejemplo, pues acá me traje este ejemplo.
+Resume el texto X, genera un poema en el estilo X, dame una lista de palabras claves basada en la similaridad semántica de Y.
+Resume la reunión, genera un texto.
+Son esos modelos donde damos la instrucción, pedimos una respuesta y finalmente pues él lo hace.
+De lo más común que tenemos.
+Y por último tenemos el modelo ajustado por diálogos, donde el modelo está entrenado para tener un diálogo al predecir la siguiente respuesta.
+Los modelos ajustados por diálogo son un caso especial de ajuste de instrucciones, donde las solicitudes las hacemos como preguntas.
+¿A qué voy?
+Esto es lo que se hace cuando se construye un chatbot, un modelo ajustado por diálogos, donde dependiendo el diálogo, que debe ser generativo, no solamente con instrucciones IF, no con condicionales, sino que pues a través del diálogo que se va desarrollando, el LL busca que la conversación que entre más larga sea o más específica se vuelva más bien, funciona mejor y se hacen más preguntas y a esas respuestas que se vayan dando, pues se da una respuesta mejor.
+Esos son los tres tipos de LLM que tenemos.
+Genérico, muy usado para predecir palabras.
+Ajustado por instrucciones, cuando le pedimos algo y nos lo entrega, y ajustado por diálogos, cuando hablamos de chatbots.
+Cuando hablamos de los LLM necesitamos entender el Chain of taut, cadena de pensamiento.
+¿Y qué es la cadena de pensamiento?
+Es la observación de que los modelos son mejores en dar la respuesta correcta cuando primero generamos un texto que explique el motivo de esa respuesta.
+Un poco enredado, no sé, pero a lo que hoy es cuando le enseñamos a la IA cómo darnos la respuesta, o lo guiamos en cómo darnos esa respuesta correcta, le estamos dando algún tipo de contexto, ese motivo, para que nos dé la respuesta.
+Entonces acá me robé de un ejemplo y la pregunta Roger tiene cinco pelotas de tenis.
+Él compra dos botes de pelotas de tenis.
+Cada bote tiene tres pelotas.
+¿Cuántas pelotas tiene ahora?
+Tiene dos pelotas.
+Bueno, tiene.
+Eran cinco pelotas, pero sólo puse cinco.
+Pero solo puse dos.
+Tiene cinco pelotas De tenis, él compra dos de estos botes, cada de estos botes tiene cinco pelotAS.
+¿Cuántas Pelotas tiene?
+Ahora, la pregunta, si se plantea al inicio sin el contexto, es menos probable que el modelo proporcione la respuesta directamente.
+Sin embargo, cuando se realiza la segunda pregunta después del contexto, es más probable que el resultado de la respuesta correcta.
+La idea del Chain of Thought es ayudar a la IA a pensar como un humano, desglosando el problema en paso a paso.
+Es como el resumen y por eso es cadena, tomamos paso a paso el problema, la ayudamos a la IA a desglosar el problema para que finalmente le hagamos la pregunta.
+Y la idea es que nos entregue la respuesta a esa pregunta o lo que nos está entregando con lo que le estamos entregando.
+Y bien, en lo que vamos a trabajar las dos siguientes clases, hay algunas muchas ya herramientas de Google de IA generativa, y vamos a revisar rápidamente tres, y en la siguiente clase vamos a revisar más a fondo una en específico.
+Y son tres herramientas, una es Vertex EI Studio, otra es Vertex AI y otra es yemenai, pues esta ya la conocen.
+¿Y qué es Vertex EI Studio?
+Es la plataforma como tal, para los chicos que están conmigo en Looker, que creo que son dos, es como hablar del Looker, es la plataforma en general, el end to end de la plataforma que ofrece todo el paquete de beneficios.
+Y dentro de Vertex AI Studio es donde encontramos Vertex AI, donde pues ya podemos compilar y generar conversaciones con idea generativa para crear chatbots, asistentes, bases de conocimiento y más que muchos me han preguntado por profe, ¿Cómo puedo hacerlo?
+Hay muchas herramientas, pero muchas de estas herramientas son pagas.
+La ventaja general de Vertex es que puede ayudar a optimizar la integración de nuestras bases de datos con herramientas de inteligencia artificial, o sea, pensar en aplicaciones empresariales, lo que nos va a permitir centrarnos más en lo que es el desarrollo dentro de la plataforma, más que el desarrollo de la IA, Nos da mucha más flexibilidad, colaboración, todo lo que traen las plataformas en la nube, lo que hemos venido hablando las clases pasadas.
+Y por último, pues yemenai como la plataforma de guía generativa que tiene Google, y pues de donde obviamente Vertex utiliza los mismos algoritmos, pero gemena diciendo la versión UX friendly para nosotros.
+Listo.
+Bien chicos, tengo más contenido, pero intenté reajustarlo por tantas, tantos bloqueos que hemos ido teniendo.
+De nuevo excusas, pero me gustaría hacer un ejercicio, un ejercicio porque veo mucho potencial en que podamos explorar aún más de esta herramienta y es la matriz creativa.
+El objetivo es que definamos como la IA o soluciones digitales, pero me gustaría mucho más explorar en temas de IA.
+Pero pueden ser soluciones digitales, pueden generar valor en su caso, en el caso final, el que estuvimos reuniéndonos y revisando el caso de cada uno, y que esto los ayude para priorizar y construir su end to end digital con ese caso que están explorando.
+¿Cuál es el objetivo que primero, perdón, ya el objetivo se los di?
+¿Cuál es el paso a paso?
+Que primero construyan el eje Y, las cuatro o cinco prioridades ordenadas por impacto.
+Profe, no, solo hay tres.
+Profe, no, solo hay dos.
+Bueno, trabajen sobre dos las prioridades.
+Mi sugerencia es cuatro a cinco máximo, pero trabajen sobre esas prioridades de su caso, de la compañía que conocen, ordenenlas por impacto, la que más impacto puede tener a la que menos impacto puede tener.
+Ordenen en el eje X esas herramientas, soluciones digitales y ojalá soluciones específicas de Genai que encuentren que pueden aportar a su solución.
+Igual ordenarlo por viabilidad como lo vimos, y hacer el cruce.
+¿Cuál sería la estrategia para que esta herramienta o solución resuelva esta necesidad o prioridad del negocio?
+Y deben ser respuestas, estrategias, acciones concretas.
+Finalmente, ¿Qué es lo que quiero que tengan?
+¿Qué es lo alto impacto y alta viabilidad?
+Y que ese va a ser su punto de partida para un entuen digital para esa organización donde quieren trabajar.
+Claro, chicos, preguntas, dudas, consultas, alguno.
+Es por los grupos, en los casos que tienen cada uno, 20 minutos por grupo y cuando completemos 6 y 21, voy a poner cronómetro, me voy a ir uniendo a cada grupo 5 minutos para que me hagan preguntas, para que me comenten qué fue lo que hicieron, para que construyamos juntos y volvemos acá a la sesión para avanzar en lo que queda de la clase.
+¿Listo?
+Entonces, en grupos trabajan con los grupos de sus casos, de cada uno de los casos.
+20 minutos para que lo hagan.
+Acá les dejo el ejemplo, les voy a dejar también el screenshot de la matriz creativa que les estaba explicando.
+Y 20 minutos, me pueden llamar antes, me pueden llamar a los 20 minutos.
+Voy a comenzar a escribirle a cada grupo para que por favor me unan y hablemos y me muestren.
+Pero si tienen dudas, consultas en estos 20 minutos, me llaman, me unen, me escriben, me taggean y entro a ayudarlos.
+¿Listo?
+Claro.
+¿Alguien tiene preguntas o dudas?
+¿No?
+Perfecto.
+Entonces nos vemos 6 y 23, chicos.
+6 y 23 les escribo para que comencemos a revisar acá voy a quedar luchando con Internet.
+Pueden ir reuniendo en los grupos, chicos.

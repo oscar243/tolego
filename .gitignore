@@ -1,0 +1,27 @@
+# API keys y secretos
+.env
+mvp_bot/.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Bases de datos SQLite del MVP
+*.db
+mvp_bot/tolego.db
+
+# Grabaciones originales (demasiado grandes para git)
+grabaciones/*.mp4
+
+# Audios extraídos (~266 MB, se regeneran con extraer_audio.py)
+grabaciones/audio/
+
+# Memoria local de Claude Code (específica de cada máquina)
+.claude/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini

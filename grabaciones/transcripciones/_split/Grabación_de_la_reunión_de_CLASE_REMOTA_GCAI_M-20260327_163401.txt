@@ -1,0 +1,838 @@
+Profe, yo tengo un modelo, o bueno, más que un modelo, tengo un reto en mi empresa, tengo una base de datos que es muy específica y me gustaría construir una solución, bien sea para mis clientes o para el negocio, que nos permita generar algunos análisis de manera mucho más sencilla, como lo hacemos hoy y pues aprovechando el uso de inteligencia artificial generativa.
+Y la respuesta es que sí, es que sí se puede hacer.
+Es algo que hoy muchas empresas ya desarrollan y Google es una de ellas, donde ella presta parte de su ecosistema y de sus APIs para uno poderse conectar a esas herramientas e información que ellos tienen y hacer un junte con nuestras bases de datos, informaciones y poder construir de tal manera esa solución mucho más específica a nuestra organización.
+Finalmente tener un fin tuning de lo que justamente necesitamos.
+Y bueno, detrás de eso hay múltiples beneficios que nosotros hemos ido viendo, pero detrás de esos múltiples beneficios también hay algunos retos.
+No son problemas, son retos que hay que afrontar y que pues hay algunas herramientas para afrontar esos retos.
+Primero, la IA generativa, y para los que ya revisaron el contenido de hace 15 días o los que estuvieron en la sesión, la idea generativa puede presentar alucinaciones.
+Y pues esas alucinaciones se pueden salir un poco de la realidad y de la respuesta que estamos buscando.
+Y para eso hay diferentes métodos y test para validar de que las respuestas no alucinen.
+Y cómo corregir esas alucinaciones para que la IA se ajuste a la realidad.
+Lo primero es que necesitamos validar y entender cuál es el nivel de alucinación de la IA.
+Y para eso hay algunas pruebas para encontrar ese nivel de alucinación.
+Y luego para comenzar a corregir, que eso vamos a ir viendo.
+Cuando una empresa compra un servicio de IA, existe algo que se llama el grounding.
+Y grounding, por eso me trae esta fotico, este icono, es porque es donde nosotros alimentamos.
+El grounding es como alimentar, alimentar la tierra, pero en el contexto de la IA.
+Es alimentar justamente la IA y es proveerle un contexto, un contexto a la IA.
+¿Y cómo se le provee un contexto a la IA?
+Con datos de contexto, por ejemplo, datos de la compañía, por ejemplo, ejemplos, por ejemplo, ejemplos de salida y cierta información que puede ayudar a nuestra IA generativa a no generar alucinaciones y que pues para que el resultado finalmente sea mucho más preciso y que la idea principal es entrenar con los datos que nosotros necesitamos, que específicamente la I aprenda los modelos base que nosotros vimos en la clase pasada.
+La teoría de los modelos base es excelente, es lo que hoy pone los cimientos y fundamenta lo que es la IA generativa.
+Han venido funcionando muy bien, pero pues todo como todo tiene sus limitaciones y reconocer esas limitaciones pues es lo que nos va a permitir afrontar de la mejor manera esas limitaciones que tiene la IA generativa.
+Y primero entonces acá quería pasar por la primitación reto que hoy tenemos con la IA generativa y son los datos.
+¿Y por qué hablamos de los datos?
+Porque el rendimiento de los modelos que nosotros vamos a crear con IA generativa depende en gran medida y puedo decir un 80% de los datos que le estemos insertando.
+Lo normal es que cuando trabajemos con IA generativa requiramos de datos de conjuntos grandes y que cualquier dato que esté incompleto o sesgado va a impactar en los resultados.
+Por eso es importante primero filtrar esos datos incorrectos, esos datos sesgados, esos datos incompletos, Porque a la final lo que va a pasar, y leía un ejemplo, es como hacerles un examen a ustedes, a un estudiante de un tema que no ha visto, de un tema del cual no ha aprendido o de un tema que se le ha enseñado mal, la respuesta va a ser negativa.
+Lo mismo con la IA, el rendimiento saber altamente afectado.
+Lo segundo es el tema de la fecha de actualización.
+Muchos de los modelos que nosotros tenemos actualmente que alimenta la IA generativa tienen conocimiento limitado en cuanto a tiempo, no reconocen eventos muy recientes, no reconocen descubrimientos muy recientes, sucesos muy recientes y esto se debe por unos temas de procesamiento y también dependiendo mucho la herramienta, esto puede generar respuestas incorrectas o bueno, más que incorrectas, desactualizadas a la hora de que utilicemos el modelo, ya que pues el modelo no se está actualizando en tiempo real.
+Entonces por eso es importante entender en qué momento se está actualizando el modelo siguiente y son las alucinaciones.
+Los modelos es muy normal que experimenten alucinaciones, lo que significa que pueden prevenir presentar resultados que no son precisos, información que no es real, puede divagar demasiado y muchas veces se ve muy relacionado con la temperatura que tenga el modelo, con qué tanta creatividad le estamos permitiendo al modelo divagar en las respuestas, pensar en las respuestas muchas veces se relaciona con eso, y pues nos puede entregar respuestas fácilmente incorrectas.
+Pero bueno, para enfrentar estos tres retos que les estaba explicando, tenemos tres maneras, tres maneras de enfrentarlo.
+La primera es la fundamentación.
+Los modelos de idea generativa son muy buenos para crear contenido, y como son tan buenos para crear contenido, los usamos mucho para hacer esto, pues se ven afectados por la alucinación.
+La, La fundamentación es el proceso de conectar los resultados de la IA con fuentes de información verificables, como si se sometiera la IA a una prueba de calidad, diría yo.
+Podemos proporcionarle a la IA, algunos tienen funciones de web scrapping, algunos le llaman Deep Search, bla, bla, bla.
+Y cuando les proporcionamos acceso a esas fuentes de datos específicas, o bueno, pueden ser fuentes de datos que nosotros mismos le subimos o que consulta en la web, lo que sea, vinculamos el resultado que queremos con esas fuentes que consideramos verídicas, reduce el riesgo a que nuestra IA presente contenido inventado.
+Lo segundo, ya lo hablamos como hace unas tres, cuatro clases, ya no recuerdo, es el RAC, Y pues lo que queremos con el RAC es que la búsqueda para encontrar información específica correcta dentro de la base de datos que le estamos proporcionando a la IA, lo haga dentro del contexto que realmente queremos que lo haga, que busque dentro de ese contexto específico que queremos que busque.
+Y tercero, algo que esto yo no lo conocía en la teoría Google lo presentan y es bueno, no lo conocía con este término, es el Human in the Loop, HITL.
+Y es que sí, o sea, todos los modelos son potentes, de hecho, hoy que veamos un poquito de Vertex, vamos a tener posibilidad de calificar las respuestas y eso ayuda también a reentrenar el modelo.
+Pero pues la experiencia humana es esencial para tareas que tal vez requieren un poco de juicio, contexto, procesamiento de datos que pueden estar sesgados, incompletos o erróneos.
+Y pues para eso con el feedback humano podemos hacer, podemos hacer esas validaciones.
+Yo como lo conocía modelos de Machine Learning como el Reinformance from Human Feedback, acá lo llaman como Human in the Loop, pero bueno, otros lo pueden conocer como el Brainstormen from Human Feedback, Es lo mismo, a la final es lo mismo.
+Pero bien, tenemos estas herramientas.
+Y finalmente, pues algo que nos hablan dentro de la teoría de Google es que ya conociendo los retos, ya conociendo un poco de cómo podemos aplicar la idea generativa, que sabemos que ella tiene muchas veces errores, no puede ser tan exacta, no siempre lo va a hacer, necesitamos hacer uso responsable de esa IA.
+Y esto significa que las aplicaciones que vamos a desarrollar con IA generativa no tengan daños intencionales y procurar que no tengan daños no intencionales sobre las personas.
+Porque es importante nosotros como desarrolladores, contar con estabilidad, ética y que los resultados finalmente sean positivos y estén enfocados en eficiencia de trabajo, en potenciar o en automatizar tareas, actividades del día a día.
+Esto pasa mucho, es un tema de conversación.
+Mucha gente utiliza la IA como médico, mucha gente utiliza la IA como psicólogo, hay un tema ético ahí, ¿Cómo restringimos eso?
+¿Porque no son profesionales de la salud y cómo lo podemos restringir?
+Y otra parte del uso responsable de la IA es el tema de la seguridad.
+Ahorita, por ejemplo, cuando lo veíamos hace 15 días con Open Cloud, ellos no nos aseguran proteger nuestra información, nuestros datos.
+Y es que hoy, pues uno de los mínimos que deben tener las soluciones digitales es que sean seguras en la nube.
+Las aplicaciones deben ser seguras, deben ser anti ciberataques, es muy, muy común anti hackers, contar con un sistema robusto de seguridad.
+Y pues finalmente lo que queremos es, si tenemos una base sólida, vamos a tener una aplicación sólida, inmune a caídas, inmune ataques, inmune a información errónea, lo que sea y lo que venga de ahí para allá.
+Por eso debemos pensar pues en eso, en cómo hacemos segura nuestra solución digital, Cómo planeamos no hacer daño intencional y cómo pensamos en esos escenarios no intencionales donde podríamos generar algún tipo de daño a la persona.
+Y bien, la ia generativa tiene 1 2 3 4 5.
+5 componentes y es que cuando implementen IA en sus compañías, siempre piensen en el usuario que va a usar estas herramientas.
+Tenemos opciones de construir soluciones un poco personalizadas o implementar servicios ya existentes como los que ofrece Google, Amazon Cloud, OpenAI Cloud no, sinoantropic OpenAI, que nos van a ayudar en el proceso de implementación vía generativa en la organización.
+Para esto siempre, siempre hay que tener a alguien que esté primero a la vanguardia de estas decisiones, alguien que comprenda el valor de traer estas soluciones, cuál es la mejor opción y cómo lo vamos a usar con esta capacidad.
+Y por eso el curso se llama Líder de Inteligencia Artificial Generativa.
+Viene la habilidad de liderar, liderar tendencia tecnológica, liderar personas y por lo tanto, liderar la capacidad de tomar decisiones basadas en datos, informadas, coherentes y en línea con la estrategia del negocio.
+Y para esto es importante entender, al menos como líderes de IA generativa, al menos los componentes básicos de la IA generativa para saber y enfocar dónde debería estar nuestra estrategia basado en los KPI del negocio.
+La guía generativa es una herramienta digital a la final.
+Y lo que hemos venido viendo desde el inicio del curso es cómo podemos liderar el cambio en nuestras organizaciones comportándonos como líderes digitales y con soluciones digitales.
+A la final, la idea generativa es una solución digital, con la diferencia de que con todas las que teníamos antes y todas las que hemos venido hablando antes, es una solución digital con esteroides.
+Así me gusta llamarlo, porque que es así, súper musculosa, potente y hace un montón de cosas.
+Y tiene esteroides además de eso, porque tiene diferentes capas interconectadas.
+Cada una de estas capas que ven acá desempeña un papel diferente y fundamental dentro de las capacidades y necesidades de una empresa.
+Y pues me gustaría que exploráramos cómo desde cada una de estas capas podemos planear una estrategia diferente para nuestra organización y podemos abordar el problema de diferentes maneras.
+La primera es infraestructura, la segunda, modelos, plataforma, agentes y genai y genaap.
+Hablamos ya de las aplicaciones de genai.
+Vamos a comenzar con genai, que es lo más familiar en todo el mundo, porque este es el front, es la parte que está conectando con el usuario, es la parte que le permite a los usuarios, a los clientes, interactuar con la herramienta digital, en este caso, pues la IA, y aprovechar al máximo las capacidades de la IA generativa.
+¿Ejemplos?
+Fácil, chat, GPT, Gemini Cloud, Copilot.
+Y bueno, y ahí puedo seguir y seguir y seguir.
+Chicos, denme un momento, me traigo un vaso con agua que se me acaba y estoy reseco.
+Listo, perdón.
+Entonces, estábamos en lo que es la primera capa, que son las aplicaciones de.
+Genial.
+Lo que les decía, que pues hay muchas deepseas, chatGPT, cloud y bla, bla, bla, BLA, muchas que ustedes ya usan.
+Ahora, tenemos algo muy, muy importante y son los agentes.
+¿Qué son los agentes?
+Son el programa que aprende a alcanzar un objetivo en específico de la mejor manera posible, en función del fine tuning que le hagamos a nuestra aplicación de generativa.
+El agente, lo que a mí me gusta es que puede funcionar de manera autónoma.
+Nos ayuda, por lo tanto, como es autónomo, a establecer KPI del negocio, a llevar a cabo tareas independiente.
+No necesitan intervención humana más allá del desarrollador que está antes, que está acá en la plataforma trabajando.
+Perdón que se me fue poner el puntero, que está acá en el intermedio trabajando.
+El puntero está súper pequeño ahí, creo que mejor ahí.
+Ya que está acá en la plataforma trabajando.
+No necesitan intervención humana.
+Hay diferentes tipos de agentes.
+Hay agentes como lo conocemos de atención al cliente, los famosos chatbots, agentes que nos ayudan con código, agentes que nos ayudan con datos, agentes que nos ayudan con la agenda.
+Y bueno, y un montón de tipos de agentes que ya luego vamos a profundizar.
+En la plataforma es esa infraestructura necesaria para que los agentes interactúen con el modelo.
+Y ya acá estamos hablando de los modelos del ELEM.
+En esta capa es donde nosotros proporcionamos todas las herramientas y la infraestructura necesaria para el desarrollo de nuestros agentes.
+Hoy vamos a ver, bueno, me adelanté un poco, pero hoy vamos a ver una plataforma.
+La plataforma es la que usa el desarrollador de IA para potenciar sus desarrollos de IA.
+Los modelos son algoritmos pre entrenados con gran cantidad de data.
+Y pues acá básicamente lo que estaba haciendo era definir el elemento, los modelos de base.
+Y por último está la infraestructura, que es el lugar base de todo lo que mantiene, todo lo que provee los recursos básicos necesarios para que la inteligencia artificial funcione, desde los servidores, los G, los TPUs, el software, las computadoras, etcétera, etcétera, etcétera, etcétera.
+Ya ahorita más adelante les voy a hacer algunas preguntas, a ver si conocen eso de lo que les voy a estar hablando.
+¿Qué pueden hacer los agentes?
+Los agentes de vía generativa pueden procesar información, pueden razonar sobre conceptos complejos y tomar medidas.
+También se usan en varias aplicaciones, como lo que les decía, atención al cliente, temas normales de productividad de una persona, tareas creativas.
+Y un agente de vida generativa lo que está haciendo es intentar lograr un objetivo observando el mundo real a su alrededor y relacionando con él algunas herramientas que él, dentro de sus algoritmos tiene a disposición.
+Con la IA generativa se tiene la flexibilidad de aprovechar agentes y aplicaciones prediseñadas o crear incluso algunas aplicaciones personalizadas según las necesidades específicas del usuario.
+Las ventajas de los agentes son tres básicamente.
+Primero, que tienen interfaces súper intuitivas como los chatbots, que pueden entender solicitudes complejas.
+Lo segundo, automatizar, ya que pueden manejar procesos de varios pasos dentro de una aplicación, como recopilar información, tomar decisiones basadas en información o realizar acciones en específico.
+Y tres, la personalización, ya que los agentes pueden aprender las preferencias de los usuarios, pueden adaptar también la experiencia de la aplicación de la que estamos trabajando, en la que estamos hablando.
+Entonces, esas son las pues como manera general lo que pueden hacer los agentes automatización, personalización y una UX muy, muy, muy, muy intuitiva, incluso llego yo a decir para el desarrollador como para el usuario.
+¿Cómo funcionan los agentes?
+Hay muchas maneras de usar los agentes, pero se pueden clasificar básicamente en dos categorías, los agentes conversacionales y los agentes de flujo de trabajo, que son estos que tenemos acá.
+Conversacionales de de trabajo A la final los dos comprenden, actúan y entregan con base en lo que se les pida.
+Los agentes conversacionales se diseñan para entender lo que quiere decir el usuario, no solo para entender lo que quiere decir el usuario, sino también para dar una respuesta coherente y estructurada según lo que está poniendo el usuario.
+¿Que se necesita?
+Proporcionar datos de entrada, escribir un mensaje, hablar con el agente para que la gente pueda trabajar.
+Así funciona un agente conversacional.
+Así funciona la gente conversacional.
+¿Qué hace básicamente la gente toma ese prompt que se le está metiendo?
+El agente determina el significado y la intención detrás de esas palabras.
+El agente luego llama una herramienta según la solicitud, evalúa si es posible hacerlo o no, recopila la información necesaria para ejecutar esa acción.
+Eso puede ir desde buscar en la base de datos que le estamos proporcionando, de ir a buscar en la web o incluso hacer algo dentro de la nube en la que está.
+Y finalmente el agente da una respuesta, formula una respuesta que es muy pertinente, ajustada a la solicitud que le estamos haciendo, de tal manera que sea muy, muy natural.
+Eso es un agente conversacional explicado de manera técnica.
+Ahora, los agentes de flujo de trabajo.
+Los agentes de flujo de trabajo son los que están diseñados ya para optimizar el trabajo y garantizar que las tareas se realicen de forma eficiente.
+¿Qué es lo que queremos?
+Que estos agentes automaticen tareas o procesos paso a paso o procesos complejos que antes nos tomaban tiempo o que eran muy repetitivos, reiterativos, y que estos agentes de flujo de trabajo lo puedan hacer.
+¿Qué necesita el agente de flujo de trabajo?
+Que nosotros le definamos una tarea o una actividad, que iniciemos el evento y ya.
+Básicamente es eso.
+El agente entiende lo que debe hacer.
+El agente va a ser el sistema que automatizar cada uno de los pasos, interpreta qué necesita para la tarea y define la serie de pasos necesarios para completar esa tarea.
+También el agente de flujo de trabajo llama la herramienta que él necesita, según la solicitud que nosotros le estemos haciendo, según la definición que nosotros le demos del problema, él ejecuta cada una de las acciones.
+¿Qué tipo de acciones?
+Transformar datos, lo que les decía, agendar en mi agenda, bloquearme algunos espacios, Transferir archivos, editar archivos, enviar notificaciones, enviar mensajes, bueno, muchas cosas que pueda ser en términos de automatización.
+El agente va a generar un resultado de salida, compila el resultado de las acciones que se ejecutaron y pues esto puede ser un informe, un archivo de datos, un mensaje de confirmación o lo que sea, para que nosotros estemos enterados de lo que está haciendo el agente de flujo de trabajo.
+¿Que es parte de los resultados que puedo arrojar?
+Puedo arrojar desde un correo, una agenda, una actualización, una ejecución, una edición, bueno, acciones que necesitamos que se realicen de manera automática.
+Y la principal diferencia entre un agente y la IA tradicional es que la gente incorpora algo que se llama el bucle de razonamiento y herramientas, que es este que están viendo acá arriba, donde vamos a comenzar por observar.
+El bucle del razonamiento le llama y es el núcleo principal de la IA.
+Y se le llama bucle porque es un ciclo continuo, porque no tiene feedbando, vueltas, vueltas, vueltas, vueltas.
+En el ciclo de la gente observa, interpreta, actúa y planea.
+Y esta interacción es la que le permite a la gente ser tan adaptable.
+Cuando hablamos de herramientas que puede usar el agente, pueden ser desde herramientas de software hasta herramientas de hardware.
+¿Y esto que le va a permitir a la gente?
+Le va a permitir a la gente poder, no sé, por ejemplo, consulta el inventario de SAP y envía un correo al cliente, si se notifica que el producto usualmente compra, está bajo, bajo inventario, o agendarle una reunión directamente, o si, ese tipo de automatizaciones que nosotros podemos usar y que le traería mucho, mucho valor al negocio.
+Cuando el agente combina herramientas y el razonamiento, es lo que le permite a la IA extraer el máximo de su potencial.
+Listo.
+Ahora, ¿Qué es Vertex AI?
+Vertex AI, bueno, pregunta para ustedes.
+¿Cuál parte de las capas que vimos hace un rato es Vértex?
+¿Alguno que me pueda decir?
+Las voy a colocar acá atrás.
+Estas son las capas.
+Es pregunta fácil, chicos, a nadie se le ocurre.
+Infraestructura, creería infraestructura o si no plataforma, o si no plataforma.
+¿Puede ser, Juan Pablo?
+Iba a decir algo más.
+Yo creería que estoy, o sea, digamos que también tengo como la misma dualidad de Giovanni.
+Bien, y es una buena duda porque suena algo parecido a los dos, gracias a los dos chicos, a Juan Pablo y Andrés, Porque cuando hablábamos de las capas, nos referíamos a que eran la base para construir las iniciativas de inteligencia artificial.
+Vertex es el intermedio entre los modelos y los agentes, porque desde Vertex ya vamos a tener modelos preconcebidos en algunas ocasiones, ahora lo vamos a ver más adelante, y los agentes específicos que vamos a crear para realizar algunas acciones.
+Entonces, efectivamente, es plataforma, así lo definimos.
+Vertex es una plataforma, no es la infraestructura como tal, y de hecho Vertex nos va a facilitar muchos temas de infraestructura, que yo por lo menos no soy experto, pero justamente Vertex proporciona esas bases en cuanto a herramientas y modelos entrenados para nosotros crear nuestras soluciones de inteligencia artificial de Machine Learning, es decir, agentes.
+¿Cuáles son las ventajas de Vertex?
+Que Vertex, como es una solución en Twenn, así como lo es Looker, incluye también herramientas de operación de Machine Learning, herramientas de operación de Machine Learning, machine learning ops, MLOPs, es decir, que nosotros podemos supervisar los modelos y los flujos de trabajo que nosotros tengamos dentro del end to end.
+Vamos a tener MLOPs, vamos a tener mantenimiento de nuestras soluciones, mantenimiento predictivo, descriptivo, incluso un poco prescriptivo.
+Se va a poder realizar ingeniería de datos de manera muy intuitiva, podemos ejecutar experimentos, administrar, iterar nuestros modelos, hacer seguimiento a los metadatos, evaluar la calidad de los modelos, evaluar la calidad de los datos, tiene MELOPS también, qué es lo que queremos con estos sistemas de MELOPS dentro de Vertex AI, que podamos automatizar, estandarizar y administrar el ciclo de vida de todo nuestro proyecto digital, de nuestra solución digital.
+¿Qué finalmente va a permitir esto?
+Que tengamos pues primero, colaboración entre proveedor y desarrollador y segundo, mejora continua del modelo, porque nos estamos sometiendo a algo que ya nos ofrece google, que es MLOPS.
+¿Listo?
+Entonces, vertex se considera como la plataforma, es ese intermedio y tiene muchos, muchos paquetes de funcionalidades y lo que nos brinda es una herramienta para una solución en TWEN.
+Así que bueno, ya sabiendo que Vertex AI es la plataforma, Vertex AI tiene varias opciones para manejar modelos de inteligencia artificial para el proyecto que nosotros requiramos en nuestra organización, el que sea.
+Podemos elegir crear un modelo desde cero, desde cero que lo tenemos acá, o podemos elegir crear un modelo desde alguna base, que es lo que tenemos acá.
+¿Alguno conoce Model Garden?
+Hay una persona que yo sé que ya es experta en Vertex, entonces si le da la oportunidad a los demás, mejor.
+Pero ¿Alguno conoce Model Garden?
+¿Alguno ya comenzó a explorar, a ver algo de estos temas de generativa?
+¿Algunos saben chicos?
+¿No?
+Bien, pues para los que no somos buenos, como les decía hace un rato, implementando infraestructura muy diferente a Santiago, hay modelos abiertos que nos facilitan mucho la vida.
+¿Lo primero que debemos preguntarnos antes de decir cómo vamos por Model Garden?
+Es cuando yo les hablaba del nivel de abstracción, ¿Qué tanto nivel de control necesitamos sobre el modelo?
+Bueno, tal vez en mi caso, si yo tengo un proyecto donde no me dedico 100% al desarrollo, pues no voy a necesitar tanto nivel de abstracción, o voy a necesitar alto nivel de abstracción, por lo tanto no necesito tener tanto control sobre el modelo y puedo irme con un.
+Un Model Garden.
+¿Y a esto como le llamábamos?
+Un SAS, pero en este caso le cambiamos el nombre y le pusimos más, porque es un Model as a Service, no es un software, es un modelo.
+Y el Model Garden, si no necesitamos un nivel tan alto de control sobre el modelo, pues podemos entregarle este control al proveedor con el que vayamos a contratar y simplemente utilizar los modelos que ya están desarrollados dentro del paquete de Vertex AI, que se llama Model Garden, y son estos modelos pre construidos para nuestro uso.
+Elegimos simplemente el modelo que más necesitemos de una lista de miles y miles de modelos que ya hay en Vertex y ya, y utilizamos ese modelo.
+Si tal vez necesitamos más control sobre el modelo, podemos ya trabajar en construir nuestro propio modelo.
+Y acá ya hablamos de comenzar a explorar el auto de mail.
+En la mayoría de casos, en nuestra organización no se va a necesitar desarrollar un modelo nuevo desde cero.
+En la mayoría de casos va a ser muy raro.
+Yo nunca lo he hecho, al menos yo, es un caso muy excepcional.
+Y como les digo, a menos de que la empresa se dedica al desarrollo, claramente lo van a necesitar.
+Pero con los modelos de Model Garden, y que ya son un montón, un montón, un mont, es más que suficiente.
+Pero igual lo podemos hacer y tenemos la opción, podemos desarrollar un modelo nuevo y comenzarlo a desarrollar en Automail.
+Bueno, que no tengo ninguna plataforma para desarrollarlo y que lo va a hacer en mi compu local, pues a menos de que seamos una empresa de miles de millones, no vamos a poder lograrlo, a llegar a ese nivel de personalización y de implementar modelos que ya existen, pero de manera local.
+¿Qué modelos podemos encontrar dentro de Model Garden?
+Acá tomé algunos también otros que yo me acordaba.
+Gemini llama, Cloud de Antropic llama.
+Y bueno, eso es como básicamente.
+Pero ya tenemos un paquete predefinido de algunos modelos.
+Pero lo que les digo, son muchos, muchos que habría que explorar.
+Bueno, también hay otros como los famosos Scikit Learn, XGBoost, bla, bla, bla, bla.
+Tenemos varios modelos que ya son famosos y podríamos usar dentro de nuestro modelo.
+Ahora, cuando hablamos del enfoque estratégico, hablamos de cómo vamos a impactar a nuestros principales stakeholders a través de nuestras soluciones digitales.
+Y esto es parte de lo que yo quiero que ustedes vayan planeando en sus trabajos para la última clase.
+Cómo vamos a impactar nuestros principales stakeholders.
+Entonces, por ejemplo, cuando hablamos de los gerentes y colaboradores, lo más urgente es identificar en el trabajo diario qué está sucediendo, Buscar esos desafíos del mundo real, porque van a ser el punto de partida entre aplicaciones de IA que generen un impacto significativo.
+Cuando hablamos de C Level, nos concentramos en impactar a esos tomadores de decisiones, los sponsors, los que van a invertir dentro de nuestras soluciones, donde la IA puede tener un impacto significativo, donde podemos priorizar la inversión sobre IA.
+Ya cuando hablamos de exploración, es capacitar a los empleados, invitarlos a que prueben a que usen las herramientas, Generar entornos de colaboración, cuando hablamos de ideas responsables, lo que hablábamos hace un rato, cuando hablamos de recursos, no solamente hablamos de recursos en temas de dinero, también hablamos en temas de herramientas y de roles.
+Establecer los KPI del negocio y buscar la mejora continua, y es lo que he dicho mucho, adoptar un enfoque interactivo, implementar mecanismos para recopilar feedback, que muchas veces se nos olvida, garantizar que cumplamos con las expectativas y además que tenemos sustento para buscar mejoras en nuestros modelos y que pues esto finalmente nos va a ayudar a pedirle al negocio inversión.
+Creo que esta parte ya habíamos hablado la clase pasada, pero bueno, igual acá se fue la slide y es bueno recordar.
+Entonces, esta es la estrategia que deberíamos seguir para implementar inteligencia artificial y que deberíamos dividir en diferentes frentes, que son estos seis frentes de acá y buscando solucionar cada uno de estos frentes de acá.
+Enfoque estratégico, exploración y responsable, buscar también seguridad, recursos, definir roles y costos, establecer KPIs alineados con el negocio y buscar la mejora continua con nuestros modelos.
+Así que bueno, cuando hablamos de Vértex, de pronto a ustedes les viene una pregunta, los que no han trabajado con este tipo de desarrollos y profe, ¿Qué vamos a necesitar para trabajar en vértex?
+¿Qué necesito si mi empresa de pronto está buscando algo y queremos implementar algo de guía generativa?
+Bueno, acá intenté consolidarlo en un paso a paso de qué necesitaríamos para trabajar sobre Vértex.
+Primero, recopilar los datos, determinar los datos que necesitamos para entrenar y probar el modelo en función del resultado que queremos lograr.
+Segundo, ya tenemos los datos, ahora los comenzamos a preparar, Asegurar que los datos tengan el formato y las etiquetas adecuadas, metadatos de los datos, variables bien caracterizadas, bases de datos estructuradas si es posible.
+Tercero, ya una vez preparamos esos datos, comenzamos a entrenar los datos y es que vamos a configurar y crear los parámetros del modelo, la temperatura, el top n, el número de tokens a producir, bueno, varios parámetros que vamos a ir viendo, pero lo comenzamos a ver cuando entrenamos el modelo.
+Cuarto, administrar el modelo y como les decía, como Vertex permite una operación de MLOPs, vamos a poder revisar las métricas del modelo, que no son las mismas métricas KPIs del negocio, ¿No?
+Que son las que deberíamos apuntar finalmente nuestra solución digital.
+Si no son esas métricas propias de la herramienta que nos va a permitir supervisar el rendimiento de la herramienta.
+¿Cómo está siendo el rendimiento?
+¿Cómo está Siendo la opción?
+¿Nuestros usuarios, clientes, bien sean internos o externos, están usando la solución?
+¿Está fallando la solución?
+¿Está funcionando correctamente?
+Ese tipo de cosas que hacemos con MLOPs.
+Y por último, implementar y es hacer que el modelo esté listo para usar, para usar a los usuarios.
+Ese debería ser el paso a paso.
+Suena sencillo, es como cualquier paso de cualquier solución digital, cinco pasos.
+Ahora, bueno, quise traer el caso de una empresa ficticia, es una empresa que no existe, pero es un ejemplo que nos dio Google que me gustó mucho, que se llama Cymbal Aerospace, creo que es un nombre.
+El objetivo de ellos era entender de manera mucho más rápida sus datos, mejorar sus planos, d sacar informes y entregarlos a sus clientes.
+Entonces, piénselo para sus empresas, ellos tienen información que necesitan procesar con IA generativa, que les tomaba mucho tiempo porque consultores de su empresa lo hacían de manera manual, revisar documentos, archivos, bases de datos, Excel, Word, reportes y comenzar a generarlos.
+Bueno, la intención de esta empresa ficticia, Cymbal Aerospace, es tomar esos datos que ellos ya tienen y en lugar de que una persona lo haga de manera manual, pasárselos a través de, en este caso Vertex, sea obviamente, y que Vertex pueda entregar esta solución, que si algún consultor necesita comenzar a generar reportes, simplemente se apoya de la herramienta y entregue reportes mucho más enfocados y potenciados con IA generativa.
+Parte de este planteamiento o el planteamiento, yo lo que les he venido diciendo en todo esto es que pues no da para que ustedes hagan un entregable y eso probablemente lo harán ustedes en sus trabajos de tesis, pero sí para que hagan un planteamiento y es lo que quiero ver en sus trabajos finales, cómo plantean que estas soluciones puedan responder con mayor agilidad y eficiencia lo que necesita hoy el negocio.
+¿Listo?
+Entonces, bueno, veamos un ejemplo de cómo esta empresa, Simba Aerospace, utilizo Vertex para perdió el mouse para generar informes de sus datos y transformar sus procesos de fabricación.
+Entonces voy a poner el video un momento que voy a compartir audio, aunque voy a compartirlo directamente YouTube.
+Momento porque creo que la última vez que compartí, la última vez que compartí le salía todo el vídeo en inglés.
+Entonces porfa chicos sigan este vídeo que les voy a compartir que es un caso muy muy interesante y que les va a servir mucho para que lo piensen para sus empresas.
+¿Entonces por favísenme pueden ver mi pantalla?
+Y si la pueden ver, la pueden ver, me confirman y si pueden escuchar.
+A manufacturer critical jet engine components, faced a challenge.
+Their vast library of three D CAD models held a wealth of vital information, but accessing it was a time consuming and inefficient process.
+Let's explore how they leverage generative AI on vertex AI to overcome this obstacle and transform transform their operations.
+Symbol Aerospace face the challenge, Similar to many manufacturers extracting critical information from complex.
+Pero un momento porque parece que se está poniendo en inglés.
+Simple Aerospace A manufacturer critical jet engine components.
+Simple Aerospace, a manufacturer of critical jet engine components faced a challenge.
+Their vast library of three D CAD models held a wealth of vital information.
+Acá tiene la opción.
+Va a ver 100 acá también.
+No la vi.
+Ah sí, acá la tiene.
+Se los voy a poner en español mejor.
+Listo.
+Three D CAD models A manufacturer critical jet engine components faced a challenge.
+Their vast library of three D CAD models held a wealth of vital information, but accessing it was a time consuming and inefficient process.
+Let's explore how they leveraged generative AI on vertex AI to overcome this obstacle and transform their operations.
+Symbol Aerospace faced the challenge, Similar to many manufacturers extracting critical information from complex.
+Three D CAD models was a tedious and error prone process engineers struggled to quickly access details like material composition, dimensions and stress points, hindering their ability to efficiently design, analyze and manufacture components.
+This manual and time consuming workflow hindered their efficiency and increased the risk of errors.
+To overcome this challenge, Symbol Aerospace decided to build a custom gen AI solution that could analyze three D CAD models to automatically generate concise summaries or answer questions.
+They did this by using a two layered approach combining the power of AutoML and Gemini within Vertex AI.
+First, they leveraged AutoML which streamlined the process of training a machine learning model capable of extracting key metadata from the CAD files.
+This eliminated the need for deep machine learning expertise, allowing Symbol Aerospace to quickly build a powerful and specialized model tailored to their specific needs.
+This custom automl model acted as an intelligent interpreter capable of understanding the intricacies of the CAD files and identifying critical information such as material composition, dimensions and tolerances.
+To further enhance the usability of this information, they integrated Gemini within Vertex AI using MLOps Tools like Vertex AI pipelines.
+Vertex AI pipelines lets you automate monitor and govern your machine learning system in a serverless manner by using ML pipelines to orchestrate your ML workflows and Gemini transformed the raw metadata extracted by the auto ML model into clear, concise and insightful summaries in natural language.
+This allowed engineers to easily understand and interpret the information facilitating faster and more informed decision making.
+For example, an engineer could ask the system what is the tensile strength of the turbine blade and receive an immediate, understandable and accurate answer extracted from the complex CAD file by using Vertex AI Symbol Aerospace was able to simplify model development.
+Vertex AI's AutoML handles the complexities of model training making it easy for the company to build a high performing model without needing deep machine learning expertise.
+Customized Solutions The company was able to train a model tailored to their specific needs and data ensuring accurate and relevant summaries.
+Scale efficiently Vertex AI provides the infrastructure to deploy and scale the generative AI model, enabling the company to process large volumes of CAD files quickly and efficiently and streamline deployment.
+The company easily deployed its models using a serverless infrastructure.
+Vertex AI handled key machine learning operations such as scaling and infrastructure management which allowed the company's employees to focus on model and application development.
+With the generative AI solution deployed on Vertex AI symbol Aerospace experienced significant improvements.
+Product development cycles accelerated by fifteen percent.
+Bueno acá realmente lo paro porque ya son datos porque Symbal no existe, es una empresa ficticia para pues obviamente Google primero pues vender la solución y segundo mostrar parte de los beneficios que son muy buenos de Vertex, pero lo que quiero que se lleven es piénselo para sus trabajos.
+Simba lo que hizo es entrenar un modelo a través de vertex y crearon un modelo específico con AutoML que pudiera responder preguntas muy específicas de un mercado que es complejo y que necesita un nivel de especificidad alto, son turbinas, es un negocio aeroespacial y pues finalmente lo que hacen es tomar esa gran cantidad de datos y que antes tenían que revisar de mucha mucha, realizar análisis de manera muy manual y pues con esto le facilitan un poco la vida en este caso al técnico ingeniero aeroespacial o ingeniero mecánico en revisar esta información, porque finalmente lo que hacen es analizar la información, pasarlo a través de esta idea generativa, crear la UX y el ingeniero va a poder realizar las preguntas específicas o solicitar la creación de reportes específicos para su organización, potencia su labor, el analista de datos pasa a evolucionarse a ser más un ingeniero de IA o analista de IA o especialista en IA para mantener la operación y crear este tipo de aplicaciones específicas que van a requerir un tipo de atención y que van a poder perfeccionarse y que el ingeniero de IA va a tener que estar actualizándose constantemente según lo nuevo que vaya trayendo el proveedor, en este caso Google.
+Pero que estas son parte de las posibilidades y lo que quiero que se pueda lograr con este tipo de herramientas, que intentemos profundizar en cómo se va a usar.
+Y finalmente la infraestructura.
+Ya hablamos de las aplicaciones, ya hablamos de los agentes, ya hablamos de las plataformas, ya hablamos de los modelos que hay Automail Garden, ahora hablemos ya lo último que nos falta es la infraestructura.
+Y la infraestructura Andrés y Juan Pablo al inicio me decían como Vertex puede ser una infraestructura o tal vez incluso la misma plataforma.
+La infraestructura, cuando hacemos relación o menciona las soluciones de inteligencia artificial generativa, nos referimos a esa base sobre la cual se construye estas herramientas de vía generativa, estas soluciones de vía generativa.
+Cuando hablamos de la base, ¿Que se necesita para construir, ¿Qué necesitamos para hacer esa base?
+Necesitamos hardware y software, esa es la infraestructura, Básico a nivel de un ingeniero de sistemas, a nivel de una persona que conoce ciencia, datos, que soy yo, y es eso, una combinación de hardware y software que va permitir y proporcionar la potencia de procesamiento, almacenamiento y bueno esto ya viene más desde el que contrate el servicio, pero la capacidad de red necesaria para entregar, implementar y escalar modelos de inteligencia artificial es la capa fundamental para que todo de ahí en adelante funcione.
+Si no hay modelos no hay nada para arriba, si no hay plataforma, nada para arriba, si no hay agentes, nadie para arriba.
+Pero si no hay infraestructura no hay nada.
+Es la capa donde se manejan los conjuntos de datos masivos y los cálculos involucrados para que la IA sea IA.
+En especial pues cuando hablamos de los modelos base y de los LL proveedores como Google, como PN, como Antropic y bla, bla, bla, bla bla, todos los que vienen de ahí en adelante, en lo que más invierten es en la infraestructura.
+Porque si se tiene una buena infraestructura que sea sólida, que esté a la vanguardia de lo que viene todos los años, se va a poder ejecutar tareas que cada vez requieren cargas más y más exigentes.
+Y como muchos de ustedes me han dicho, me han manifestado, me han dicho, hemos conversado, imaginen que su empresa quiere desarrollar un proyecto de guía generativa.
+Sin embargo, el procesamiento del modelo requiere una potencia significativa.
+Requiere almacenamiento y requiere procesamiento.
+Esas son las dos cosas principales que requiere la IA generativa.
+Y perdón por el tema de la seguridad, claramente también temas de ciberseguridad, pero voy a hablar de algo específico para que sea funcional al menos, es almacenamiento y procesamiento.
+Ya sabemos que la infraestructura que tenemos hoy dentro de la empresa, si no somos de desarrollo, probablemente no va a ser suficiente para seguir el ritmo de lo que queremos.
+Si queremos alimentar con X datos y que a partir de esos X datos, los consultores, desarrolladores de negocio puedan entregar insights del negocio más estructurados, más rápido, más ágil, probablemente con la infraestructura que tenemos hoy, si no somos una empresa de desarrollo, no lo vamos a poder lograr.
+Porque justamente empresas como Google, como OpenAI, como Meta, han invertido un montón en temas de infraestructura.
+Y ahí es donde juega el tema del proveedor que vayamos a contratar para que ellos nos entreguen el mejor posible alto rendimiento que ellos puedan entregar y que la infraestructura en la nube sea consistente y cuente con algunos datos base para que funcionen estos modelos base y que en adelante lo que nosotros vayamos a desarrollar sea mucho más sencillo.
+Porque nosotros no somos empresa de desarrollo, muchos de nosotros los que sí y no vamos a invertir en estos temas de infraestructura cuando ya otras empresas lo están haciendo en manera masiva.
+Y a partir de aquí, bueno, voy a hacerles una pregunta porque quiero que me hablen también, chicos.
+¿Alguno sabe que es el GPU?
+Creería que la mayoría pueden levantar la manito, o sea, reaccionar con manito arriba.
+¿Saben que es el GPU?
+¿Alguien que pueda prender micrófono y decirme para él o ella que es el GPU?
+¿Es como el procesador que tienen para las gráficas en los computadores?
+Sí, es eso.
+Y lo podemos resumir así.
+Está bien, Karen, Lo vamos a hablar así de manera muy genérica.
+Es la unidad de procesamiento que tenemos para el tema.
+Los núcleos para hacer el procesamiento de la información matemática del sistema, etcétera.
+Incluso ahorita en Vertex está el TP.
+Perfecto.
+Y ahí me está hablando Sebastián creo, ¿Cierto?
+Bien, porque sabes de Vértex.
+Bien, y gracias porque me abres un tema muy importante y es que el GPU, lo que nos dijo al inicio Karen, el GPU en un inicio fue concebido únicamente para temas gráficos.
+¿Pero qué pasa?
+Nos dimos cuenta que para algunos temas de rendimiento el GPU además de renderizar nos podía ayudar con algunos temas de rendimiento y podíamos usar estas unidades de procesamiento que eran gráficas, pero también para evolucionar lo que hoy en día es la IA y ayudar a que la IA fuera más eficiente.
+¿Pero qué pasa?
+Hace un tiempo nació el TPU y el TPU es una unidad de procesamiento tensorial y a diferencia del GPU, el TPU se especializa en el procesamiento de IA diferente al GPU, porque estábamos básicamente lo que estábamos haciendo era utilizar una solución que era para algo gráfico, utilizarlo para algo que era procesamiento y rendimiento.
+La concepción inicial del GPU era eso, procesamiento, renderizar gráfico.
+Pero hoy la TPU se diseñó específicamente para acelerar esas cargas de trabajo del aprendizaje automático.
+Y bien, ya ahora que tenemos claro el tema del GPU y el TPU, eso es lo que nos va a permitir hacer el procesamiento de nuestros modelos que vamos a utilizar en Vertex.
+Y gracias Sebastián.
+Gracias Karen.
+¿Y qué pasa ahora hablando del tema, ahí estábamos hablando del tema del rendimiento del procesamiento, que era las dos características fundamentales en las que invierten estas grandes empresas en los temas de infraestructura?
+Pero ahora si hablamos de almacenamiento, cuando hablamos de IA generativa, siempre lo hablábamos y siempre soy muy reiterativa en esto, necesitamos grandes cantidades de datos para que él aprenda esas grandes y grandes y grandes y masivas cantidades de datos, porque pues esto va a ayudar a que junto el TPU se proporciona una capacidad y una velocidad de respuesta mucho más, mucho más, retiren eso, una respuesta óptima.
+Pero de ahí a que los grandes proveedores inviertan en los data centers, que lo hablábamos hace par de clases, invierten en estos datacenters, primero para aumentar el almacenamiento que ellos tienen, almacenamiento en la nube, y segundo para aumentar la capacidad de procesamiento que tiene.
+Y tercero, hay un concepto, yo no me acuerdo bien del nombre de ese concepto, lo siento chicos, pueden investigarlo, Procesamiento perimetral.
+Puede ser, no me acuerdo bien, pero lo que nos dice el procesamiento perimetral es justamente eso, es buscar cuál es la fuente más cercana de procesamiento para procesar nuestro sistema.
+Y es que es diferente si nosotros estamos ejecuta, si contratamos Vertex, por ejemplo, y ejecutamos nuestro modelo para nuestra empresa en Colombia y nuestro data center que está almacenando y procesando toda la información de nuestro modelo y de nuestra empresa está en China, diferente a si está, no sé, en Sao Paulo, porque el procesamiento va a ser mucho más rápido si tenemos nuestra fuente de almacenamiento cerca a recorrer pues un montón de kilómetros e ir hasta China.
+Claro, estoy hablando de temas de respuestas de minutos o segundos, pero cuando hablamos de modelos tan, tan y tan grandes, chicos, pues esto cobra mucha importancia porque va aumentando y aumentando el tiempo de procesamiento.
+Entonces por eso estos grandes proveedores invierten en data centers, le pagan a otras empresas para comprar data centers o para alquilar data centers, o ellos mismos construyen sus data centers y pues eso es lo que permite que tengan una infraestructura tan potente en la nube y nos ahorre muchos temas que son muy complejos para una empresa que no se dedique específicamente al desarrollo.
+Así que bien, básicamente eso es la nube, perdón, básicamente eso es la infraestructura, es la base que combina software, hardware para que tengamos almacenamiento y procesamiento.
+¿Listo?
+Y bien, como les decía, detrás de esto pues necesitamos recursos, recursos que muchas veces puede que el proveedor asuma o que nosotros vamos a asumir si nosotros vamos a construirlo desde cero, pero lo mínimo son estas dos como partes de los recursos que necesitamos para el proyecto.
+Primero, el costo.
+Cuando se crean las soluciones de guía generativa, se pagan por tres actividades, actividades, ojo, no recursos, sino actividades, recursos, almacenamiento y procesamiento, actividades.
+Y las actividades por las que se paga es, primero, entrenar el modelo, segundo, implementar el modelo y tercero, usar el modelo.
+Dependiendo el proveedor puede cobrar por las tres, puede cobrar por una sola, la mayoría cobra por todas.
+El entrenamiento y la implementación de modelos implica lo que es el pago por el tiempo de procesamiento utilizado, además del almacenamiento de los datos que vamos a utilizar, los datos de entrenamiento y también los resultados del modelo que podemos usar para mostrar el negocio, para reentrenar el modelo.
+Y según el uso suele medirse en estos temas de IA generativa y no sé si lo hablaba con un estudiante acá, creo que era de otro curso con David.
+Si, David es de otro.
+Cuando utilizamos estas soluciones de IA generativa, Sebastián lo debe saber muy bien, usualmente se puede pagar por tokens o caracteres o solicitudes que le hagamos a la IA.
+Y pues a partir de ahí también hay un costo asociado muchas veces.
+Entonces, podemos tener varios factores que pueden alterar el costo de nuestra solución de IA generativa.
+Desde el token, el carácter, la solicitud o incluso lo que les decía hace un rato del tiempo.
+Y en cuanto a roles, cuando hablamos de recursos para un proyecto que involucre inteligencia artificial, primero, el sponsor, quien va a pagar por esto desde el negocio.
+Segundo, el profesional que va a usar la inteligencia artificial, bien sea el cliente, el usuario.
+Y tercero, el desarrollador de la IA, quién va a desarrollarlo y quién lo va a entregar y quién va a capacitar a estos profesionales que la van a usar.
+Y con esto, como mínimo, ojo, mínimo, mínimo, mínimo para que haya, porque acá hay muchos más roles de ahí en adelante, pero como mínimo, si tenemos claridad de los costos y tenemos claridad de los roles, quienes van a desempeñar al menos estos tres roles, ya podemos comenzar a plantear nuestro proyecto de IA.
+¿Listo?
+Bien.
+Y acá yo quiero recomendarles un listado de preguntas que siempre recomiendo hacerse para evaluar la necesidad de implementar guía generativa, porque no siempre necesitamos idea generativa, no siempre necesitamos lo más complejo.
+Y es que si de pronto ustedes están pensando en implementar guía generativa en sus empresas, sean muy críticos en decidir si realmente es lo que necesitan o es algo que nada más quieren, porque hay una gran diferencia.
+Y primero hablemos de escala.
+Voy a poner todas, sí, porque las puse en desorden.
+Hablemos de escala, lo va a señalar más bien con el puntero, porque puse la animación en desorden.
+De escala.
+Cuando hablamos de escala, la pregunta que se deberían hacer es si la solución es de uso individual, para un equipo, para una organización o para clientes de nuestras empresas, de nuestra empresa, que pueden ser muchos.
+Si es algo en pequeña escala, se puede llegar, pues, bien lejos con ya modelos que están previamente entrenados y tal vez no es necesario crear algo desde cero.
+Si es a gran escala, tal vez se necesita algo muy diferencial del mercado, porque ya estamos hablando de muchas personas y debemos buscar algo que se diferencie del mercado.
+Y tal vez acá ya estamos hablando de crear nuestra propia solución de guía generativa.
+Personalización, la pregunta debería ser ¿Qué tan especializada debe ser la solución?
+¿Los modelos de base son suficientes?
+¿Necesitamos desarrollar más modelos?
+¿En muchos casos puede que sí, pero qué nivel de personalización le queremos dar a nuestra solución?
+Tercero, interacción con el usuario.
+¿Como nuestros usuarios van a interactuar con la solución?
+Siempre pensar en diseñar una experiencia, lo que yo les he dicho, alineada con la cultura organizacional de la empresa, intuitiva, atractiva, fácil de usar, fácil de encontrar, fácil de mantener, fácil de elegir y con eso van a tener una buena experiencia para el usuario.
+Privacidad, ¿Qué tan sensibles son los datos con los que trabajo?
+¿Y además de eso, qué reglamentaciones debo cumplir?
+Hay reglamentaciones internas de mi compañía y reglamentaciones internas de mi empresa.
+Por ejemplo, yo hace poco me enteré.
+En China, por ejemplo, en mi empresa se paga la licencia Copilot y en China, para mi empresa en China ellos no pueden usar Copilot por temas de privacidad de datos, porque China restringió estas soluciones.
+Entonces hay que ver temas de reglamentación tanto de la empresa como del país.
+Y por último, comparar diferentes empresas y modelos.
+Comparar qué me ofrecen cada una de las empresas, qué competencia tiene Vertex, tiene por ejemplo Azure, tiene por ejemplo esta IBM tiene por ejemplo la API de OpenAI, la API Cloud y bueno y muchas otras.
+Comparar esos precios, que me ofrece una, que me ofrece otra, Hay unas que son muy intuitivas, hay otras que no tanto.
+Porque sea tan intuitiva nos van a cobrar más, porque no sea tan intuitiva nos van a cobrar menos.
+El nivel de abstracción, comparar ese tipo de cosas y es comenzar a comparar.
+Entonces esas son las preguntas que se deberían hacer para determinar si realmente su solución es de ya generativa.
+Y es lo que a mí me gustaría que ustedes pudieran plasmar en el trabajo de la clase final, porque están decidiendo implementar una solución digital que involucre y a generativa o por qué no es una buena opción.
+Ese tipo de cosas me gustaría que las pudieran plasmar en su trabajo y voy a valorar mucho eso.
+Y listo chicos, creo que a tiempo.
+Nos vamos a ir a un break.
+Vamos a ir a un break de 15 minutos.
+La idea es que hagamos un break, una pausa activa chicos y volvemos acá para ya ver un tema un poco más práctico.
+Entonces volvemos en 15 minutos, vayan abriendo Cloud Skills Boost y nos vemos acá a las.
+A las alas a las 5.58, ¿Vale?
+Nos vemos por acá de nuevo.
+¿Preguntas hasta el momento chicos o dudas?
+Perfecto, listo, con gusto.
+Listo chicos, entonces cinco cincuenta y ocho, nos vemos de nuevo acá.
+Quince minutos de break.
+Listo chicos, ¿Ya están de nuevo conmigo?
+¿Escuchan bien?
+¿Me logran ver?
+Gracias, gracias.
+Listo, Los voy a necesitar súper activos conmigo chicos, porque vamos a hacer muchas cosas y quiero que me vayan diciendo si van bien conmigo.
+Los paso por acá.
+Parece que se me va a apagar la puntacha.
+Listo.
+Bien chicos, hoy quiero que veamos algunos ejercicios de Vértex y vamos a utilizar el primer laboratorio que es muy, muy sencillo.
+Entonces los que estén ahí conmigo, porfa, van a ingresar a este laboratorio acá que se llama Diseño de Instrucciones en Vertex AI, la app de desafío.
+Voy a copiarles este link y se los voy a compartir acá en el chat y me avisan si pueden ingresar, pero les voy a mostrar la ruta desde cerveza para que porfa me sigan.
+Y los que vayan entrando al laboratorio me van alzando la manita, así como hicimos hace un tiempo con los ejercicios prácticos.
+Entonces hay una ruta aprendizaje que se llama ruta aprendizaje introducción a la AI generativa, a la IA generativa.
+Ingresan a esa ruta de aprendizaje y una vez estén dentro de esa ruta de aprendizaje, van a encontrar un cuarto curso que se llama Diseño de Instrucciones en Vertex AI.
+Van a ingresar ahí y ese es el laboratorio en el que vamos a estar.
+Porfa alcen la mano cuando ingresen a ese laboratorio, porfa, una vez ingresen, de una vez denle en comenzar la.
+Gracias Sebastián.
+Denle de una vez en comenzar la porque se va a demorar bastante en iniciar.
+Si quieres Sebastián mantén la mano arriba.
+Espero que somos nueve en la clase, entonces a que hayan al menos cinco personas.
+Ya tengo a Santiago y a Sebastián conmigo, necesito tres más chicos para ir avanzando.
+Y Santiago y Sebastián que ya están ahí, denle en comenzar la.
+Bueno, otra cosa, bueno, no denle comenzarla porque él se demora un poco cargando.
+Y una vez les termine de cargar, no vayan a bajar la mano y porfa chicos, los que ya lleguen a calcen la mano para saber que van conmigo.
+Una vez lleguen acá, le van a dar clic derecho a Open Google Cloud Console y le van a dar Open en incógnito.
+Señor, no está proyectando pantalla por si acaso.
+Gracias.
+Estaba pensando que estaba proyectando, se estaban imaginando todo ahí.
+Ya, perdón chicos, ahí pueden ver.
+Gracias.
+Entonces, una vez para los chicos que ya le dieron en comenzarla, acá donde dice Open Google Cloud Console, le van a dar clic derecho y Open Link in Incógnito Windows lo van a abrir en incógnito.
+Los demás chicos ¿Cómo van?
+Andrés, Juan Pablo, Brian, Michel, Juan Sebastián, Oscar, ¿Pudieron?
+Listo, les doy la espera un poquito, no quiero que se pierdan.
+Los que estén conmigo de nuevo, van a darle en Open Link en Incógnito Window y van a entrar acá.
+Señor, ahorita estoy como con el celular, ¿Lo puedo hacer desde ahí o voy siguiendo más bien su pantalla?
+No te toca desde la pantalla porque toca sí o sí desde el compu.
+Y una vez que preciso lo mandé a arreglar y pues ya después me adelantaré creo.
+Listo, no te preocupes.
+Porfa.
+Nosotros chicos me han Si señor Juan Pablo, le dan Comenzar la y cuando les salga Open Google Cloud Console le van a dar clic derecho y Opening Incógnito Window.
+Es que se les va a demorar en iniciar el laboratorio por ahí unos cinco minutos.
+¿Listo?
+Por eso los necesito súper enganchados conmigo porque hay muchas cosas que se van a demorar chicos.
+Bueno, voy a ir siguiendo, si se quedan en alguna parte, porfa, así como Juan Pablo prenda el micrófono y me interrumpen si quieren ya pueden bajar la mano.
+Sebastián y Santiago, gracias por levantarla.
+Entonces, una vez ingresen al laboratorio en modo incógnito, van a darle en entendido que les va a dar como una bienvenida ahí y los va a llevar a la consola de la nube Google.
+Cuando estén en la consola de la nube Google, van a tener esta interfaz que de pronto los que los que estén viendo la clase Cloud Data Analytics en la clase Santiago, pues acá utilizan BigQuery.
+Entonces una vez les salga este letrero como Welcome Student, bla, bla, bla, bla.
+Acá en Country van a poner Colombia, de pronto alguien que tenga una VPN diferente, le sale otro país, puede poner Colombia.
+Y en Terms of Service le van a dar I Agree.
+En Email Updates no va a pasar nada porque pues ese es un correo test.
+Entonces yo en mi caso lo voy a dejar deseleccionado, le voy a dar Agregan continu.
+Y bien, ya estamos en la interfaz en la nube de Google.
+Una vez estando acá, van a ir a este letrero que dice acá Vertex AI y vamos a ir a donde dice Vertex AI Studio y le vamos a dar clic y se va a abrir la interfaz de Vertex Estudio.
+¿Cómo van hasta ahí chicos?
+¿Pueden, si quieren prender micrófono, están ahí conmigo?
+Bien, Sebastián ya me dijo que sí.
+Juan Pablo, Santiago, que me están siguiendo, ¿Van bien?
+Un segundito.
+Profe, no ha llegado a una vértexia estudio.
+Listo.
+Michelle ya me dijo que sí.
+Gracias Michelle, 10 segunditos.
+Listo, listo, listo.
+Bien, perfecto, gracias.
+Entonces, una vez estén en Vertex AI Studio, acá al lado, esto es que izquierda, sí, izquierda, esquina superior izquierda, les debe salir un botón que dice New.
+Le van a dar en New, él les va a desplegar como un pop up y le van a dar en Chat.
+Y vamos a crear nuestra primera aplicación de guía generativa en Chat.
+Listo.
+Una vez estén acá, van a entrar ahora a la interfaz de Vertex AI y acá vamos a comenzar a jugar con Vertex AI.
+Porfa, me dicen cuando vayan llegando a esta parte, chicos.
+Chat.
+Sí, Listo, profe, yo estoy ahí.
+Perfecto, gracias.
+Listo.
+Bien, entonces vamos a dar una repasada.
+Como ven, la interfaz es muy sencilla, es muy parecida a cualquier otra IA generativa, con la diferencia de que acá estamos en un ambiente de desarrollo donde vamos a tener acceso a diferentes APIs.
+Le di acá en Model Settings y pues Acá tenemos diferentes APIs que podemos usar.
+Incluso vean acá está NanoBanana, Gemini 3.1, el 3, Nanabana Pro, bueno, tenemos muchas y pueden explorarlas y se van a explorar en otros ejercicios, pero hay una específicamente que nos está pidiendo para este caso de este modelo.
+Y hay una descripción muy corta que nos indica para qué se puede usar cada una de estos modelos que tenemos acá.
+En nuestro caso vamos a utilizar, si no estoy mal, déjenme verificar, creo que vamos a usar el 2.5, pero déjenme verificar.
+Sí, 2.5.
+Entonces van a ir a Model Settings para los que me están siguiendo.
+Model Settings, En Model Settings probablemente les va a salir Gemini 3.1, vamos a cambiarlo por Gemini porque deben aparecer en la sección de Latest.
+Van a ir a la sección de Gemini y en la sección de Gemini van a buscar el 2.5 flash que nuestro modelo estándar de razonamiento nos permite tener más control sobre modelos de pensamiento y es el primero que vamos a tener de prueba, entonces vamos a darle en el 2.5 flash.
+¿Listo?
+¿Qué hay de acá?
+Interesante chicos, nosotros en estos modelos tenemos modelos para creación de imagen, vídeo, música, incluso audio, APIs, podemos incluso construir desde cero muchas cosas interesantes.
+Tenemos un sistema de instrucciones donde le vamos a dar un contexto a nuestro modelo de AI para que él comience a generar respuestas mucho más específicas, hacer un fine tuning del modelo y convertirlo en un agente específico para algo.
+En la sección donde dice System Instructions, donde dice Write a prompt o Use Commands, que es como la sección donde normalmente se le pregunta a un modelo de guía generativa, ahí vamos a escribir el comando o prompt para pedirle algunas cosas a la IA generativa.
+¿Listo?
+Entonces hasta ahí yo creo que sencillo, me siguen, ¿Cierto?
+¿Van bien conmigo?
+¿Pueden prender micrófono y decirme van bien?
+¿Vamos bien?
+Listo, gracias Santiago.
+Entonces bien, ya acordé, vamos a ponerle un nombre a este prompt.
+Entonces arriba de Model Settings vamos a copiar y pegar un título que se llama Insurance Risk Summary Prototype.
+¿Listo?
+Ese va a ser el nombre de nuestra instrucción que le vamos a dar a nuestro modelo para hacer el fine tuning.
+Y dentro del sistema de instrucciones vamos a pegar nuestro contexto que es el que You are an expert AI assistance for an insurance from the writing department.
+Your primary goal is to held underwriters.
+Bla bla bla bla bla bla.
+Ahí le estamos dando un contexto a nuestra IA generativa.
+¿Bien?
+¿Hasta ahí me siguen?
+Nombre al promedio, un sistema de instrucciones para darle personalidad a nuestro modelo.
+¿Lo tiene?
+Y como siguiente parte, en la parte de comandos de los prompts vamos a pedirle lo que justamente necesitamos.
+Entonces le estamos entregando una nota de un seguro y le estamos diciendo que su tarea es hacer un resumen con detalles del negocio de seguros y basado únicamente en las notas que nosotros le estamos proveyendo.
+¿Listo?
+Y le damos Enviar Submit.
+Profe, usted nos comparte sus textos o ¿Donde los encontramos?
+Ah bien, buena pregunta.
+Los textos están en el laboratorio.
+Acá en el laboratorio los vas a encontrar.
+¿Los pudiste ver Santiago?
+No profe, todavía no.
+Con la pregunta de Santiago, o sea estamos haciendo la tarea 2, la 1.
+Estamos haciendo la 1.
+Es que a mí en la tarea 1 no me sale el sista.
+Pregunta, ¿Estarás en otra tarea tal vez?
+¿Puede ser, a ver si yo te comparto esta tarea, el link ingresarás a la que compañero?
+Profe, no me aparece lo que usted le está pareciendo, ¿Será que están ingresando a otras?
+Chicos, creo que ya entré al laboratorio.
+Sí, sí es otro laboratorio, porque este es para hacer toda la parte de Júpiter en el Workbench.
+Sebastián, si estás en este, en el mismo mío.
+No, yo abrí ese que te has enviado y nos envía ese que acabas de enviar.
+Si es otro.
+Qué raro, los está llevando otro.
+A ver, hace el link que acabas de enviar, Ese sí ya está al laboratorio que es al laboratorio que sí profe, hay chicos, qué lástima.
+Bueno, intenten ingresar a este entonces, o sea que inicien el laboratorio.
+Es que se les va a demorar un poco, es lo que me preocupa, como 5 minutos y ya llevamos.
+Ya les abre de inmediato el otro.
+Ah bueno, sí, ya les debo abrir la consola rápido.
+¿Me avisan chicos si les abren y le dan en incógnito, no?
+Gracias Sebastián, Michelle, Juan Pablo y Santiago que me van siguiendo ahí.
+El laboratorio se debe llamar, Comienza a usar Vertex CV.
+Lo único profe, es que no creo que no es necesario repetir como lo de abrir consola.
+No, o sea, con la consola que teníamos abierta anteriormente funciona.
+Sí, sí ya están en.
+Bueno, no sé si él.
+No, si él les generó otras credenciales diferentes, si va a ser necesario porque no les va a contar el progreso, pero bueno, no importa.
+Exacto, si se les demora mucho, si se les está demorando mucho en general las credenciales, trabajen sobre el nuevo que tenemos, sobre el anterior que tienen, Sí, Para ir avanzando, así no les vaya a marcar el progreso.
+Pero eso sí, de una vez denle en comenzarla porque él se les demora por ahí un poquito.
+Igual confírme.
+Chicos, si ya les sale esta parte, si ya les generó credenciales, password y eso, Sí.
+¿Ah bueno, sí fue rápido y entonces ya lo abrieron en incógnito con las nuevas credenciales, cierren el anterior y abran uno nuevo cuando estábamos en la opción de, o sea, ya como en la interfaz, como en lo de poner Vertex, tenía que aparecer chat o que era lo que teníamos que poner?
+¿Quieren?
+Volvámoslo a hacer.
+Puede ir ante nuevo la interfaz.
+Juan Pablo y Michelle ¿Pudieron ingresar al que era?
+Sí, profe, ya me redirigió a la parte incógnito.
+Listo, entonces vamos a hacerlo desde cero.
+Entonces abrieron desde incógnito, les va a cargar la interfaz de la consola, les va a pedir como aceptar términos y condiciones, le van a dar aceptar términos y condiciones, de pronto les pide el país, de pronto les pide como aceptar algunas cosas.
+Denle a todo eso que sí, porque igual todo es una prueba.
+Denle acá en Vertex aislado y cuando le den en Vertex AI, le dan en Vertex AI Studio y cuando estén en Vertex AI Estudio, le van a dar en New y le van a dar en Chat.
+¿Listo?
+Y una vez le den en Chat, van a entrar acá.
+¿Bien?
+Hasta ahí.
+¿Ya volvieron a ingresar conmigo?
+¿Ya están ahí conmigo?
+Sí, profe, está cargando.
+Entonces chicos, dentro del laboratorio hay varias tareas.
+Vamos a comenzar por la tarea 1, que se llama Crea aplicaciones a partir de instrucciones.
+Mientras descarga, voy a ir leyendo en qué consiste la tarea para que estemos todos contextualizados.
+En esta tarea verás qué tan rápido puedes tomar una idea para un asistente de Inteligencia Artificial generativa y convertirla en un prototipo funcional.
+Con Vertex AI Studio te enfocarás en nuestro caso de seguros.
+Es un caso de seguros, lo que yo les decía hace un rato, crear una instrucción que ayude a un profesional de seguros, si ven, es una persona que es fuera del mundo de ciencia de datos, que es del negocio, y vas a ayudar a un profesional de seguros a resumir la información del cliente para un informe de análisis de riesgos y luego preparar esta instrucción como una aplicación simple.
+¿Listo?
+Entonces vamos a crear primero unos prompts que le van a dar contexto a nuestra IA.
+Vamos a hacer algunos test de validación y posteriormente vamos a crear esa aplicación que nuestro profesional en seguros utilizaría.
+Y para eso necesitamos cierta información que hay acá.
+Lo primero que van a copiar, chicos, es esto que se llama Insurance Risk Summary Prototype, que va a ser el nombre de nuestras instrucciones que le vamos a dar a la IA.
+Para contextualizarlo.
+Listo, Entonces una vez estén acá, acá en el título vamos a colocar ese título que les decía en modelo, lo que les hablaba hace un rato también van a ir a Gemini y en Gemini van a buscar el Gemini 2.5 y en system instructions le vamos a dar el contexto para hacer el fine tuning de nuestro modelo, donde le estamos diciendo que es un asistente experto en inteligencia artificial de seguros.
+¿Hasta ahí me sigue?
+Qué pena es que yo me quedé con el título.
+Sí, tranqui, nos devolvemos.
+Si, es que abajo del título.
+Ya hiciste el título, ¿Cierto?
+Es que no me deja ponerlo o no sé cómo ponerlo.
+Sí, si vas arriba de Model Settings, tú te paras y te salir así como subrayadito, tú le das a dar clic y ahí le das doble clic y lo borras y pegas el nombre que cogiste del otro lado.
+Mira que no me dijo, o sea, está como un cuadradito pequeñito que está al lado de la casilla, pero no me aparece la casilla.
+¿Qué casilla no te sale?
+La de poner el nombre.
+Si quieres manda un pantallazo por acá, pero te sale lo demás.
+Lo demás.
+Model Settings, System Instructions, Minimap, Bueno, ve pegando igual la información, mándame con pantallazo y vamos avanzando y ya miramos que no sé qué puede ser.
+Bueno, igual ahorita cuando corras el modelo, él te va a preguntar un nombre, Michelle, Entonces ahí cuando él te pregunte el nombre del modelo, ahí pones el nombre.
+¿Listo?
+Ahorita haces la prueba cuando lo vayas a correr, no lo vayamos a guardar y todo lo demás.
+Por ahora voy avanzando poniendo el System Instructions y le pasa a los demás lo mismo.
+Ahorita más tarde el modelo va a preguntar para guardar, entonces no se afanen por eso.
+Entonces, en escribir un prompt, vamos a poner el prompt que nos daban en el laboratorio.
+Recuerden todo eso yo lo copié del laboratorio, que el prompt son unas notas sobre un seguro y la tarea que él debe hacer que es resumir en detalle y dar algunas notas basado únicamente en la información que le estamos entregando.
+Y le vamos a dar enviar.
+¿Bien?
+Y ahí él nos genera la respuesta, 923 tokens, cuál es la respuesta que nos está dando según lo que le ingresamos.
+Bien, entonces volvemos acá.
+Bien, ya seleccionamos Gemini 2.5, haz clic en la flecha Enviar Intro.
+Bien, en la parte superior derecha, junto al nombre de la instrucción, haz clic en el botón de guardar.
+Entonces le vamos a dar clic en el botón de guardar.
+Que se me olvidó dónde está el botón de guardar.
+Se me olvide dónde está el botón.
+Es este, así ya es este.
+Entonces este botoncito al lado de Preview, que es como la memoria que te sale a ti Michelle, le vas a dar en ese botoncito que es el de guardar y ahí seguramente te va a salir como prompt Name y ahí le deberías poner el prompt.
+Avísame si te saca eso.
+Perfecto.
+Y fíjense que en la región salga esta región que dice US Central 1 Iowa.
+Iowa, no sé cómo se pronuncia, Iowa.
+Que le salga esta región, que si no estoy mal es la que debería salir yo confirmo, si, IU central 1.
+Bien, le damos clic en guardar, ponen el nombre, se fijan en la región, le vamos a dar clic en guardar.
+Él se va a demorar un momento mientras guarda, pero no debería demorarse mucho.
+Y mientras guardemos un momento, bueno, voy a ir avanzando con el laboratorio chicos, porque creo que ahí en esa parte se poco.
+Mientras él guarda, lo siguiente que vamos a hacer es ir a la sección Podium, es decir, la sección que sale acá al lado del nombre, donde nos debería salir el nombre del prompt.
+Ahí nos sale como Preview y nos sale Code ha hecho, Vengan.
+Si se fijan acá nos va a salir una sección que se llama Código.
+Ahora que nos guarde el modelo, le vamos a dar en código y una vez le demos en código, nos van a salir algunas opciones.
+Vamos acá, nos van a salir unas opciones para desplegar nuestro modelo y luego desplegarlo como una app.
+Vamos a darle en Desplegar y luego vamos a darle en desplegar como app.
+Y una vez le demos en desplegar como App, le damos a la casilla de que estamos de acuerdo, le damos en crear App y se va a tardar unos minutos, unos buenos minutos, por ahí unos 7 minutos en crear esa app.
+Mientras se crea esa app, vamos a ir avanzando a la tarea dos.
+Listo.
+¿Y qué es lo que vamos a obtener?
+Vamos a obtener una demo de una app.
+Pues realmente no es una demo, realmente es una app muy, muy pequeña, muy sencilla, enfocada a riesgos para seguros, donde si nosotros le preguntamos a nuestro chatbot, él nos va a poder dar algunas respuestas según lo que le indicamos.
+¿Listo chicos?
+Y ahí vamos a tener nuestra primera aplicación para un agente de seguros, donde pues el agente de seguros ingresa acá y habla con el chatbot, va a recibir algunas respuestas según los datos que le dimos, que fueron básicos, cosas mínimas.
+¿Hasta ahí me siguen?
+Deben estar acá en esta sección de decir saving, está cargando.
+Listo, Ahí deben estar varios de ustedes.
+Entonces vamos a intentar duplicando esta ventana chicos.
+Le vamos a dar duplicar y vamos a intentar ir trabajando en la segunda tarea mientras esto nos carga, porque se puede demorar un par de minutos.
+Entonces le van a dar duplicar a la ventana y una vez le den duplicar a la ventana, esperen un momento, yo me arrastro una vez, me los arrastro ustedes, Vamos a hacer algunos ejercicios que son mucho más sencillos para ver cómo funciona un poco de Vértex y vamos a estar mirando acá.
+Si alguno le carga, termina de guardar y se da cuenta.
+Por favice para yo entrar acá a terminar el ejercicio que se va a demorar un tiempo en cargar.
+Bien, vamos a entrar al segundo y el segundo diseña instrucciones eficaces.
+En la primera creamos una instrucción inicial donde creamos un prototipo para un agente de seguros.
+Ahora vamos a profundizar en definir mejor las instrucciones para obtener resultados más precisos, controlados y útiles de los modelos generativos.
+¿Entonces vamos a realizar el primero, donde vamos a entrar pues de nuevo a nuestro interfaz principal de Vertex AI, que es esta de acá, y vamos a tomar esta instrucción del sistema, listo?
+Donde le estamos diciendo que es un asistente especializado en hacer algunos extractos y análisis de datos, bla, bla, bla, bla, bla.
+Vamos a tomar eso y lo vamos a llevar a Vertex y lo vamos a poner otra vez en las instrucciones.
+Una vez lo pongamos en las instrucciones, vamos a darle un nombre al prompt que es Insurance Claim Data Extraction.
+Vamos a darle Control C y vamos a ponerle ese nombre al prompt.
+Bien, Y en el prompt de abajo vamos a copiar este de acá, donde lo que vamos a hacer es darle la información que queremos que él tome para darnos respuestas y vamos a explicarle cómo debería ser la salida que queremos que nos dé.
+Entonces le estamos dando un ejemplo de un texto donde le decimos, esto es un ejemplo de un texto que vamos a recibir, no sé, del equipo de seguros.
+El equipo de data lo procesa y el equipo de data lo entrega de manera estructurada, de esta manera.
+Entonces lo vamos a enviar, vamos a dar submit, pero acá no cambié el modelo, ahorita lo cambio, bueno, de hecho lo voy a parar, voy a eliminar esta respuesta acá.
+Fíjense chicos en que el modelo sea el 2.5 o si no se va a demorar un poco más porque es más potente el 2.5 flash.
+¿Listo?
+Y además de eso, se me olvidaba, yo por acá vi algo que nos dice ajusten la temperatura en 0.1 y limiten los tokens de salida a 1024 y asegúrate de que la región sea global.
+Entonces vamos a ir a Model Settings y le vamos a dar clic en Model Settings.
+En Model Settings, si nos fijamos dice región global, hasta ahí va bien.
+Temperatura creo que nos decía 1 y en Auto Token Limit le vamos a poner 1024.
+Bien, y ahí ya lo tenemos.
+Y ahora sí podemos darle.
+Bien, a ver, miramos si éste ya cargó, no, todavía dice saving, vamos jugando todavía con este.
+Y bien, ¿Qué hizo?
+Entonces le entregamos la información y le pedimos que nos lo entregara así de esta manera.
+¿Finalmente el que hace?
+Analiza el texto y nos entrega de esta manera estructurada como lo necesitamos, la información correspondiente.
+Si no encuentra la información, pues está diciendo no hay heridas reportadas para este seguro.
+¿Listo?
+Y ahí estamos obteniendo nuestra primera respuesta.
+Bien, ahora vamos a hacer una donde no le vamos a dar solo un ejemplo, sino que le vamos a dar varios ejemplos a nuestra guía generativa.
+Así que vamos a crear otro chat.
+¿Listo chicos?
+Entonces voy a darle en duplicate de nuevo, voy a darle en duplicate de nuevo y en la parte inferior, en la sección de instrucciones, clic en el botón más.
+En el menú emergente selecciona ejemplo, bla, bla, bla, bla, bla, para entrada y para salida.
+¿Listo?
+Entonces nos vamos a copiar el prompt de entrada y el prompt de salida.
+¿Listo?
+Y lo que vamos a hacer es algo mucho, eso es de La misma tarea 2, es de la misma tarea 2, es DE la misma tarea 2.
+Vamos a hacer varios ejercicios de la tarea 2.
+En el primero lo hicimos dando el ejemplo desde el prompt y dando un único ejemplo Y en la tarea 2, en la segundo punto de la tarea 2, vamos a darle varios ejemplos a nuestro prompt.
+¿Listo?
+Entonces hacemos lo mismo, abrimos un nuevo chat, vamos a herramientas, perdón, vamos al más, al más en la barra del chat, y vamos a darle en example.
+Una vez leemos en example, en input, vamos a colocar lo que nos salía como input, lo que no es.
+¿Eso lo voy a hacer paso a paso, así está bien?
+Le vamos a dar el input.
+Y en output vamos a escribir un ejemplo, es este acá.
+Y le estamos dando varios ejemplos.
+Y le damos Add examples en el nombre del modelo, me parece que es el mismo nombre, A ver, yo reviso, no especifica, así que voy a usar, voy a usar, vamos a usar el mismo nombre que utilizamos en el punto anterior.
+¿Listo?
+El que es Insurance claim data extraction.
+Este de acá.
+Vamos a usar entonces acá en el nombre del prompt, vamos a usar el mismo.
+¿Profe, el primer ejercicio que estábamos haciendo, ya terminó de cargar?
+Ya te terminó, gracias por avisar.
+Vamos a ver.
+Perfecto, a mí también me terminó, gracias.
+Vamos a terminar este segundo punto y volvemos al primero, ¿Les parece, chicos?
+No mentiras, perdón, el otro se demora mucho.
+Vamos a volver al primero otra vez.
+Perdón por tantos saltos, chicos, pero es que esto es muy demorado Vertex, porque estamos haciendo varias cosas que ejecuta muchas, muchos contenedores al tiempo.
+Entonces vamos a ir otra vez al primer ejercicio, que espero no lo hayan cerrado.
+Una vez haya guardado, van a ir a la sección donde dice Code código, y en Code les debe salir Get API key, bla, bla, bla.
+Aquí les sale cómo se vería en Python, las librerías que se están extrayendo, todo súper interesante.
+Le vamos a dar en Deploy y le vamos a dar en Deploy as an app.
+Perdón, una vez le demos en Deploy as app, le vamos a dar Allow public access y le vamos a dar I understand this app will be deployed publicly.
+Le damos Create app y se va a demorar más o menos unos cinco minutos.
+Voy a poner acá un temporizador para acordarme.
+Y listo, chicos, deberían estar en esta sección, en la primera tarea.
+Él se debería demorar más o menos cinco minutos en terminar de compilar.
+Bien, volvemos al segundo ejercicio.
+Gracias, Michelle por avisarnos.
+Volvemos al segundo ejercicio, le ponemos el nombre al prompt en System Instructions, vamos a darle algunas instrucciones, miremos acá, entrada, salida, le vamos a dar al sistema esta instrucción de acá.
+You are an AI assistance.
+Volvemos acá, proporciona la nueva entrada en la instrucción, entonces le vamos a proporcionar este nuevo.
+Este nuevo prompt.
+Acá en Input van a escribir acá el valor que es pues la información que nos están dando de, en este caso del seguro, que es esta de acá, Hi Team, tuve una llamada de la señorita Eleanor Y en la instrucción, en el prompt vamos a copiar este que es donde le vamos a pedir al modelo que nos dé el resultado y vamos a poner acá el modelo, el Model Prompt, perdón, y creo que ya, Ah, perdón, no revisé el modelo, si no se me va a demorar un montón.
+Voy a dar Delete, Delete.
+Y acá en Gemini le voy a dar de nuevo gemini y gemini 2.5 flash, pero no el Flash light, sino el Flash.
+Ah bien, nos piden hacer una configuración, temperatura en 0.01 y límite de tokens también en 1024.
+Entonces le vamos a dar model settings, temperatura en 1 y límite tokens 1024.
+Ah bueno chicos, información importante.
+¿Qué quiere decir la temperatura?
+¿Alguien que lo quiera explicar chicos, estén acá mientras voy poniendo?
+¿La tarea que yo le dije, OK?
+¿Y qué quiere decir más temperatura o menos temperatura?
+¿Sebastián?
+Entre más temperatura es más creativo.
+Perfecto, justamente, gracias Sebastián.
+Entonces chicos, lo que nos determina la temperatura es el nivel de creatividad de nuestra.
+De nuestra.
+Y como dijo Sebastián, a más temperatura, más creativo, a menos temperatura va a ser más concreto, más.
+Se me olvidó la palabra más.
+Concreto.
+En sus respuestas se va a ceñir únicamente a lo que le estamos ingresando y ya ahorita vamos a hacer una prueba con un nivel de creatividad mucho más bajo.
+Bien, entonces acá tenemos finalmente la respuesta donde le estamos ingresando más ejemplos para que su respuesta sea mucho más robusta de lo que estaba haciendo con solo añadirle uno de los ejemplos.
+Ahora vamos a ir al tercer punto de la tarea 2 y nos dicen, ahora explorarás como los diferentes parámetros de la configuración.
+Esperen un momento, antes de avanzar al 3 voy a ver si esto ya compiló bien.
+Vamos a ir de nuevo A la tarea 1, chicos, vamos de nuevo a la tarea 1.
+Y en la tarea 1 ya les debió haber salido esto, donde debe decir Application Name debe salir acá Open Status Ready.
+¿Todos están acá conmigo?
+Tarea 1.
+Vuelvan a la tarea 1 y una vez vuelvan a la tarea 1 le van a dar Open App.
+Una vez le den en Open App debería cargarles precisamente la interfaz para nuestros agentes de seguro, donde nuestros agentes de seguro van a hacer las consultas que requieran.
+Metámosle algún prompt, metámosle este que dice New Customer Inquiry.
+Tenemos un nuevo caso y le estamos diciendo por favor resume en los principales puntos que identificaste y los potenciales riesgos.
+Se lo vamos a enviar y nuestro chatbot nos va a entregar una respuesta.
+¿Si le metí el prompt que era?
+Creo que sí.
+Y bien, acá nos entrega un resumen según lo que le estamos indicando y basado pues en la información que le habíamos entregado a nuestra Listo, ahora sí, si van a la tarea 1 y le vamos revisar mi progreso, él debería cargar y ya les debería marcar completo.
+Chicos, tengo tres minutos antes de que se me cierre el laboratorio, entonces voy a correr un poquito con el último, ¿Vale?
+Ya les pregunto cómo les fue con la tarea 1 a los que ya pudieron hacerlo.
+Entonces vamos a asignarle el título Insurance Story a la instrucción.
+Vamos a poner en el cuadro de texto la siguiente instrucción Y ahora vamos a experimentar con algunas variaciones en el modelo.
+No creo que alcance por el tiempo, pero vamos a intentarlo.
+Hasta ahí chicos, ¿Pudieron con la tarea 1?
+¿Les salió?
+¿Pudieron crear la aplicación temperatura 1.5 y luego probar temperatura 0.1?
+OK, vamos a probar 500 tokens y luego con la longitud máxima, luego con el tope vamos a probarlo con 1 y luego a 0.8.
+Bueno, acá son más pruebas.
+Bueno, me queda un minuto chicos, así que no hace mucho sentido que vaya avanzando porque va a quedar a medias, pero entonces quisiera escucharlos.
+¿Pudieron hacer la aplicación del primero, de la primera tarea?
+¿Les salió?
+¿Alguien tiene dudas?
+Sí profe, a mí me salió.
+Estaba revisando la respuesta no sería tan buena la verdad.
+Puedes probar, de hecho ingresándole algunas cosas tú como prueba y pruebas a ver qué más te entrega, pero súper que hayas podido.
+Bien chicos, en los siguientes 15 minutos, porque ya se me acabó el tiempo, me gustaría que terminen la tarea 2.
+¿Que terminen la tarea 2, nos falta el tercer punto?
+El tercer punto es muy sencillo, es crear un nuevo chat, donde ustedes en ese nuevo chat prueben los diferentes parámetros que van a encontrar en la sección de Model, en esta sección de acá, si van acá, van a encontrar Model Settings y en Model Settings, primero fíjense que lo cambien a Gemini 2.5 y van a probar con una temperatura de 1 y luego con una temperatura de 0.1, parece que es en punto de 0.1.
+Van a probar con tokens al máximo, luego van a probar con tokens de 500, que es poco, y luego van a probar con el Top P, que el Top P indica qué tan aleatorio sea el modelo.
+Y lo mismo, van a probar, creo que el pie con 0.1 y luego probarlo con el máximo que es 1.
+Hacen las pruebas y una vez hagan las pruebas con este prompt que se llama, con este prompt que se va a llamar, Creo que va a tener el mismo nombre, creo que va a tener este nombre, Va a tener este nombre.
+Insurance Claim Data Extraction, Van a probar con este, corren las pruebas con cada una de las de los parámetros variados y una vez lo terminen, le van a dar acá en revisar mi progreso y una vez les marque como OK, bien, lo tiene.
+Céntrense en eso estos últimos 13 minutos.
+Y la próxima clase chicos, trabajamos en la tarea 3, que es diseña y administra instrucciones, que es esta de acá.
+Y el objetivo es llegar a la tarea 5, donde vamos a crear algunas imágenes y vamos a ver cómo podemos generar ideas generativas usando algunos prompts específicos de imágenes para de pronto los que trabajen en áreas de marketing y necesiten algo específico para su empresa.
+Bueno, acá pues es bien útil porque pueden dejar seteado esa idea generativa que podría usar su empresa y completaríamos este laboratorio.
+Y bien, esa era la clase hasta hoy chicos, yo esperaba terminar todo el laboratorio, pero no nos dio tiempo, pero al menos terminamos el primero y parte del segundo, casi todo.
+Me voy a quedar acá estos 12 minutos restantes para los que tengan dudas respecto a la tercer parte de la tarea 2 y los que no tengan dudas, por ejemplo, sé que creo que Juan Sebastián eres que no tienes el compu, Los que no tengan compu, pues sé que no van a poder hacer mucho, entonces pueden ir saliendo de la clase, son libros de ir saliendo y los que estén acá conmigo, vamos revisando el punto 3.
+Que esté muy bien.
+Hasta luego.
+Igualmente, hasta luego.
+La siguiente clase, chicos, es nuestra casi última clase, que será de hoy en 15, ¿Cómo será la presentación del proyecto?
+La presentación del proyecto va a ser en los grupos que armaron.
+Cada grupo va a tener media hora para presentar su proyecto, desarrollarlo.
+Voy a traer unos jurados, esos dos jurados van a ser dos, conmigo tres.
+Entre los tres vamos a darles la nota, va a ser el ponderado de esas tres notas y esa va a ser la nota del grupo.
+Bueno, importante, súper importante.
+Menos mal, me acordaste.
+Para el proyecto hay otra parte que les iba a dejar hoy en la que deberían avanzar para el proyecto y ya con lo que veamos de hoy en 15 ya deberían poder terminar toda la entrega del proyecto.
+Ya les voy a mostrar.
+Un momento chicos, que no encontró la slide, pero bueno, van teniendo más preguntas por ahora de cómo será el proyecto.
+Parece que borre los.
+La idea es que presenten en media hora.
+La idea es traer dos expertos en temas de digitalización, que puedan dar su feedback, que puedan conocerlos, que tal vez los que están buscando trabajo, pues se expongan porque van a ser personas que tienen personas en su equipo y que pues consoliden todo lo que hemos ido viendo en clase para que formulen un buen proyecto digital.
+Tenía el siguiente entregable en este compu, chicos, pero es como si hubiera borrado la slide, es muy raro.
+Les voy a compartir en mi otro compu más preguntas mientras les comparto dudas.
+Porfa confirme si pueden ver mi pantalla.
+Gracias.
+Bien, en la clase pasada les dejé esta tercera entrega, que eran estos puntos de acá.
+En la cuarta entrega vienen estos siguientes puntos que ya vamos a hablar del mockup de la solución, cómo se asegurará la manutención de la operación de la solución, cómo se recogerá el feedback, cada cuánto se actualizará la solución, el costo de la solución, el ROI de la solución, el cronograma y una demo.
+La demo puede ser en cualquiera de las herramientas que ustedes quieran.
+Acá sólo es una sugerencia, Tabló, Power BI o herramienta y me quedo cortado.
+Herramienta digital.
+Si quieren hacer alguna prueba en el ambiente de Vertex, que pues tenemos ahí la limitación de que sólo se puede usar una hora, pueden explorar por Vértex.
+Y un punto importante, cada etapa del enduen debe describir qué herramienta digital se usará y cómo será el proceso de liderazgo digital en la organización.
+Finalmente, la conclusión, que es el resumen de la propuesta y por qué se debe implementar esta solución digital.
+Esta es la última parte, les voy a compartir por acá.
+Y listo chicos, ¿Alguna duda o pregunta?
+Si no, Con Vértex entonces solo lo podemos usar durante una hora consecutiva, o sea, no podemos pausar el laboratorio, no se puede si no tenemos un sandbox, es algo que le pedí a Google si pueda, si podía darnos algún sandbox para hacer pruebas, pero tenemos esa limitación.
+Sólo podemos usarlo durante un tiempo limitado, lo que dure el laboratorio, que ese tiempo es para usarlo en el laboratorio, pero bueno, que si nos queremos desviar y hacer otras cosas, podemos hacerlo, pero esa es la limitación que tenemos, por eso sugiero algunas herramientas, las que ustedes manejen, las que sean gratuitas.
+Vertex no es gratuito, porque es una herramienta muy potente, no es barata.
+Entonces lo que quieran usar para entregar una demo y ya.
+Chicos, ¿Qué más preguntas tienen?
+Creo que Brian también tenía esa tercera entrega.
+¿Es para dentro de 15 días o me recuerda las fechas?
+Por.
+Es para la última clase, para dentro de tres semanas, es consolidar todo lo de la primera, segunda, tercera, cuarta, en una entrega y es la última entrega.
+La próxima clase les daré más de los parámetros para la sesión final, pero les voy adelantando, voy a invitar dos jurados que van a evaluar sus proyectos, sus propuestas de proyectos, les van a entregar retroalimentación de lo que ustedes propongan y la nota va a ser para el equipo y va a ser el ponderado de lo que los tres reunamos.
+El trabajo es el consolidado de las cuatro entregas, entonces no es para dentro de 15 días.
+Mi sugerencia es que para dentro de 15 díes ya debería estar hasta la cuarta entrega y el trabajo final va a ser el consolidado de esas entregas que les he ido dejando.
+¿Listo?
+¿Más claro?
+¿Preguntas?
+¿Igual a otras sesiones entrego más vale?
+No, a ti con gusto.
+¿Más preguntas, chicos?
+¿Dudas?
+Listo.
+Bueno chicos, les regalo entonces estos tres últimos minutos.
+Muchas gracias por la asistencia hoy, espero les haya gustado la clase, que tengan una feliz Semana Santa, que la aprovechen para descansar y que nos Vemos dentro de 15 días.
+De hoy en 8 no hay clase.
+¿Listo?
+Es dentro de 15 que volvemos entonces, que tengan buena noche, muchas gracias a todos, hasta luego.
+Gracias profe, hasta luego.
+Gracias profe, hasta luego.
