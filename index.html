@@ -242,7 +242,7 @@
   .flow-step:first-child { clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%); }
   .flow-step:last-child { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 20px 50%); margin-right: 0;}
   .flow-step.alt { background: var(--yellow); color: var(--ink); }
-  .flow-step .icon { font-size: 30px; margin-bottom: 8px; }
+  .flow-step .icon { font-size: 30px; margin-bottom: 8px; display: flex; justify-content: center; align-items: center; height: 36px; }
   .flow-step h4 { color: inherit; font-size: 17px; margin-bottom: 6px; }
   .flow-step p { color: inherit; opacity: 0.85; font-size: 13px; }
 
@@ -873,45 +873,63 @@
   </div>
   <div class="content">
     <h1>Operación, <span class="accent">Feedback y Actualización</span></h1>
-    <p class="lead">Monitoreo predictivo sobre GCP, ETL nocturno y feedback integrado en el roadmap.</p>
-    <div class="grid-4" style="margin-top: 10px;">
-      <div class="card accent">
-        <div class="icon">📈</div>
-        <h4>Monitoreo</h4>
-        <p style="font-size: 14px;">Cloud Monitoring para uptime, latencia y error rate del bot y del pipeline ETL</p>
+    <p class="lead">Un ciclo continuo: monitoreamos, escalamos cuando hace falta, escuchamos al cliente y mejoramos el producto.</p>
+
+    <!-- Loop visual de 4 pasos -->
+    <div class="flow" style="margin-top: 24px;">
+      <div class="flow-step">
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 3 5-6"/><circle cx="7" cy="14" r="1.2" fill="currentColor"/><circle cx="11" cy="10" r="1.2" fill="currentColor"/><circle cx="15" cy="13" r="1.2" fill="currentColor"/><circle cx="20" cy="7" r="1.2" fill="currentColor"/></svg>
+        </div>
+        <h4>Monitorear</h4>
+        <p>Uptime, latencia, precisión de Gemini y OCR de comprobantes en Cloud Monitoring</p>
       </div>
-      <div class="card accent">
-        <div class="icon">🔄</div>
-        <h4>Actualización</h4>
-        <p style="font-size: 14px;">ETL nocturno de datos financieros · releases por sprint</p>
+      <div class="flow-step alt">
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 21c0-3.5 3-6 7-6s7 2.5 7 6"/><path d="M17 4l3 -3 m0 0 l-3 0 m3 0 l0 3"/></svg>
+        </div>
+        <h4>Escalar (HITL)</h4>
+        <p>2 intentos fallidos o confianza &lt;0,7 → WhatsApp al fundador con resumen del contexto</p>
       </div>
-      <div class="card accent">
-        <div class="icon">📬</div>
-        <h4>Feedback</h4>
-        <p style="font-size: 14px;">Encuesta automática 24 h post-entrega · almacenada en BigQuery</p>
+      <div class="flow-step">
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v11H8l-4 4z"/><path d="M8 10h8"/><path d="M8 13h5"/></svg>
+        </div>
+        <h4>Escuchar</h4>
+        <p>Encuesta 24 h post-entrega · chats en BigQuery · Gemini detecta dolores recurrentes</p>
       </div>
-      <div class="card accent">
-        <div class="icon">🧠</div>
-        <h4>Salud de la IA</h4>
-        <p style="font-size: 14px;">Latencia del AI Agent y tasa de error del OCR monitoreadas</p>
+      <div class="flow-step alt">
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-15.5 6.3L3 16"/><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8"/><path d="M21 4v4h-4"/><path d="M3 20v-4h4"/></svg>
+        </div>
+        <h4>Mejorar</h4>
+        <p>Backlog priorizado → release → vuelve al monitoreo. El ciclo nunca se detiene.</p>
       </div>
     </div>
-    <div class="grid-2" style="margin-top: 16px;">
-      <div class="card soft">
-        <h4>Ciclo de actualización</h4>
-        <ul style="margin-top: 4px;">
-          <li><b>Nocturno:</b> sincronización ETL de datos financieros a BigQuery</li>
-          <li><b>Por sprint:</b> liberación de cambios funcionales</li>
-          <li><b>Trimestral:</b> revisión de backlog con feedback de clientes</li>
-        </ul>
+
+    <!-- Tira de cadencias -->
+    <div style="margin-top: 28px;">
+      <div style="font-size: 13px; font-weight: 700; letter-spacing: 2px; color: var(--muted); margin-bottom: 10px; text-transform: uppercase; display:flex; align-items:center; gap:8px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        Cadencias de actualización
       </div>
-      <div class="card">
-        <h4>Recolección e integración de feedback</h4>
-        <ul style="margin-top: 4px;">
-          <li><b>Recolección:</b> encuesta post-entrega automatizada por el bot</li>
-          <li><b>Almacenamiento:</b> respuestas y chats en BigQuery</li>
-          <li><b>Integración:</b> GenAI detecta dolores recurrentes y ajusta el backlog trimestral</li>
-        </ul>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;">
+        <div style="text-align:center; padding:14px 8px; background:var(--accent-bg); border:2px solid var(--ink); border-radius:10px;">
+          <div style="font-weight:800; font-size:18px; color:var(--ink);">Nocturno</div>
+          <div style="font-size:13px; color:var(--ink-soft); margin-top:4px;">ETL a BigQuery</div>
+        </div>
+        <div style="text-align:center; padding:14px 8px; background:var(--accent-bg); border:2px solid var(--ink); border-radius:10px;">
+          <div style="font-weight:800; font-size:18px; color:var(--ink);">Quincenal</div>
+          <div style="font-size:13px; color:var(--ink-soft); margin-top:4px;">Cambios en el bot</div>
+        </div>
+        <div style="text-align:center; padding:14px 8px; background:var(--accent-bg); border:2px solid var(--ink); border-radius:10px;">
+          <div style="font-weight:800; font-size:18px; color:var(--ink);">Mensual</div>
+          <div style="font-size:13px; color:var(--ink-soft); margin-top:4px;">Re-entrenamiento del modelo</div>
+        </div>
+        <div style="text-align:center; padding:14px 8px; background:var(--yellow); border:2px solid var(--ink); border-radius:10px;">
+          <div style="font-weight:800; font-size:18px; color:var(--ink);">Trimestral</div>
+          <div style="font-size:13px; color:var(--ink-soft); margin-top:4px;">Revisión de backlog</div>
+        </div>
       </div>
     </div>
   </div>
