@@ -21,3 +21,10 @@ grabaciones/audio/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Logs del bot (se regeneran en runtime)
+mvp_bot/bot.log
+
+# Imágenes de trabajo sueltas (no son assets del deck)
+/Image*.jpeg
+mvp_bot/data/images/

@@ -45,9 +45,11 @@ Reglas importantes:
 - Si el cliente menciona un personaje con varias versiones (ej. "Iron Man"), no fijes sku y pide aclaración en texto_respuesta.
 - Si el mensaje no tiene nada que ver con minifiguras o pedidos, usa intent "fuera_alcance".
 - Mantén texto_respuesta corto (máximo 3 frases) y amable. No inventes productos ni precios.
+- NUNCA menciones códigos SKU (tipo M-IM001, SW-BF001, etc.) en texto_respuesta: son internos. Refiérete a los productos por su nombre.
 - Si el cliente quiere ver el catálogo completo, intent = "ver_catalogo" y texto_respuesta sugiere ver las categorías.
 - Si el cliente pregunta precio o disponibilidad de un producto, intent = "consultar_producto".
 - Si el cliente quiere comprar un producto específico ya identificado, intent = "hacer_pedido".
+- TIENES HISTORIAL de los últimos mensajes. Úsalo para mantener contexto: si el cliente acaba de ver un producto (ej. Vegeta) y luego pregunta "¿por qué tan caro?" o "no me gusta", refiérete a ese producto y mantén el SKU si aplica. Si pregunta por alternativas ("¿hay otro?", "muéstrame algo más barato"), sugiere productos de la misma categoría.
 
 CATÁLOGO DISPONIBLE (úsalo como única fuente de verdad):
 {catalogo}
@@ -87,14 +89,34 @@ def _parsear_json(texto: str) -> dict[str, Any]:
     }
 
 
-def interpretar_mensaje(mensaje_usuario: str) -> dict[str, Any]:
-    """Llama a Gemini con el catálogo como contexto y devuelve el JSON estructurado."""
+def interpretar_mensaje(
+    mensaje_usuario: str,
+    historial: list[dict[str, str]] | None = None,
+    ultimo_sku: str | None = None,
+) -> dict[str, Any]:
+    """Llama a Gemini con el catálogo + historial y devuelve JSON estructurado.
+
+    historial: lista de turnos previos [{"role": "user"|"model", "text": str}, ...].
+    ultimo_sku: último SKU mostrado al cliente (para resolver referencias como "ese producto").
+    """
     model = _get_model()
     prompt = PROMPT_SISTEMA.format(catalogo=_catalogo_como_texto())
-    respuesta = model.generate_content(
-        [
-            {"role": "user", "parts": [prompt]},
-            {"role": "user", "parts": [f"Mensaje del cliente: {mensaje_usuario}"]},
-        ]
-    )
+
+    contenidos: list[dict[str, Any]] = [{"role": "user", "parts": [prompt]}]
+    if ultimo_sku:
+        contenidos.append(
+            {
+                "role": "user",
+                "parts": [
+                    f"[CONTEXTO] El último producto que el cliente vio fue el SKU {ultimo_sku}. "
+                    "Si el mensaje actual parece referirse a ese producto (precio, crítica, alternativa), manténlo como referencia."
+                ],
+            }
+        )
+    for turno in historial or []:
+        rol = "model" if turno.get("role") == "model" else "user"
+        contenidos.append({"role": rol, "parts": [turno.get("text", "")]})
+    contenidos.append({"role": "user", "parts": [f"Mensaje del cliente: {mensaje_usuario}"]})
+
+    respuesta = model.generate_content(contenidos)
     return _parsear_json(respuesta.text or "")

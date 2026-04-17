@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+from pathlib import Path
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import ContextTypes
@@ -11,6 +12,16 @@ from . import db
 from .gemini_client import interpretar_mensaje
 
 log = logging.getLogger(__name__)
+
+PRODUCTOS_DIR = Path(__file__).resolve().parent.parent / "data" / "productos"
+
+
+def _imagen_producto(sku: str) -> Path | None:
+    for ext in ("jpeg", "jpg", "png"):
+        p = PRODUCTOS_DIR / f"{sku}.{ext}"
+        if p.exists():
+            return p
+    return None
 
 MENSAJE_BIENVENIDA = (
     "👋 ¡Hola! Soy el asistente de *Tolego*, tu tienda de minifiguras coleccionables.\n\n"
@@ -78,13 +89,51 @@ async def pedidos(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text("\n".join(lineas), parse_mode="Markdown")
 
 
+MAX_HISTORIAL = 12  # turnos (user+model combinados) que le pasamos a Gemini
+
+_STOPWORDS = {
+    "quiero", "dame", "muestrame", "muéstrame", "tienes", "hay", "busco", "pedir",
+    "un", "una", "unos", "unas", "el", "la", "los", "las", "de", "del", "y", "o",
+    "por", "favor", "me", "con", "sin", "para", "es", "ese", "esa", "eso",
+}
+
+
+def _filtrar_por_mensaje(productos: list[dict], mensaje: str) -> list[dict]:
+    """Filtra la lista a los productos cuyo nombre contiene alguna palabra del mensaje
+    (excluyendo stopwords y palabras cortas)."""
+    import re
+    palabras = {
+        w for w in re.findall(r"[\wáéíóúñ]+", mensaje.lower())
+        if len(w) >= 3 and w not in _STOPWORDS
+    }
+    if not palabras:
+        return productos
+    return [
+        p for p in productos
+        if any(w in p["nombre"].lower() for w in palabras)
+    ]
+
+
+def _registrar_turno(context: ContextTypes.DEFAULT_TYPE, role: str, text: str) -> None:
+    historial = context.user_data.setdefault("historial", [])
+    historial.append({"role": role, "text": text})
+    if len(historial) > MAX_HISTORIAL:
+        del historial[: len(historial) - MAX_HISTORIAL]
+
+
 async def mensaje_libre(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Pipeline: mensaje -> Gemini -> lógica de base -> respuesta."""
+    """Pipeline: mensaje -> Gemini (con historial) -> lógica de base -> respuesta."""
     texto = update.message.text or ""
-    await update.message.chat.send_action("typing")
+    try:
+        await update.message.chat.send_action("typing")
+    except Exception:
+        log.debug("send_action falló, se ignora", exc_info=True)
+
+    historial = context.user_data.get("historial", [])
+    ultimo_sku = context.user_data.get("ultimo_sku")
 
     try:
-        resultado = interpretar_mensaje(texto)
+        resultado = interpretar_mensaje(texto, historial=historial, ultimo_sku=ultimo_sku)
     except Exception:
         log.exception("Fallo llamando a Gemini")
         await update.message.reply_text(
@@ -98,28 +147,51 @@ async def mensaje_libre(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     categoria = resultado.get("categoria")
     cantidad = resultado.get("cantidad") or 1
 
+    _registrar_turno(context, "user", texto)
+
     if intent == "ver_catalogo":
+        if categoria:
+            productos = db.get_productos_por_categoria(categoria)
+            if productos:
+                await update.message.reply_text(
+                    respuesta or f"Estos son los productos en *{categoria}*:",
+                    parse_mode="Markdown",
+                    reply_markup=_teclado_productos(productos),
+                )
+                _registrar_turno(context, "model", f"Mostré productos de categoría {categoria}.")
+                return
         await update.message.reply_text(
             respuesta or "Estas son nuestras categorías:", reply_markup=_teclado_categorias()
         )
+        _registrar_turno(context, "model", respuesta or "Categorías disponibles.")
         return
 
     if intent == "consultar_producto" and sku:
         producto = db.get_producto_por_sku(sku)
         if producto:
-            await update.message.reply_text(
-                _ficha_producto(producto), parse_mode="Markdown", reply_markup=_teclado_producto(sku)
-            )
+            await _enviar_ficha_con_foto(update, producto, sku)
+            context.user_data["ultimo_sku"] = sku
+            _registrar_turno(context, "model", f"Mostré ficha de {producto['nombre']} (SKU {sku}).")
             return
 
     if intent == "consultar_producto" and categoria:
         productos = db.get_productos_por_categoria(categoria)
         if productos:
+            filtrados = _filtrar_por_mensaje(productos, texto)
+            if 0 < len(filtrados) < len(productos):
+                await update.message.reply_text(
+                    f"Encontré estas opciones en *{categoria}*:",
+                    parse_mode="Markdown",
+                    reply_markup=_teclado_productos(filtrados),
+                )
+                _registrar_turno(context, "model", f"Mostré {len(filtrados)} productos filtrados de {categoria}.")
+                return
             await update.message.reply_text(
                 f"Estos son los productos en *{categoria}*:",
                 parse_mode="Markdown",
                 reply_markup=_teclado_productos(productos),
             )
+            _registrar_turno(context, "model", f"Mostré productos de categoría {categoria}.")
             return
 
     if intent == "consultar_producto":
@@ -129,16 +201,17 @@ async def mensaje_libre(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
                 "Encontré estas opciones que pueden servirte:",
                 reply_markup=_teclado_productos(coincidencias),
             )
+            _registrar_turno(context, "model", "Mostré resultados de búsqueda.")
             return
 
     if intent == "hacer_pedido" and sku:
         await _registrar_pedido(update, sku, cantidad)
+        _registrar_turno(context, "model", f"Registré pedido de SKU {sku}.")
         return
 
-    # Fallback: mandamos la respuesta del modelo
-    await update.message.reply_text(
-        respuesta or "No estoy seguro de haberte entendido. Escribe /catalogo para ver productos."
-    )
+    texto_salida = respuesta or "No estoy seguro de haberte entendido. Escribe /catalogo para ver productos."
+    await update.message.reply_text(texto_salida)
+    _registrar_turno(context, "model", texto_salida)
 
 
 async def callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -171,11 +244,23 @@ async def callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         if not producto:
             await query.edit_message_text("Ese producto ya no está disponible.")
             return
-        await query.edit_message_text(
-            _ficha_producto(producto),
-            parse_mode="Markdown",
-            reply_markup=_teclado_producto(sku),
-        )
+        img = _imagen_producto(sku)
+        if img:
+            with img.open("rb") as f:
+                await query.message.reply_photo(
+                    photo=f,
+                    caption=_ficha_producto(producto),
+                    parse_mode="Markdown",
+                    reply_markup=_teclado_producto(sku),
+                )
+        else:
+            await query.message.reply_text(
+                _ficha_producto(producto),
+                parse_mode="Markdown",
+                reply_markup=_teclado_producto(sku),
+            )
+        context.user_data["ultimo_sku"] = sku
+        _registrar_turno(context, "model", f"Mostré ficha de {producto['nombre']} (SKU {sku}).")
         return
 
     if data.startswith("pedir:"):
@@ -183,19 +268,37 @@ async def callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         cantidad = int(cantidad_str)
         producto = db.get_producto_por_sku(sku)
         if not producto:
-            await query.edit_message_text("Ese producto ya no está disponible.")
+            await query.message.reply_text("Ese producto ya no está disponible.")
             return
         user = update.effective_user
         pedido = db.crear_pedido(user.id, user.username, sku, cantidad)
         if pedido is None:
-            await query.edit_message_text(
+            await query.message.reply_text(
                 f"😕 No hay stock suficiente de {producto['nombre']} ({producto['stock']} disponibles)."
             )
             return
-        await query.edit_message_text(
+        await query.message.reply_text(
             _confirmacion_pedido(pedido), parse_mode="Markdown"
         )
         return
+
+
+async def _enviar_ficha_con_foto(update: Update, producto: dict, sku: str) -> None:
+    img = _imagen_producto(sku)
+    if img:
+        with img.open("rb") as f:
+            await update.message.reply_photo(
+                photo=f,
+                caption=_ficha_producto(producto),
+                parse_mode="Markdown",
+                reply_markup=_teclado_producto(sku),
+            )
+    else:
+        await update.message.reply_text(
+            _ficha_producto(producto),
+            parse_mode="Markdown",
+            reply_markup=_teclado_producto(sku),
+        )
 
 
 async def _registrar_pedido(update: Update, sku: str, cantidad: int) -> None:

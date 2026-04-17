@@ -1,44 +1,1730 @@
 [
-  {"sku": "M-IM001", "nombre": "Iron Man MK1", "categoria": "Marvel", "precio": 15000, "stock": 5, "descripcion": "Minifigura Iron Man, armadura Mark 1"},
-  {"sku": "M-IM002", "nombre": "Iron Man", "categoria": "Marvel", "precio": 15000, "stock": 4, "descripcion": "Minifigura Iron Man clásico"},
-  {"sku": "M-IM003", "nombre": "Iron Man MK50", "categoria": "Marvel", "precio": 18000, "stock": 3, "descripcion": "Iron Man Mark 50 Infinity War"},
-  {"sku": "M-IM005", "nombre": "Iron Man Guantelete", "categoria": "Marvel", "precio": 20000, "stock": 2, "descripcion": "Iron Man con el Guantelete del Infinito"},
-  {"sku": "M-CA001", "nombre": "Capitán América (Steve Rogers)", "categoria": "Marvel", "precio": 15000, "stock": 6, "descripcion": "Steve Rogers como Capitán América"},
-  {"sku": "M-CA002", "nombre": "Capitán América con Mjölnir", "categoria": "Marvel", "precio": 18000, "stock": 3, "descripcion": "Capitán América empuñando el martillo de Thor"},
-  {"sku": "M-WM001", "nombre": "War Machine", "categoria": "Marvel", "precio": 18000, "stock": 4, "descripcion": "Minifigura War Machine"},
-  {"sku": "M-SM001", "nombre": "Spider-Man clásico", "categoria": "Marvel", "precio": 15000, "stock": 7, "descripcion": "Spider-Man traje rojo y azul"},
-  {"sku": "M-SM002", "nombre": "Spider-Man Negro (Simbionte)", "categoria": "Marvel", "precio": 15000, "stock": 4, "descripcion": "Spider-Man con traje negro del simbionte"},
-  {"sku": "M-VE001", "nombre": "Venom", "categoria": "Marvel", "precio": 18000, "stock": 3, "descripcion": "Minifigura Venom"},
-  {"sku": "SW-MA001", "nombre": "Mandalorian", "categoria": "Star Wars", "precio": 18000, "stock": 5, "descripcion": "Din Djarin con casco beskar"},
-  {"sku": "SW-DV001", "nombre": "Darth Vader", "categoria": "Star Wars", "precio": 18000, "stock": 4, "descripcion": "Darth Vader minifigura"},
-  {"sku": "SW-YD001", "nombre": "Yoda", "categoria": "Star Wars", "precio": 15000, "stock": 6, "descripcion": "Maestro Yoda"},
-  {"sku": "SW-BF001", "nombre": "Boba Fett", "categoria": "Star Wars", "precio": 18000, "stock": 3, "descripcion": "Cazador de recompensas mandaloriano"},
-  {"sku": "SW-NM001", "nombre": "Nave Mandalorian", "categoria": "Star Wars", "precio": 80000, "stock": 1, "descripcion": "Set premium 105 piezas - Nave Razor Crest"},
-  {"sku": "SW-DI001", "nombre": "Diorama Anakin vs Obi-Wan", "categoria": "Star Wars", "precio": 150000, "stock": 1, "descripcion": "Set premium 314 piezas - Mustafar"},
-  {"sku": "HP-HP001", "nombre": "Harry Potter", "categoria": "Harry Potter", "precio": 15000, "stock": 5, "descripcion": "Harry Potter con varita"},
-  {"sku": "HP-HE001", "nombre": "Hermione Granger", "categoria": "Harry Potter", "precio": 15000, "stock": 4, "descripcion": "Hermione Granger"},
-  {"sku": "HP-DU001", "nombre": "Albus Dumbledore", "categoria": "Harry Potter", "precio": 15000, "stock": 3, "descripcion": "Director de Hogwarts"},
-  {"sku": "HP-VO001", "nombre": "Lord Voldemort", "categoria": "Harry Potter", "precio": 15000, "stock": 3, "descripcion": "El Señor Oscuro"},
-  {"sku": "MO-PE001", "nombre": "Pennywise", "categoria": "Cine y Terror", "precio": 15000, "stock": 4, "descripcion": "Pennywise de It"},
-  {"sku": "MO-JV001", "nombre": "Jason Voorhees", "categoria": "Cine y Terror", "precio": 15000, "stock": 3, "descripcion": "Jason de Viernes 13"},
-  {"sku": "MO-FK001", "nombre": "Freddy Krueger", "categoria": "Cine y Terror", "precio": 15000, "stock": 3, "descripcion": "Freddy Krueger de Pesadilla en la Calle Elm"},
-  {"sku": "MO-MM001", "nombre": "Michael Myers", "categoria": "Cine y Terror", "precio": 15000, "stock": 3, "descripcion": "Michael Myers de Halloween"},
-  {"sku": "MO-BJ001", "nombre": "Beetlejuice", "categoria": "Cine y Terror", "precio": 15000, "stock": 2, "descripcion": "Beetlejuice"},
-  {"sku": "SM-MA001", "nombre": "Mario", "categoria": "Super Mario", "precio": 18000, "stock": 5, "descripcion": "Mario clásico"},
-  {"sku": "SM-LU001", "nombre": "Luigi", "categoria": "Super Mario", "precio": 18000, "stock": 4, "descripcion": "Luigi"},
-  {"sku": "SM-PE001", "nombre": "Princesa Peach", "categoria": "Super Mario", "precio": 18000, "stock": 3, "descripcion": "Princesa Peach"},
-  {"sku": "SM-BO001", "nombre": "Bowser", "categoria": "Super Mario", "precio": 18000, "stock": 3, "descripcion": "Bowser, rey de los Koopas"},
-  {"sku": "SM-KT001", "nombre": "Mario Kart", "categoria": "Super Mario", "precio": 32000, "stock": 2, "descripcion": "Set Mario Kart 55 piezas"},
-  {"sku": "TN-LE001", "nombre": "Leonardo (Tortuga)", "categoria": "Tortugas Ninja", "precio": 18000, "stock": 3, "descripcion": "Leonardo, líder con katanas"},
-  {"sku": "TN-DO001", "nombre": "Donatello (Tortuga)", "categoria": "Tortugas Ninja", "precio": 18000, "stock": 3, "descripcion": "Donatello con bō"},
-  {"sku": "TN-MI001", "nombre": "Miguel Ángel (Tortuga)", "categoria": "Tortugas Ninja", "precio": 18000, "stock": 3, "descripcion": "Miguel Ángel con nunchakus"},
-  {"sku": "TN-RA001", "nombre": "Rafael (Tortuga)", "categoria": "Tortugas Ninja", "precio": 18000, "stock": 3, "descripcion": "Rafael con sai"},
-  {"sku": "N-NU001", "nombre": "Naruto Uzumaki", "categoria": "Anime", "precio": 15000, "stock": 6, "descripcion": "Naruto modo normal"},
-  {"sku": "N-NU002", "nombre": "Naruto Modo Sabio", "categoria": "Anime", "precio": 18000, "stock": 4, "descripcion": "Naruto en modo sabio"},
-  {"sku": "N-SA001", "nombre": "Sasuke Uchiha", "categoria": "Anime", "precio": 15000, "stock": 4, "descripcion": "Sasuke Uchiha"},
-  {"sku": "N-KA001", "nombre": "Kakashi Hatake", "categoria": "Anime", "precio": 15000, "stock": 3, "descripcion": "Kakashi del escuadrón 7"},
-  {"sku": "N-VF001", "nombre": "Valle del Fin", "categoria": "Anime", "precio": 120000, "stock": 1, "descripcion": "Set premium 450 piezas - batalla Naruto vs Sasuke"},
-  {"sku": "DB-GO001", "nombre": "Goku", "categoria": "Anime", "precio": 15000, "stock": 6, "descripcion": "Goku saiyan"},
-  {"sku": "DB-VE001", "nombre": "Vegeta", "categoria": "Anime", "precio": 15000, "stock": 4, "descripcion": "Vegeta príncipe saiyan"},
-  {"sku": "DB-FR001", "nombre": "Freezer", "categoria": "Anime", "precio": 18000, "stock": 3, "descripcion": "Freezer forma final"}
+  {
+    "sku": "M-IM001",
+    "nombre": "Iron Man MK1",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Iron Man armadura Mark 1"
+  },
+  {
+    "sku": "M-IM002",
+    "nombre": "Iron Man MK50",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Iron Man Mark 50"
+  },
+  {
+    "sku": "M-IM003",
+    "nombre": "Iron Man MK50 II",
+    "categoria": "Marvel",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Iron Man Mark 50 variante II"
+  },
+  {
+    "sku": "M-IM004",
+    "nombre": "Iron Man Infinity War",
+    "categoria": "Marvel",
+    "precio": 20000,
+    "stock": 50,
+    "descripcion": "Iron Man con alas de Infinity War"
+  },
+  {
+    "sku": "M-IM005",
+    "nombre": "Iron Man Guantelete",
+    "categoria": "Marvel",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Iron Man con el Guantelete del Infinito"
+  },
+  {
+    "sku": "M-IM006",
+    "nombre": "Ironman Zombie",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Iron Man versión zombie"
+  },
+  {
+    "sku": "M-SR001",
+    "nombre": "Steve Rogers",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Steve Rogers de civil con escudo"
+  },
+  {
+    "sku": "M-CA001",
+    "nombre": "Capitán América Mjölnir",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Capitán América empuñando Mjölnir"
+  },
+  {
+    "sku": "M-CA002",
+    "nombre": "Capitán América Escudos Wakanda",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Capitán América con escudos de vibranium"
+  },
+  {
+    "sku": "M-CA003",
+    "nombre": "Capitán América Mjölnir II",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Capitán América con Mjölnir y escudo partido"
+  },
+  {
+    "sku": "M-CA004",
+    "nombre": "Capitán América (Sam Wilson)",
+    "categoria": "Marvel",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Sam Wilson como Capitán América"
+  },
+  {
+    "sku": "M-CA005",
+    "nombre": "Capitán América Zombie",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Capitán América versión zombie"
+  },
+  {
+    "sku": "M-CA007",
+    "nombre": "Spider-Gwen",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Gwen Stacy como Spider-Woman"
+  },
+  {
+    "sku": "M-WM001",
+    "nombre": "War Machine",
+    "categoria": "Marvel",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "War Machine clásico"
+  },
+  {
+    "sku": "M-WM002",
+    "nombre": "War Machine USA",
+    "categoria": "Marvel",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "War Machine pintura USA"
+  },
+  {
+    "sku": "M-WM003",
+    "nombre": "War Machine III",
+    "categoria": "Marvel",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "War Machine armadura plateada"
+  },
+  {
+    "sku": "M-TH001",
+    "nombre": "Thor",
+    "categoria": "Marvel",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Thor con Stormbreaker"
+  },
+  {
+    "sku": "M-TH002",
+    "nombre": "Thor Mjölnir",
+    "categoria": "Marvel",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Thor empuñando Mjölnir"
+  },
+  {
+    "sku": "M-TH003",
+    "nombre": "Thor Gordo",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Thor Endgame con lata"
+  },
+  {
+    "sku": "M-TH004",
+    "nombre": "Thor Beta Ray Bill",
+    "categoria": "Marvel",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Beta Ray Bill"
+  },
+  {
+    "sku": "M-WI001",
+    "nombre": "Winter Soldier",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Bucky Barnes como Winter Soldier"
+  },
+  {
+    "sku": "M-BW001",
+    "nombre": "Black Widow",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Natasha Romanoff"
+  },
+  {
+    "sku": "M-VI001",
+    "nombre": "Vision",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Vision con la gema de la mente"
+  },
+  {
+    "sku": "M-SW001",
+    "nombre": "Scarlet Witch",
+    "categoria": "Marvel",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Wanda con el Darkhold"
+  },
+  {
+    "sku": "M-SW002",
+    "nombre": "Scarlet Witch WandaVision",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Wanda en versión WandaVision"
+  },
+  {
+    "sku": "M-WZ001",
+    "nombre": "Wanda Maximoff Zombie",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Wanda Maximoff versión zombie"
+  },
+  {
+    "sku": "M-GA001",
+    "nombre": "Gamora",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Gamora Guardianes de la Galaxia"
+  },
+  {
+    "sku": "M-RO001",
+    "nombre": "Rocket",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Rocket Raccoon"
+  },
+  {
+    "sku": "M-NE001",
+    "nombre": "Nebula",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Nebula con espada"
+  },
+  {
+    "sku": "M-DS001",
+    "nombre": "Dr. Strange",
+    "categoria": "Marvel",
+    "precio": 22000,
+    "stock": 50,
+    "descripcion": "Dr. Strange con portal"
+  },
+  {
+    "sku": "M-DS002",
+    "nombre": "Dr. Strange Multiverso",
+    "categoria": "Marvel",
+    "precio": 20000,
+    "stock": 50,
+    "descripcion": "Dr. Strange con llamas místicas"
+  },
+  {
+    "sku": "M-DS003",
+    "nombre": "Dr. Strange Zombie",
+    "categoria": "Marvel",
+    "precio": 20000,
+    "stock": 50,
+    "descripcion": "Dr. Strange zombie con látigo"
+  },
+  {
+    "sku": "M-DS004",
+    "nombre": "Dr. Strange Astral",
+    "categoria": "Marvel",
+    "precio": 20000,
+    "stock": 50,
+    "descripcion": "Dr. Strange proyección astral zombie"
+  },
+  {
+    "sku": "M-DS005",
+    "nombre": "Dr. Strange Zombie II",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Dr. Strange zombie con portales"
+  },
+  {
+    "sku": "M-CD001",
+    "nombre": "Carol Danvers",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Carol Danvers con casco"
+  },
+  {
+    "sku": "M-CM001",
+    "nombre": "Capitana Marvel",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Capitana Marvel"
+  },
+  {
+    "sku": "M-SM001",
+    "nombre": "Spider-Man (Tobey Maguire)",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Spider-Man versión Tobey Maguire"
+  },
+  {
+    "sku": "M-SM002",
+    "nombre": "Spider-Man (Andrew Garfield)",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Spider-Man versión Andrew Garfield"
+  },
+  {
+    "sku": "M-SM003",
+    "nombre": "Spider-Man (Tom Holland)",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Spider-Man versión Tom Holland"
+  },
+  {
+    "sku": "M-SM004",
+    "nombre": "Spider-Man Negro",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Spider-Man traje negro dorado"
+  },
+  {
+    "sku": "M-SM005",
+    "nombre": "Spider-Man Iron Spider",
+    "categoria": "Marvel",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Spider-Man Iron Spider con brazos"
+  },
+  {
+    "sku": "M-SM006",
+    "nombre": "Spider-Man Miles Morales",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Miles Morales Spider-Man"
+  },
+  {
+    "sku": "M-SM008",
+    "nombre": "Spider-Ham",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Peter Porker Spider-Ham"
+  },
+  {
+    "sku": "M-BP001",
+    "nombre": "Black Panther",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Black Panther con garras"
+  },
+  {
+    "sku": "M-WS001",
+    "nombre": "Wasp",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "The Wasp con alas"
+  },
+  {
+    "sku": "M-WS002",
+    "nombre": "Wasp Zombie",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Wasp versión zombie"
+  },
+  {
+    "sku": "M-WE001",
+    "nombre": "Hawkeye Zombie",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Hawkeye versión zombie"
+  },
+  {
+    "sku": "M-WO001",
+    "nombre": "Wong Zombie",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Wong versión zombie"
+  },
+  {
+    "sku": "M-FA001",
+    "nombre": "Falcon Zombie",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Falcon versión zombie"
+  },
+  {
+    "sku": "M-DD001",
+    "nombre": "Dr. Doom",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Dr. Doom villano de los 4 Fantásticos"
+  },
+  {
+    "sku": "M-ME001",
+    "nombre": "Mefisto",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Mefisto demonio"
+  },
+  {
+    "sku": "M-RS001",
+    "nombre": "Red Skull",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Red Skull, enemigo del Capitán América"
+  },
+  {
+    "sku": "M-AH001",
+    "nombre": "Agatha Harkness",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Agatha Harkness bruja"
+  },
+  {
+    "sku": "M-NF001",
+    "nombre": "Nick Fury",
+    "categoria": "Marvel",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Director de SHIELD"
+  },
+  {
+    "sku": "M-GG001",
+    "nombre": "Green Goblin",
+    "categoria": "Marvel",
+    "precio": 22000,
+    "stock": 50,
+    "descripcion": "Duende Verde con planeador"
+  },
+  {
+    "sku": "M-CX001",
+    "nombre": "Charles Xavier",
+    "categoria": "Marvel",
+    "precio": 22000,
+    "stock": 50,
+    "descripcion": "Profesor X en silla de ruedas"
+  },
+  {
+    "sku": "M-MI001",
+    "nombre": "Mysterio",
+    "categoria": "Marvel",
+    "precio": 20000,
+    "stock": 50,
+    "descripcion": "Mysterio con domo y humo verde"
+  },
+  {
+    "sku": "M-VE001",
+    "nombre": "Venom",
+    "categoria": "Marvel",
+    "precio": 22000,
+    "stock": 50,
+    "descripcion": "Venom simbionte, figura grande 7cm"
+  },
+  {
+    "sku": "M-DO001",
+    "nombre": "Dr. Octopus",
+    "categoria": "Marvel",
+    "precio": 22000,
+    "stock": 50,
+    "descripcion": "Dr. Octopus con tentáculos mecánicos"
+  },
+  {
+    "sku": "M-TS001",
+    "nombre": "Thanos",
+    "categoria": "Marvel",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Thanos con espada de doble filo"
+  },
+  {
+    "sku": "M-GR001",
+    "nombre": "Ghost Rider (Moto Verde)",
+    "categoria": "Marvel",
+    "precio": 22000,
+    "stock": 50,
+    "descripcion": "Ghost Rider con motocicleta verde"
+  },
+  {
+    "sku": "M-GR002",
+    "nombre": "Ghost Rider (Caballo)",
+    "categoria": "Marvel",
+    "precio": 22000,
+    "stock": 50,
+    "descripcion": "Ghost Rider del viejo oeste con caballo"
+  },
+  {
+    "sku": "M-GR003",
+    "nombre": "Ghost Rider (Moto Naranja)",
+    "categoria": "Marvel",
+    "precio": 22000,
+    "stock": 50,
+    "descripcion": "Ghost Rider con motocicleta naranja"
+  },
+  {
+    "sku": "SW-BF001",
+    "nombre": "Boba Fett",
+    "categoria": "Star Wars",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Cazador de recompensas mandaloriano"
+  },
+  {
+    "sku": "SW-BK001",
+    "nombre": "Bo-Katan",
+    "categoria": "Star Wars",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Bo-Katan Kryze con casco"
+  },
+  {
+    "sku": "SW-MA001",
+    "nombre": "Mandalorian",
+    "categoria": "Star Wars",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Din Djarin con casco beskar"
+  },
+  {
+    "sku": "SW-MA003",
+    "nombre": "Mandalorian con Grogu",
+    "categoria": "Star Wars",
+    "precio": 22000,
+    "stock": 50,
+    "descripcion": "Din Djarin acompañado de Grogu"
+  },
+  {
+    "sku": "SW-HS001",
+    "nombre": "Han Solo",
+    "categoria": "Star Wars",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Han Solo veterano"
+  },
+  {
+    "sku": "SW-YO001",
+    "nombre": "Yoda",
+    "categoria": "Star Wars",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Maestro Yoda"
+  },
+  {
+    "sku": "SW-OW001",
+    "nombre": "Obi-Wan Kenobi",
+    "categoria": "Star Wars",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Obi-Wan con capa"
+  },
+  {
+    "sku": "SW-OW002",
+    "nombre": "Obi-Wan Kenobi (Clásico)",
+    "categoria": "Star Wars",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Obi-Wan Kenobi con sable azul"
+  },
+  {
+    "sku": "SW-AS001",
+    "nombre": "Anakin Skywalker",
+    "categoria": "Star Wars",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Anakin Skywalker Jedi"
+  },
+  {
+    "sku": "SW-LS001",
+    "nombre": "Luke Skywalker",
+    "categoria": "Star Wars",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Luke Skywalker con capa"
+  },
+  {
+    "sku": "SW-AK001",
+    "nombre": "Ahsoka Tano",
+    "categoria": "Star Wars",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Ahsoka Tano con sables blancos"
+  },
+  {
+    "sku": "SW-GR001",
+    "nombre": "Grogu",
+    "categoria": "Star Wars",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Grogu (Baby Yoda)"
+  },
+  {
+    "sku": "SW-RD001",
+    "nombre": "R2-D2",
+    "categoria": "Star Wars",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Droide astromecánico R2-D2"
+  },
+  {
+    "sku": "SW-RD002",
+    "nombre": "R2-D2 Holograma",
+    "categoria": "Star Wars",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "R2-D2 versión holograma azul"
+  },
+  {
+    "sku": "SW-ST001",
+    "nombre": "Stormtrooper",
+    "categoria": "Star Wars",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Soldado imperial clásico"
+  },
+  {
+    "sku": "SW-ST002",
+    "nombre": "Stormtrooper Sandtrooper",
+    "categoria": "Star Wars",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Stormtrooper con armadura desgastada del desierto"
+  },
+  {
+    "sku": "SW-ST003",
+    "nombre": "Stormtrooper 501",
+    "categoria": "Star Wars",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Clone Trooper batallón 501"
+  },
+  {
+    "sku": "SW-ST004",
+    "nombre": "Stormtrooper Hologram",
+    "categoria": "Star Wars",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Stormtrooper versión holograma"
+  },
+  {
+    "sku": "SW-CC002",
+    "nombre": "Commander Cody",
+    "categoria": "Star Wars",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Comandante Cody de la 212"
+  },
+  {
+    "sku": "SW-PP001",
+    "nombre": "Palpatine",
+    "categoria": "Star Wars",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Emperador Palpatine con capa"
+  },
+  {
+    "sku": "SW-KR001",
+    "nombre": "Kylo Ren",
+    "categoria": "Star Wars",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Kylo Ren con sable rojo"
+  },
+  {
+    "sku": "SW-GI001",
+    "nombre": "Grand Inquisitor",
+    "categoria": "Star Wars",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Gran Inquisidor con sable doble"
+  },
+  {
+    "sku": "SW-DM001",
+    "nombre": "Darth Maul",
+    "categoria": "Star Wars",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Darth Maul con sable doble"
+  },
+  {
+    "sku": "SW-DV001",
+    "nombre": "Darth Vader",
+    "categoria": "Star Wars",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Darth Vader clásico"
+  },
+  {
+    "sku": "SW-DV002",
+    "nombre": "Darth Vader Hologram",
+    "categoria": "Star Wars",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Darth Vader versión holograma azul"
+  },
+  {
+    "sku": "SW-GG001",
+    "nombre": "General Grievous",
+    "categoria": "Star Wars",
+    "precio": 20000,
+    "stock": 50,
+    "descripcion": "General Grievous con cuatro sables"
+  },
+  {
+    "sku": "SW-MA002",
+    "nombre": "Nave Mandalorian",
+    "categoria": "Star Wars",
+    "precio": 80000,
+    "stock": 50,
+    "descripcion": "Set premium 105 piezas Razor Crest"
+  },
+  {
+    "sku": "SW-DM002",
+    "nombre": "Nave Darth Maul",
+    "categoria": "Star Wars",
+    "precio": 70000,
+    "stock": 50,
+    "descripcion": "Set premium 63 piezas Sith Infiltrator"
+  },
+  {
+    "sku": "SW-JH001",
+    "nombre": "Jabba the Hutt",
+    "categoria": "Star Wars",
+    "precio": 35000,
+    "stock": 50,
+    "descripcion": "Jabba el Hutt figura grande"
+  },
+  {
+    "sku": "SW-DW001",
+    "nombre": "Dewback con Stormtrooper",
+    "categoria": "Star Wars",
+    "precio": 65000,
+    "stock": 50,
+    "descripcion": "Set premium Dewback montado por Stormtrooper"
+  },
+  {
+    "sku": "SW-OVA001",
+    "nombre": "Diorama Anakin vs Obi-Wan",
+    "categoria": "Star Wars",
+    "precio": 150000,
+    "stock": 50,
+    "descripcion": "Set premium 314 piezas batalla de Mustafar"
+  },
+  {
+    "sku": "H-HP001",
+    "nombre": "Harry Potter",
+    "categoria": "Harry Potter",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Harry Potter con Hedwig"
+  },
+  {
+    "sku": "H-HP002",
+    "nombre": "Hermione Granger",
+    "categoria": "Harry Potter",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Hermione Granger con Crookshanks"
+  },
+  {
+    "sku": "H-HP003",
+    "nombre": "Ron Weasley",
+    "categoria": "Harry Potter",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Ron Weasley con Scabbers"
+  },
+  {
+    "sku": "H-HP004",
+    "nombre": "Albus Dumbledore",
+    "categoria": "Harry Potter",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Director de Hogwarts"
+  },
+  {
+    "sku": "H-HP005",
+    "nombre": "Severus Snape",
+    "categoria": "Harry Potter",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Severus Snape con capa"
+  },
+  {
+    "sku": "H-HP006",
+    "nombre": "Sirius Black (Azkaban)",
+    "categoria": "Harry Potter",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Sirius Black escapado de Azkaban"
+  },
+  {
+    "sku": "H-HP007",
+    "nombre": "Rubeus Hagrid",
+    "categoria": "Harry Potter",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Hagrid con farol"
+  },
+  {
+    "sku": "H-HP008",
+    "nombre": "Lord Voldemort",
+    "categoria": "Harry Potter",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "El Señor Oscuro con Nagini"
+  },
+  {
+    "sku": "H-HP009",
+    "nombre": "Dobby",
+    "categoria": "Harry Potter",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Dobby elfo doméstico con calcetín"
+  },
+  {
+    "sku": "H-HP010",
+    "nombre": "Draco Malfoy (Quidditch)",
+    "categoria": "Harry Potter",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Draco Malfoy con escoba y snitch"
+  },
+  {
+    "sku": "H-HP011",
+    "nombre": "Harry Potter Capa Invisibilidad",
+    "categoria": "Harry Potter",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Harry con la capa de invisibilidad"
+  },
+  {
+    "sku": "MO-JS001",
+    "nombre": "Jack Sparrow",
+    "categoria": "Cine y Terror",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Jack Sparrow Piratas del Caribe"
+  },
+  {
+    "sku": "MO-JV001",
+    "nombre": "Jason Voorhees",
+    "categoria": "Cine y Terror",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Jason de Viernes 13"
+  },
+  {
+    "sku": "MO-LF001",
+    "nombre": "Leather Face",
+    "categoria": "Cine y Terror",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Leatherface de Masacre en Texas"
+  },
+  {
+    "sku": "MO-EW001",
+    "nombre": "Edward Manos de Tijera",
+    "categoria": "Cine y Terror",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Joven Manos de Tijera"
+  },
+  {
+    "sku": "MO-FK001",
+    "nombre": "Freddy Krueger",
+    "categoria": "Cine y Terror",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Freddy Krueger de Pesadilla en la Calle Elm"
+  },
+  {
+    "sku": "MO-JT001",
+    "nombre": "Jack Torrance",
+    "categoria": "Cine y Terror",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Jack Torrance de El Resplandor"
+  },
+  {
+    "sku": "MO-PE001",
+    "nombre": "Pennywise",
+    "categoria": "Cine y Terror",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Pennywise de It con globo"
+  },
+  {
+    "sku": "MO-HR001",
+    "nombre": "Pinhead",
+    "categoria": "Cine y Terror",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Pinhead de Hellraiser"
+  },
+  {
+    "sku": "MO-MM001",
+    "nombre": "Michael Myers",
+    "categoria": "Cine y Terror",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Michael Myers de Halloween"
+  },
+  {
+    "sku": "MO-NU001",
+    "nombre": "Bubble Head Nurse",
+    "categoria": "Cine y Terror",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Enfermera de Silent Hill"
+  },
+  {
+    "sku": "MO-PH001",
+    "nombre": "Pyramid Head",
+    "categoria": "Cine y Terror",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Pyramid Head de Silent Hill"
+  },
+  {
+    "sku": "MO-BJ001",
+    "nombre": "Beetlejuice",
+    "categoria": "Cine y Terror",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Beetlejuice el bioexorcista"
+  },
+  {
+    "sku": "MO-RM001",
+    "nombre": "Regan McNeil",
+    "categoria": "Cine y Terror",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Regan de El Exorcista"
+  },
+  {
+    "sku": "MO-SM001",
+    "nombre": "Samara Morgan",
+    "categoria": "Cine y Terror",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Samara Morgan de El Aro"
+  },
+  {
+    "sku": "MO-GH001",
+    "nombre": "Ghost",
+    "categoria": "Cine y Terror",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Fantasma sábana clásico"
+  },
+  {
+    "sku": "MO-LM001",
+    "nombre": "Valak (La Monja)",
+    "categoria": "Cine y Terror",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Valak de El Conjuro"
+  },
+  {
+    "sku": "MO-CH001",
+    "nombre": "Chucky",
+    "categoria": "Cine y Terror",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Chucky el muñeco diabólico"
+  },
+  {
+    "sku": "MO-CH002",
+    "nombre": "Tiffany",
+    "categoria": "Cine y Terror",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Tiffany la novia de Chucky"
+  },
+  {
+    "sku": "MO-SC001",
+    "nombre": "Ghostface",
+    "categoria": "Cine y Terror",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Ghostface de Scream"
+  },
+  {
+    "sku": "MO-TE001",
+    "nombre": "Art el Payaso",
+    "categoria": "Cine y Terror",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Art de Terrifier"
+  },
+  {
+    "sku": "MO-TE002",
+    "nombre": "Victoria Heyes",
+    "categoria": "Cine y Terror",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Victoria Heyes de Terrifier"
+  },
+  {
+    "sku": "SM-MA001",
+    "nombre": "Mario",
+    "categoria": "Super Mario",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Mario clásico"
+  },
+  {
+    "sku": "SM-LU001",
+    "nombre": "Luigi",
+    "categoria": "Super Mario",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Luigi hermano de Mario"
+  },
+  {
+    "sku": "SM-PE001",
+    "nombre": "Princesa Peach",
+    "categoria": "Super Mario",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Princesa Peach"
+  },
+  {
+    "sku": "SM-BO001",
+    "nombre": "Bowser",
+    "categoria": "Super Mario",
+    "precio": 22000,
+    "stock": 50,
+    "descripcion": "Bowser rey de los Koopas, figura 7cm"
+  },
+  {
+    "sku": "SM-YO001",
+    "nombre": "Yoshi",
+    "categoria": "Super Mario",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Yoshi dinosaurio verde"
+  },
+  {
+    "sku": "SM-TO001",
+    "nombre": "Toad",
+    "categoria": "Super Mario",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Toad hongo del Reino Champiñón"
+  },
+  {
+    "sku": "SM-CAR001",
+    "nombre": "Kart Rojo (Mario)",
+    "categoria": "Super Mario",
+    "precio": 32000,
+    "stock": 50,
+    "descripcion": "Set 55 piezas kart rojo de Mario"
+  },
+  {
+    "sku": "SM-CAR002",
+    "nombre": "Kart Rosa (Peach)",
+    "categoria": "Super Mario",
+    "precio": 32000,
+    "stock": 50,
+    "descripcion": "Set 55 piezas kart rosa de Peach"
+  },
+  {
+    "sku": "SM-CAR003",
+    "nombre": "Kart Verde (Luigi)",
+    "categoria": "Super Mario",
+    "precio": 32000,
+    "stock": 50,
+    "descripcion": "Set 55 piezas kart verde de Luigi"
+  },
+  {
+    "sku": "SM-CAR004",
+    "nombre": "Kart Amarillo",
+    "categoria": "Super Mario",
+    "precio": 32000,
+    "stock": 50,
+    "descripcion": "Set 55 piezas kart amarillo"
+  },
+  {
+    "sku": "SM-MOT001",
+    "nombre": "Moto Azul",
+    "categoria": "Super Mario",
+    "precio": 27000,
+    "stock": 50,
+    "descripcion": "Set 31 piezas moto azul Mario Kart"
+  },
+  {
+    "sku": "SM-MO002",
+    "nombre": "Moto Verde",
+    "categoria": "Super Mario",
+    "precio": 27000,
+    "stock": 50,
+    "descripcion": "Set 31 piezas moto verde Mario Kart"
+  },
+  {
+    "sku": "T-TN001",
+    "nombre": "Leonardo (Tortuga)",
+    "categoria": "Tortugas Ninja",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Leonardo líder con katanas"
+  },
+  {
+    "sku": "T-TN002",
+    "nombre": "Donatello (Tortuga)",
+    "categoria": "Tortugas Ninja",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Donatello con bō"
+  },
+  {
+    "sku": "T-TN003",
+    "nombre": "Miguel Ángel (Tortuga)",
+    "categoria": "Tortugas Ninja",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Miguel Ángel con nunchakus"
+  },
+  {
+    "sku": "T-TN004",
+    "nombre": "Rafael (Tortuga)",
+    "categoria": "Tortugas Ninja",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Rafael con sai"
+  },
+  {
+    "sku": "N-NU001",
+    "nombre": "Naruto Uzumaki",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Naruto modo normal"
+  },
+  {
+    "sku": "N-NU002",
+    "nombre": "Naruto Modo Sabio",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Naruto en modo sabio"
+  },
+  {
+    "sku": "N-NU003",
+    "nombre": "Naruto Chakra Kyubi",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Naruto con chakra del Kyubi"
+  },
+  {
+    "sku": "N-NU004",
+    "nombre": "Naruto Chakra Kurama",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Naruto manto de Kurama"
+  },
+  {
+    "sku": "N-NU005",
+    "nombre": "Naruto Uzumaki (6 Caminos)",
+    "categoria": "Naruto",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Naruto modo 6 Caminos"
+  },
+  {
+    "sku": "N-SU001",
+    "nombre": "Sasuke Uchiha",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Sasuke Uchiha"
+  },
+  {
+    "sku": "N-SU002",
+    "nombre": "Sasuke Uchiha (Rinnegan)",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Sasuke con Rinnegan"
+  },
+  {
+    "sku": "N-SH001",
+    "nombre": "Sakura Haruno",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Sakura Haruno"
+  },
+  {
+    "sku": "N-KH001",
+    "nombre": "Kakashi Hatake",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Kakashi del escuadrón 7"
+  },
+  {
+    "sku": "N-KH002",
+    "nombre": "Kakashi Hatake (Hokage)",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Kakashi como Hokage"
+  },
+  {
+    "sku": "N-MG001",
+    "nombre": "Might Guy",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Might Guy sensei"
+  },
+  {
+    "sku": "N-MG002",
+    "nombre": "Might Guy (Octava Puerta)",
+    "categoria": "Naruto",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Might Guy en la Octava Puerta"
+  },
+  {
+    "sku": "N-ZM001",
+    "nombre": "Zabuza Momochi",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Zabuza demonio de la niebla"
+  },
+  {
+    "sku": "N-HH001",
+    "nombre": "Hinata Hyuga",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Hinata Hyuga"
+  },
+  {
+    "sku": "N-RL001",
+    "nombre": "Rock Lee",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Rock Lee"
+  },
+  {
+    "sku": "N-NH001",
+    "nombre": "Neji Hyuga",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Neji Hyuga"
+  },
+  {
+    "sku": "N-KB001",
+    "nombre": "Killer Bee",
+    "categoria": "Naruto",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Killer Bee Jinchuriki del 8 colas"
+  },
+  {
+    "sku": "N-DS001",
+    "nombre": "Danzo Shimura",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Danzo Shimura de Raíz"
+  },
+  {
+    "sku": "N-KY001",
+    "nombre": "Kabuto Yakushi",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Kabuto Yakushi"
+  },
+  {
+    "sku": "N-JI001",
+    "nombre": "Jiraiya",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Jiraiya el sannin"
+  },
+  {
+    "sku": "N-SS001",
+    "nombre": "Tsunade Senju",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Tsunade la quinta Hokage"
+  },
+  {
+    "sku": "N-OR001",
+    "nombre": "Orochimaru",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Orochimaru el sannin"
+  },
+  {
+    "sku": "N-MN001",
+    "nombre": "Minato Namikaze (Edo Tensei)",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Minato revivido por Edo Tensei"
+  },
+  {
+    "sku": "N-MN002",
+    "nombre": "Minato Namikaze (Chakra Kurama)",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Minato modo Kurama"
+  },
+  {
+    "sku": "N-IU001",
+    "nombre": "Itachi Uchiha",
+    "categoria": "Naruto",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Itachi Uchiha Akatsuki"
+  },
+  {
+    "sku": "N-IU002",
+    "nombre": "Itachi Uchiha (Edo Tensei)",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Itachi revivido por Edo Tensei"
+  },
+  {
+    "sku": "N-HS001",
+    "nombre": "Hashirama Senju (Edo Tensei)",
+    "categoria": "Naruto",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Primer Hokage revivido"
+  },
+  {
+    "sku": "N-MU001",
+    "nombre": "Madara Uchiha (Edo Tensei)",
+    "categoria": "Naruto",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Madara revivido por Edo Tensei"
+  },
+  {
+    "sku": "N-MU002",
+    "nombre": "Madara Uchiha (6 Caminos)",
+    "categoria": "Naruto",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Madara modo 6 Caminos"
+  },
+  {
+    "sku": "N-TS001",
+    "nombre": "Tobirama Senju (Edo Tensei)",
+    "categoria": "Naruto",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Segundo Hokage revivido"
+  },
+  {
+    "sku": "N-TO001",
+    "nombre": "Tobi",
+    "categoria": "Naruto",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Tobi con máscara naranja"
+  },
+  {
+    "sku": "N-KI001",
+    "nombre": "Kisame Hoshigaki",
+    "categoria": "Naruto",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Kisame con Samehada"
+  },
+  {
+    "sku": "N-HI001",
+    "nombre": "Hidan",
+    "categoria": "Naruto",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Hidan inmortal de Akatsuki"
+  },
+  {
+    "sku": "N-KA001",
+    "nombre": "Kakuzu",
+    "categoria": "Naruto",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Kakuzu Akatsuki"
+  },
+  {
+    "sku": "N-ZE001",
+    "nombre": "Zetsu Blanco y Negro",
+    "categoria": "Naruto",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Zetsu dual Akatsuki"
+  },
+  {
+    "sku": "N-ZE002",
+    "nombre": "Zetsu Blanco",
+    "categoria": "Naruto",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Zetsu blanco clon"
+  },
+  {
+    "sku": "N-DE001",
+    "nombre": "Deidara",
+    "categoria": "Naruto",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Deidara Akatsuki"
+  },
+  {
+    "sku": "N-SA001",
+    "nombre": "Sasori",
+    "categoria": "Naruto",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Sasori de la Arena Roja"
+  },
+  {
+    "sku": "N-NA001",
+    "nombre": "Nagato Uzumaki",
+    "categoria": "Naruto",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Nagato verdadero Pain"
+  },
+  {
+    "sku": "N-PA001",
+    "nombre": "Pain (Camino Deva)",
+    "categoria": "Naruto",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Pain Camino Deva de Akatsuki"
+  },
+  {
+    "sku": "N-PA002",
+    "nombre": "Pain (Camino Preta)",
+    "categoria": "Naruto",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Pain Camino Preta"
+  },
+  {
+    "sku": "N-KO001",
+    "nombre": "Konan",
+    "categoria": "Naruto",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Konan ángel de Akatsuki"
+  },
+  {
+    "sku": "N-OU001",
+    "nombre": "Obito Uchiha",
+    "categoria": "Naruto",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Obito con máscara"
+  },
+  {
+    "sku": "N-VF001",
+    "nombre": "Diorama Valle del Fin",
+    "categoria": "Naruto",
+    "precio": 120000,
+    "stock": 50,
+    "descripcion": "Set premium 450 piezas batalla Naruto vs Sasuke"
+  },
+  {
+    "sku": "DB-DB001",
+    "nombre": "Bardock",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Bardock padre de Goku"
+  },
+  {
+    "sku": "DB-DB002",
+    "nombre": "Maestro Roshi",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Maestro Roshi con bastón"
+  },
+  {
+    "sku": "DB-DB003",
+    "nombre": "Krillin",
+    "categoria": "Dragon Ball",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Krillin guerrero humano"
+  },
+  {
+    "sku": "DB-DB004",
+    "nombre": "Yamcha",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Yamcha"
+  },
+  {
+    "sku": "DB-DB005",
+    "nombre": "Ten Shin Han",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Ten Shin Han"
+  },
+  {
+    "sku": "DB-DB006",
+    "nombre": "Piccolo",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Piccolo namekiano"
+  },
+  {
+    "sku": "DB-DB007",
+    "nombre": "Vegeta",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Vegeta príncipe saiyan"
+  },
+  {
+    "sku": "DB-DB008",
+    "nombre": "Freezer",
+    "categoria": "Dragon Ball",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Freezer forma final"
+  },
+  {
+    "sku": "DB-DB009",
+    "nombre": "Goku SSJ",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Goku Super Saiyan"
+  },
+  {
+    "sku": "DB-DB010",
+    "nombre": "Trunks",
+    "categoria": "Dragon Ball",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Trunks del futuro con espada"
+  },
+  {
+    "sku": "DB-DB011",
+    "nombre": "Androide 17",
+    "categoria": "Dragon Ball",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Androide 17"
+  },
+  {
+    "sku": "DB-DB012",
+    "nombre": "Androide 18",
+    "categoria": "Dragon Ball",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Androide 18"
+  },
+  {
+    "sku": "DB-DB013",
+    "nombre": "Gohan SSJ",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Gohan Super Saiyan"
+  },
+  {
+    "sku": "DB-DB014",
+    "nombre": "Gohan SSJ2",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Gohan Super Saiyan 2"
+  },
+  {
+    "sku": "DB-DB015",
+    "nombre": "Androide 13",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Androide 13"
+  },
+  {
+    "sku": "DB-DB016",
+    "nombre": "Broly",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Broly Super Saiyan Legendario"
+  },
+  {
+    "sku": "DB-DB017",
+    "nombre": "Majin Buu",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Majin Buu gordo"
+  },
+  {
+    "sku": "DB-DB018",
+    "nombre": "Bills",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Bills dios de la destrucción"
+  },
+  {
+    "sku": "DB-DB019",
+    "nombre": "Goku SSJ Dios",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Goku Super Saiyan Dios"
+  },
+  {
+    "sku": "DB-DB020",
+    "nombre": "Golden Freezer",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Freezer forma dorada"
+  },
+  {
+    "sku": "DB-DB021",
+    "nombre": "Goku Black",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Goku Black Rosé"
+  },
+  {
+    "sku": "DB-DB022",
+    "nombre": "Zamas Pothala",
+    "categoria": "Dragon Ball",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Zamas fusionado con Pothala"
+  },
+  {
+    "sku": "DB-DB023",
+    "nombre": "Vegeta SSJ Dios",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Vegeta Super Saiyan Dios"
+  },
+  {
+    "sku": "DB-DB024",
+    "nombre": "Goku SSJ Azul",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Goku Super Saiyan Blue"
+  },
+  {
+    "sku": "DB-DB025",
+    "nombre": "Hit",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Hit el asesino del universo 6"
+  },
+  {
+    "sku": "DB-DB026",
+    "nombre": "Gogeta",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Gogeta fusión Goku y Vegeta"
+  },
+  {
+    "sku": "DB-DB027",
+    "nombre": "Jiren",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Jiren del universo 11"
+  },
+  {
+    "sku": "DB-DB028",
+    "nombre": "Kefla",
+    "categoria": "Dragon Ball",
+    "precio": 15000,
+    "stock": 50,
+    "descripcion": "Kefla fusión Caulifla y Kale"
+  },
+  {
+    "sku": "DB-DB029",
+    "nombre": "Goku Ultra Instinto",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Goku Ultra Instinto"
+  },
+  {
+    "sku": "DB-DB030",
+    "nombre": "Goku SSJ4",
+    "categoria": "Dragon Ball",
+    "precio": 18000,
+    "stock": 50,
+    "descripcion": "Goku Super Saiyan 4 de GT"
+  }
 ]

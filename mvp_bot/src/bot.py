@@ -38,7 +38,15 @@ def main() -> None:
     db.init_db()
     logging.info("Base de datos lista en %s", db.DB_PATH)
 
-    app = ApplicationBuilder().token(token).build()
+    app = (
+        ApplicationBuilder()
+        .token(token)
+        .connect_timeout(20)
+        .read_timeout(30)
+        .write_timeout(30)
+        .pool_timeout(20)
+        .build()
+    )
     app.add_handler(CommandHandler("start", handlers.start))
     app.add_handler(CommandHandler("catalogo", handlers.catalogo))
     app.add_handler(CommandHandler("pedidos", handlers.pedidos))
