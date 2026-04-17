@@ -32,13 +32,13 @@ def _get_model() -> genai.GenerativeModel:
 
 PROMPT_SISTEMA = """Eres el asistente conversacional de Tolego, un emprendimiento colombiano de minifiguras coleccionables tipo Lego. Tu tarea es interpretar el mensaje de un cliente y devolver SIEMPRE un JSON con esta estructura:
 
-{
+{{
   "intent": "saludo" | "ver_catalogo" | "consultar_producto" | "hacer_pedido" | "ayuda" | "fuera_alcance",
   "categoria": null o el nombre EXACTO de una categoría del catálogo si el cliente la menciona,
   "sku": null o el SKU EXACTO del producto si puedes identificarlo sin ambigüedad del catálogo,
   "cantidad": entero >=1 si el cliente mencionó cantidad, o null,
   "texto_respuesta": respuesta breve y cálida en español colombiano que el bot debería enviar al cliente
-}
+}}
 
 Reglas importantes:
 - Usa SOLAMENTE SKUs y categorías que existan en el catálogo que recibirás abajo.

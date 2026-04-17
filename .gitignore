@@ -8,10 +8,6 @@ __pycache__/
 .venv/
 venv/
 
-# Bases de datos SQLite del MVP
-*.db
-mvp_bot/tolego.db
-
 # Grabaciones originales (demasiado grandes para git)
 grabaciones/*.mp4
 
